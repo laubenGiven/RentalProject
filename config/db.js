@@ -1,15 +1,16 @@
-const express = require('express')
-require('dotenv').config()
-const mongoose = require('mongoose')
+const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
 
-const Port = process.env.Port
-const MongoConn = process.env.Mongo_url
 
-mongoose.connect(MongoConn,{useNewUrlParser:true,useUnifiedTopology:true})
- mongoose.connection.on('error',err=>{
-    console.log(err)
- })
+const mongourl = process.env.MongodbConn;
 
- mongoose.connection.on('connected',res=>{
-    console.log('successfull DB Connection!')
- })
+mongoose.connect(mongourl, { useNewUrlParser: true, useUnifiedTopology: true });
+
+mongoose.connection.on('error', err => {
+  console.log(err);
+});
+
+mongoose.connection.on('connected', res => {
+  console.log('Connected successfully!!');
+});

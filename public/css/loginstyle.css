@@ -1,0 +1,111 @@
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f8f9fc;
+  }
+
+  .login-card {
+    width: 700px;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  
+    .login-card h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .login-card form .form-control {
+    margin-bottom: 1.5rem;
+  }
+
+  .login-card form .btn-primary {
+    width: 80%;
+    background-color: red;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin: 0.5rem 2rem 0 2rem;
+  }
+
+  .login-card form .btn-link {
+    float: left;
+    color: red;
+    margin: 1rem;
+  }
+  .login-card form .text-muted {
+    float: right;
+    color: blue;
+    margin: 1rem;
+  }
+  .login-card  {
+    color: #007bff;
+    font-size: 20px;
+    margin-right: 0.5rem;
+  }
+
+  .login-card .form-group {
+    position: relative;
+  }
+
+  .login-card .form-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #999;
+  }
+
+  .login-card .form-group input {
+    padding: 10px;
+    text-align: center;
+  }
+  .form-group {
+position: relative;
+}
+
+.form-group label {
+position: absolute;
+left: 10px;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.login-button i {
+margin-right: 5px;
+}
+.card-header i {
+    position: relative;
+    margin: 30px 3px 3px 10px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5em;
+  }
+  
+  .card-header  h1{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 10px 3px 3px 10px;
+    font-size: 16px;
+   
+  }
+
+  .card-header  p{
+    position: relative;
+    text-align: center;
+    font-weight: bolder;
+    font-family:'Courier New', Courier, monospace;
+    flex-wrap: wrap;
+    font-size:large;
+   
+   
+  }

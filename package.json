@@ -4,17 +4,22 @@
   "description": "rental system",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js "
   },
   "author": "mpairwe lauben",
   "license": "ISC",
   "dependencies": {
+    "@mui/material": "^5.13.5",
     "bcrypt": "^5.1.0",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "mongoose": "^7.3.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.13.0",
+    "validator": "^13.9.0"
   }
 }

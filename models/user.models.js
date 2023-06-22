@@ -9,6 +9,7 @@ const userSchema = new mongoose.Schema({
     },
   role: {
     type: String,
+    enum: ['admin', 'tenant', 'landlord'],
     required: true,
   },
   username: {
@@ -30,9 +31,13 @@ const userSchema = new mongoose.Schema({
     required: true,
     minlength: 8,
   },
-},{versionKey:false
+  
+    date: {
+      type: Date,
+      default: Date.now
+    }
 });
 
-const UserModel = mongoose.model('Users', userSchema);
+const User = mongoose.model('Users', userSchema);
 
-module.exports = UserModel;
+module.exports = User;

@@ -5,6 +5,6 @@ const propertyRoutes = require('./property.routes');
 const router = express.Router();
 
 router.use('/users', userRoutes);
-router.use('/properties', propertyRoutes);
+router.use('/property', propertyRoutes);
 
 module.exports = router;

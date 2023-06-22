@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Property Registration</title>
+ <link rel="stylesheet" href="/css/newproperty.css">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .form-container {
+        float: left;
+        width: 50%;
+        padding-right: 10px;
+    }
+
+    .properties-container {
+        float: right;
+        width: 50%;
+        padding-left: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .form-container,
+        .properties-container {
+            width: 100%;
+            float: none;
+            padding: 0;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+      <h1> LAND LORD'S LANDING PAGE</h1>
+        <h2 class="text-center">Property Registration</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <form id="addPropertyForm" action="/api/property/register" enctype="multipart/form-data" method="post">
+              <div class="mb-3">
+                  <label for="property_name" class="form-label">Property Name:</label>
+                  <input type="text" class="form-control" id="property_name" name="property_name" required>
+              </div>
+              <div class="mb-3">
+                  <label for="property_type" class="form-label">Property Type:</label>
+                  <select class="form-select" id="property_type" name="property_type" required>
+                      <option value="Apartment">Apartment</option>
+                      <option value="House">House</option>
+                      <option value="Villa">Villa</option>
+                      <option value="Condo">Condo</option>
+                      <option value="Townhouse">Townhouse</option>
+                  </select>
+              </div>
+              <div class="mb-3">
+                  <label for="location" class="form-label">Location:</label>
+                  <input type="text" class="form-control" id="location" name="location" required>
+              </div>
+              <div class="mb-3">
+                  <label for="description" class="form-label">Description:</label>
+                  <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+              </div>
+              <div class="row">
+                  <div class="col">
+                      <label for="bedrooms" class="form-label">Number of Bedrooms:</label>
+                      <input type="number" class="form-control" id="bedrooms" name="bedrooms" required>
+                  </div>
+                  <div class="col">
+                      <label for="bathrooms" class="form-label">Number of Bathrooms:</label>
+                      <input type="number" class="form-control" id="bathrooms" name="bathrooms" required>
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label for="cost" class="form-label">Cost:</label>
+                  <input type="number" class="form-control" id="cost" name="cost" required>
+              </div>
+              <div class="mb-3">
+                  <label for="photos" class="form-label">Photos:</label>
+                  <input type="file" class="form-control" id="photos" name="photos" multiple accept="image/*" required>
+              </div>
+              <div class="mb-3">
+                  <label for="maps" class="form-label">Maps:</label>
+                  <input type="file" class="form-control" id="maps" name="maps" accept="image/*" required>
+              </div>
+              <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Register Property</button>
+              </div>
+          </form>
+      </div>
+      <div class="col-md-6">
+          <h2>Properties List</h2>
+          <ul id="propertiesList" class="list-group"></ul>
+      </div>
+  </div>
+</div>
+
+
+<script>
+  // Property array to store added properties
+  var properties = [];
+
+  // DOM elements
+  var addPropertyForm = document.getElementById('addPropertyForm');
+  var propertiesList = document.getElementById('propertiesList');
+
+  // Add property event listener
+  addPropertyForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var property_name = document.getElementById('property_name').value;
+      var property_type = document.getElementById('property_type').value;
+      var location = document.getElementById('location').value;
+      var description = document.getElementById('description').value;
+      var bedrooms = document.getElementById('bedrooms').value;
+      var bathrooms = document.getElementById('bathrooms').value;
+      var cost = document.getElementById('cost').value;
+
+      var property = {
+          property_name: property_name,
+          property_type: property_type,
+          location: location,
+          description: description,
+          bedrooms: bedrooms,
+          bathrooms: bathrooms,
+          cost: cost
+      };
+
+      properties.push(property);
+      renderPropertiesList();
+      addPropertyForm.reset();
+  });
+
+  // Delete property event listener
+  function deleteProperty(index) {
+      properties.splice(index, 1);
+      renderPropertiesList();
+  }
+
+  // Edit property event listener
+  function editProperty(index) {
+      var property = properties[index];
+      var updatedName = prompt('Enter the updated name:', property.property_name);
+      var updatedType = prompt('Enter the updated type:', property.property_type);
+      var updatedLocation = prompt('Enter the updated location:', property.location);
+      var updatedDescription = prompt('Enter the updated description:', property.description);
+      var updatedBedrooms = prompt('Enter the updated number of bedrooms:', property.bedrooms);
+      var updatedBathrooms = prompt('Enter the updated number of bathrooms:', property.bathrooms);
+      var updatedCost = prompt('Enter the updated cost:', property.cost);
+
+      if (updatedName && updatedType && updatedLocation && updatedDescription && updatedBedrooms && updatedBathrooms && updatedCost) {
+          property.property_name = updatedName;
+          property.property_type = updatedType;
+          property.location = updatedLocation;
+          property.description = updatedDescription;
+          property.bedrooms = updatedBedrooms;
+          property.bathrooms = updatedBathrooms;
+          property.cost = updatedCost;
+          renderPropertiesList();
+      }
+  }
+
+  // Save property event listener
+  function saveProperty(index) {
+      var property = properties[index];
+
+      var form = document.createElement('form');
+      form.action = '/api/property/register';
+      form.method = 'POST';
+      form.enctype = 'multipart/form-data';
+
+      var propertyNameInput = document.createElement('input');
+      propertyNameInput.type = 'hidden';
+      propertyNameInput.name = 'property_name';
+      propertyNameInput.value = property.property_name;
+
+      var propertyTypeInput = document.createElement('input');
+      propertyTypeInput.type = 'hidden';
+      propertyTypeInput.name = 'property_type';
+      propertyTypeInput.value = property.property_type;
+
+      var locationInput = document.createElement('input');
+      locationInput.type = 'hidden';
+      locationInput.name = 'location';
+      locationInput.value = property.location;
+
+      var descriptionInput = document.createElement('textarea');
+      descriptionInput.name = 'description';
+      descriptionInput.style.display = 'none';
+      descriptionInput.value = property.description;
+
+      var bedroomsInput = document.createElement('input');
+      bedroomsInput.type = 'hidden';
+      bedroomsInput.name = 'bedrooms';
+      bedroomsInput.value = property.bedrooms;
+
+      var bathroomsInput = document.createElement('input');
+      bathroomsInput.type = 'hidden';
+      bathroomsInput.name = 'bathrooms';
+      bathroomsInput.value = property.bathrooms;
+
+      var costInput = document.createElement('input');
+      costInput.type = 'hidden';
+      costInput.name = 'cost';
+      costInput.value = property.cost;
+
+      var photosInput = document.createElement('input');
+      photosInput.type = 'file';
+      photosInput.name = 'photos';
+      photosInput.multiple = true;
+      photosInput.accept = 'image/*';
+      photosInput.style.display = 'none';
+
+      var mapsInput = document.createElement('input');
+      mapsInput.type = 'file';
+      mapsInput.name = 'maps';
+      mapsInput.accept = 'image/*';
+      mapsInput.style.display = 'none';
+
+      form.appendChild(propertyNameInput);
+      form.appendChild(propertyTypeInput);
+      form.appendChild(locationInput);
+      form.appendChild(descriptionInput);
+      form.appendChild(bedroomsInput);
+      form.appendChild(bathroomsInput);
+      form.appendChild(costInput);
+      form.appendChild(photos);
+      form.appendChild(maps);
+
+      document.body.appendChild(form);
+      form.submit();
+  }
+
+  // Render properties list
+  function renderPropertiesList() {
+      propertiesList.innerHTML = '';
+
+      properties.forEach(function(property, index) {
+          var li = document.createElement('li');
+          li.className = 'list-group-item';
+          li.innerHTML = `
+              <span>${property.property_name}</span>
+              <div>
+                  <button type="button" class="btn btn-primary btn-sm" onclick="editProperty(${index})">Edit</button>
+                  <button type="button" class="btn btn-danger btn-sm" onclick="deleteProperty(${index})">Delete</button>
+                  <button type="button" class="btn btn-success btn-sm" onclick="saveProperty(${index})">Save</button>
+              </div>
+          `;
+          propertiesList.appendChild(li);
+      });
+  }
+
+
+     // jquery  form validation
+     $(document).ready(function() {
+      $('#addPropertyForm').submit(function(event) {
+        event.preventDefault();
+
+        // Perform form validation
+        var property_name = $('#property_name').val();
+        var property_type = $('#property_type').val();
+        var location = $('#location').val();
+        var description = $('#description').val();
+        var bedrooms = $('#bedrooms').val();
+        var bathrooms = $('#bathrooms').val();
+        var cost = $('#cost').val();
+
+        // Check if any field is empty
+        if (property_name === '' || property_type === '' || location === '' ||
+            description === '' || bedrooms === '' || bathrooms === '' || cost === '') {
+          alert('Please fill in all the fields.');
+          return;
+        }
+
+        // Check if property type is selected
+        if (property_type === '') {
+          alert('Please select a property type.');
+          return;
+        }
+
+        // Check if bedrooms and bathrooms are positive numbers
+        if (bedrooms <= 0 || bathrooms <= 0) {
+          alert('Number of bedrooms and bathrooms should be greater than zero.');
+          return;
+        }
+
+        // Check if cost is a positive number
+        if (cost <= 0) {
+          alert('Cost should be a positive number.');
+          return;
+        }
+
+        // If all validations pass, submit the form
+        this.submit();
+      });
+    });
+</script>
+  
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </body>
+  </html>

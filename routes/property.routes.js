@@ -6,13 +6,13 @@ const propertyController = new PropertyController();
 
 // GET route for property registration page
 router.get('/register', (req, res) => {
-    res.render('register');
+    res.render('newproperty');
   });
 
 // Define property routes
 router.get('/getAll', propertyController.getAll);
 router.get('/:id', propertyController.getById);
-router.post('/add', propertyController.add);
+router.post('/register', propertyController.add);
 router.put('/:id', propertyController.update);
 router.delete('/:id', propertyController.deleteById);
 

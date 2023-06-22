@@ -34,13 +34,12 @@ class BaseController {
     async add(req, res) {
       try {
         const body = req.body;
-        const doc = await this.repo.create(body);
+        const doc = await this.repo.create(body); // Create a new document using the repo's create method
         this.sendSuccessResponse(res, 'Successfully created data', doc, 201);
       } catch (err) {
-        this.sendErrorResponse(res, 'Failed to add Data /Record');
+        this.sendErrorResponse(res, 'Failed to add data/record');
       }
     }
-  
     async update(req, res) {
         try {
           const id = req.params.id;

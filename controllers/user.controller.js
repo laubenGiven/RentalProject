@@ -2,6 +2,8 @@ const bcrypt = require('bcrypt');
 const BaseController = require('./base.controller');
 const UserRepository = require('../repository/user.repository');
 const User = require('../models/user.models');
+const flash = require('connect-flash');
+const session = require('express-session');
 
 class UserController extends BaseController {
   constructor() {
@@ -21,6 +23,15 @@ class UserController extends BaseController {
         return res.status(400).send('Passwords do not match.');
       }
 
+      // Check if username or email already exists
+      const existingUser = await User.findOne({ $or: [{ username }, { email }] });
+      if (existingUser) {
+        // Redirect back to the registration page with a pop-up message
+        return res.send(
+          `<script>alert("Username or email already exists."); window.location.href = "/api/users/register";</script>`
+        );
+      }
+
       const hashedPassword = await bcrypt.hash(password, 10);
 
       const newUser = new User({
@@ -32,7 +43,11 @@ class UserController extends BaseController {
 
       await newUser.save();
 
-      res.status(201).send('User registered successfully!');
+      //res.status(201).send('User registered successfully!');
+      // Redirect to the login page with a success message
+      res.send( `<script>alert("Account created successfully!!"); window.location.href = "/api/users/login";</script>`)
+  
+
     } catch (error) {
       console.error(error);
       res.status(500).send('Failed to create user.');
@@ -75,7 +90,6 @@ class UserController extends BaseController {
       user.password = hashedPassword;
       await user.save();
 
-      
       // Display a successful message as a pop-up window
       const message = 'Password reset successfully!';
       const script = `
@@ -89,8 +103,9 @@ class UserController extends BaseController {
         </script>
       `;
 
-      res.send(script);      
-        
+     //res.send(script);
+     res.send( `<script>alert("Password resetted  successfully!"); window.location.href = "/api/users/login";</script>`)
+
     } catch (error) {
       console.error('Error resetting password:', error);
       res.status(500).send({ error: 'Failed to reset password! Try again!!' });
@@ -99,4 +114,3 @@ class UserController extends BaseController {
 }
 
 module.exports = UserController;
-

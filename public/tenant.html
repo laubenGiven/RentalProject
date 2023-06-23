@@ -12,16 +12,25 @@
         .container .row {
   margin-bottom: 20px; /* Adjust the value as per your desired spacing */
 }
+.card-img-top{
+    border-radius: 3%;
+    height: 200px;
+    width: 100%;
+    align-content: center;
+    align-self: center;
+    border-top: 1rem;
+    margin-top:0rem;
+}
     </style>
 </head>
 <body>
-    <div class="container">
+       <div class="container">
         <h1>Tenant Page</h1>
         <div class="row">
             <div class="col-md-4">
-                <div class="card">                    
-                    <div class="card-body">
-                        <img src="/public/images/apartments.jpg" class="card-img-top" alt="Image 1">
+                <div class="card"> 
+                    <img src="./images/apartments.jpg" class="card-img-top" alt="Image 1">                   
+                    <div class="card-body">                        
                         <h5 class="card-title">Image 1</h5>
                         <p class="card-text">Description 1</p>
                         <div class="likes">
@@ -43,10 +52,16 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="/public/img/aparts.jpg" class="card-img-top" alt="Image 2">
+                    <img src="./images/aparts.jpg" class="card-img-top" alt="Image 2">
                     <div class="card-body">
                         <h5 class="card-title">Image 2</h5>
                         <p class="card-text">Description 2</p>
+                        <div class="likes">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                            </svg>
+                            <span class="like-count">0</span>
+                          </div>
                         <button class="btn btn-primary like-btn">Like</button>
                         <button class="btn btn-danger">Dislike</button>
                         <button class="btn btn-primary comment-btn">Comment</button>
@@ -59,10 +74,16 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="image3.jpg" class="card-img-top" alt="Image 3">
+                    <img src="./images/bedroom3.jpg" class="card-img-top" alt="Image 3">
                     <div class="card-body">
                         <h5 class="card-title">Image 3</h5>
                         <p class="card-text">Description 3</p>
+                        <div class="likes">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                            </svg>
+                            <span class="like-count">0</span>
+                          </div>
                         <button class="btn btn-primary like-btn">Like</button>
                         <button class="btn btn-danger">Dislike</button>
                         <button class="btn btn-primary comment-btn">Comment</button>
@@ -77,11 +98,17 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <div class="card">                    
-                    <div class="card-body">
-                        <img src="/public/images/apartments.jpg" class="card-img-top" alt="Image 1">
+                <div class="card"> 
+                    <img src="./images/apartments.jpg" class="card-img-top" alt="Image 1">                   
+                    <div class="card-body">                       
                         <h5 class="card-title">Image 1</h5>
                         <p class="card-text">Description 1</p>
+                        <div class="likes">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                            </svg>
+                            <span class="like-count">0</span>
+                          </div>
                         <button class="btn btn-primary like-btn">Like</button>
                         <button class="btn btn-danger">Dislike</button>
                         <button class="btn btn-primary comment-btn">Comment</button>
@@ -94,10 +121,16 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="/public/img/aparts.jpg" class="card-img-top" alt="Image 2">
+                    <img src="./images/countryside.avif" class="card-img-top" alt="Image 2">
                     <div class="card-body">
                         <h5 class="card-title">Image 2</h5>
                         <p class="card-text">Description 2</p>
+                        <div class="likes">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                            </svg>
+                            <span class="like-count">0</span>
+                          </div>
                         <button class="btn btn-primary like-btn">Like</button>
                         <button class="btn btn-danger">Dislike</button>
                         <button class="btn btn-primary comment-btn">Comment</button>
@@ -110,10 +143,16 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="image3.jpg" class="card-img-top" alt="Image 3">
+                    <img src="./images/coparts.jpg" class="card-img-top" alt="Image 3">
                     <div class="card-body">
                         <h5 class="card-title">Image 3</h5>
                         <p class="card-text">Description 3</p>
+                        <div class="likes">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                            </svg>
+                            <span class="like-count">0</span>
+                          </div>
                         <button class="btn btn-primary like-btn">Like</button>
                         <button class="btn btn-danger">Dislike</button>
                         <button class="btn btn-primary comment-btn">Comment</button>
@@ -129,11 +168,17 @@
         
         <div class="row">
             <div class="col-md-4">
-                <div class="card">                    
-                    <div class="card-body">
-                        <img src="/public/images/apartments.jpg" class="card-img-top" alt="Image 1">
+                <div class="card"> 
+                    <img src="./images/apartments.jpg" class="card-img-top" alt="Image 1">                   
+                    <div class="card-body">                        
                         <h5 class="card-title">Image 1</h5>
                         <p class="card-text">Description 1</p>
+                        <div class="likes">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                            </svg>
+                            <span class="like-count">0</span>
+                          </div>
                         <button class="btn btn-primary like-btn">Like</button>
                         <button class="btn btn-danger">Dislike</button>
                         <button class="btn btn-primary comment-btn">Comment</button>
@@ -146,10 +191,16 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="/public/img/aparts.jpg" class="card-img-top" alt="Image 2">
+                    <img src="./images/aparts.jpg" class="card-img-top" alt="Image 2">
                     <div class="card-body">
                         <h5 class="card-title">Image 2</h5>
                         <p class="card-text">Description 2</p>
+                        <div class="likes">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                            </svg>
+                            <span class="like-count">0</span>
+                          </div>
                         <button class="btn btn-primary like-btn">Like</button>
                         <button class="btn btn-danger">Dislike</button>
                         <button class="btn btn-primary comment-btn">Comment</button>
@@ -162,10 +213,16 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="image3.jpg" class="card-img-top" alt="Image 3">
+                    <img src="./images/congested.avif" class="card-img-top" alt="Image 3">
                     <div class="card-body">
                         <h5 class="card-title">Image 3</h5>
                         <p class="card-text">Description 3</p>
+                        <div class="likes">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                            </svg>
+                            <span class="like-count">0</span>
+                          </div>
                         <button class="btn btn-primary like-btn">Like</button>
                         <button class="btn btn-danger">Dislike</button>
                         <button class="btn btn-primary comment-btn">Comment</button>
@@ -180,11 +237,17 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <div class="card">                    
-                    <div class="card-body">
-                        <img src="./images/apartments.jpg" class="card-img-top" alt="Image 1">
+                <div class="card">  
+                    <img src="./images/apartments.jpg" class="card-img-top" alt="Image 1">                  
+                    <div class="card-body">                       
                         <h5 class="card-title">Image 1</h5>
                         <p class="card-text">Description 1</p>
+                        <div class="likes">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                            </svg>
+                            <span class="like-count">0</span>
+                          </div>
                         <button class="btn btn-primary like-btn">Like</button>
                         <button class="btn btn-danger">Dislike</button>
                         <button class="btn btn-primary comment-btn">Comment</button>
@@ -197,10 +260,16 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="/public/img/aparts.jpg" class="card-img-top" alt="Image 2">
+                    <img src="./images/family2.jpg" class="card-img-top" alt="Image 2">
                     <div class="card-body">
                         <h5 class="card-title">Image 2</h5>
                         <p class="card-text">Description 2</p>
+                        <div class="likes">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                            </svg>
+                            <span class="like-count">0</span>
+                          </div>
                         <button class="btn btn-primary like-btn">Like</button>
                         <button class="btn btn-danger">Dislike</button>
                         <button class="btn btn-primary comment-btn">Comment</button>
@@ -213,10 +282,16 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="image3.jpg" class="card-img-top" alt="Image 3">
+                    <img src="./images/coparts.jpg" class="card-img-top" alt="Image 3">
                     <div class="card-body">
                         <h5 class="card-title">Image 3</h5>
                         <p class="card-text">Description 3</p>
+                        <div class="likes">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                            </svg>
+                            <span class="like-count">0</span>
+                          </div>
                         <button class="btn btn-primary like-btn">Like</button>
                         <button class="btn btn-danger">Dislike</button>
                         <button class="btn btn-primary comment-btn">Comment</button>

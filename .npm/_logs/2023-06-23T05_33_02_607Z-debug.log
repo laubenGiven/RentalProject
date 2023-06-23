@@ -1,0 +1,32 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/c9/.c9/node/bin/node',
+1 verbose cli   '/home/ubuntu/.c9/node/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--production',
+1 verbose cli   'https://d29k1zxsqibxmt.cloudfront.net/static/cloud9ide-nak-3cb2f94.tar.gz' ]
+2 info using npm@6.9.0
+3 info using node@v10.16.0
+4 verbose npm-session 3c0aedab18a94d51
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData error for https://d29k1zxsqibxmt.cloudfront.net/static/cloud9ide-nak-3cb2f94.tar.gz request to https://d29k1zxsqibxmt.cloudfront.net/static/cloud9ide-nak-3cb2f94.tar.gz failed, reason: getaddrinfo EAI_AGAIN d29k1zxsqibxmt.cloudfront.net d29k1zxsqibxmt.cloudfront.net:443
+8 timing stage:rollbackFailedOptional Completed in 2ms
+9 timing stage:runTopLevelLifecycles Completed in 21943ms
+10 verbose type system
+11 verbose stack FetchError: request to https://d29k1zxsqibxmt.cloudfront.net/static/cloud9ide-nak-3cb2f94.tar.gz failed, reason: getaddrinfo EAI_AGAIN d29k1zxsqibxmt.cloudfront.net d29k1zxsqibxmt.cloudfront.net:443
+11 verbose stack     at ClientRequest.req.on.err (/opt/c9/.c9/node/lib/node_modules/npm/node_modules/node-fetch-npm/src/index.js:68:14)
+11 verbose stack     at ClientRequest.emit (events.js:198:13)
+11 verbose stack     at TLSSocket.socketErrorListener (_http_client.js:392:9)
+11 verbose stack     at TLSSocket.emit (events.js:198:13)
+11 verbose stack     at emitErrorNT (internal/streams/destroy.js:91:8)
+11 verbose stack     at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
+11 verbose stack     at process._tickCallback (internal/process/next_tick.js:63:19)
+12 verbose cwd /opt/c9/.c9
+13 verbose Linux 6.3.7-200.fc38.x86_64
+14 verbose argv "/opt/c9/.c9/node/bin/node" "/home/ubuntu/.c9/node/bin/npm" "install" "--production" "https://d29k1zxsqibxmt.cloudfront.net/static/cloud9ide-nak-3cb2f94.tar.gz"
+15 verbose node v10.16.0
+16 verbose npm  v6.9.0
+17 error code EAI_AGAIN
+18 error errno EAI_AGAIN
+19 error request to https://d29k1zxsqibxmt.cloudfront.net/static/cloud9ide-nak-3cb2f94.tar.gz failed, reason: getaddrinfo EAI_AGAIN d29k1zxsqibxmt.cloudfront.net d29k1zxsqibxmt.cloudfront.net:443
+20 verbose exit [ 1, true ]

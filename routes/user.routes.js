@@ -36,8 +36,7 @@ router.get('/:id', userController.getUserById);
 router.post('/resetpassword', userController.resetPassword);
 
 
-
-//Login route
+// Login route
 router.post('/auth', async (request, response) => {
   try {
     const { username, password } = request.body;
@@ -54,9 +53,21 @@ router.post('/auth', async (request, response) => {
       if (isPasswordValid) {
         request.session.loggedin = true;
         request.session.username = username;
-        response.render('index', { username, message: ' Welcome to the DashBoard.' });
+        
+        // Render different views based on the user's role
+        if (user.role === 'tenant') {
+          response.render('tenant', { username, message: 'Welcome to the Tenant Dashboard.' });
+        } else if (user.role === 'landlord') {
+          response.render('landlord', { username, message: 'Welcome to the Landlord Dashboard.' });
+        } else if (user.role === 'user') {
+          response.render('index', { username, message: 'Welcome to the User Dashboard.' });
+        } else if (user.role === 'admin') {
+          response.render('admin', { username, message: 'Welcome to the Admin Dashboard.' });
+        } else {
+          response.send('Invalid role!');
+        }
       } else {
-        response.send('Incorrect Username and / or Password!');
+        response.send('Incorrect Username and/or Password!');
       }
     } else {
       response.send('Incorrect Username and/or Password!');

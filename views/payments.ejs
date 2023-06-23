@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  
+</head>
+<body>
+    <div class="container">
+        <h1>Make Payment</h1>
+        <form id="paymentForm" method="POST">
+            <div class="form-group">
+                <label for="propertyId">Property ID</label>
+                <input type="text" class="form-control" id="propertyId" name="propertyId" readonly value="123456">
+            </div>
+            <div class="form-group">
+                <label for="tenantId">Tenant ID:</label>
+                <input type="text" class="form-control" id="tenantId" name="tenantId" readonly value="789012">
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount to Pay:</label>
+                <input type="text" class="form-control" id="amount" name="amount" placeholder="Enter the amount">
+            </div>
+            <div class="form-group">
+                <label for="paymentDate">Payment Date:</label>
+                <input type="date" class="form-control" id="paymentDate" name="paymentDate">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Payment</button>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var currentDate = new Date().toISOString().split('T')[0];
+            $('#paymentDate').val(currentDate);
+            $('#paymentForm').validate({
+                rules: {
+                    amount: {
+                        required: true,
+                        number: true
+                    },
+                    paymentDate: {
+                        required: true
+                    }
+                },
+                messages: {
+                    amount: {
+                        required: "Please enter the amount to pay.",
+                        number: "Please enter a valid number."
+                    }
+                },
+                submitHandler: function(form) {
+                    // Handle the form submission using AJAX or other logic
+                    // ...
+                    // Example AJAX call:
+                    // $.ajax({
+                    //     url: 'payment/submit',
+                    //     type: 'POST',
+                    //     data: $(form).serialize(),
+                    //     success: function(response) {
+                    //         // Handle the success response
+                    //     },
+                    //     error: function(xhr, status, error) {
+                    //         // Handle the error response
+                    //     }
+                    // });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

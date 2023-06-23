@@ -1,0 +1,726 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>RPMS
+		</title>
+	    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+	    <!----css3---->
+        <link rel="stylesheet" href="/css/custom.css">
+		<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+	
+	
+	
+	<!--google material icon-->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <style>
+          .comment-box {
+              display: none;
+          }
+  
+          .container .row {
+    margin-bottom: 20px; /* Adjust the value as per your desired spacing */
+  }
+  .card-img-top{
+      border-radius: 3%;
+      height: 200px;
+      width: 100%;
+      align-content: center;
+      align-self: center;
+      border-top: 1rem;
+      margin-top:0rem;
+  }
+
+  .custom-blockquote {
+      border-left: 5px solid #007bff;
+      padding-left: 20px;
+      margin: 20px 0;
+      background-color: #f8f9fa;
+      font-size: large;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      font-style: italic;
+  }
+      </style>
+  </head>
+  <body>
+  
+
+
+
+<div class="wrapper">
+
+
+<div class="body-overlay"></div>
+
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><img src="/images/house.png" class="img-fluid"/><span>RPMS</span></h3>
+            </div>
+            <ul class="list-unstyled components">
+			<li  class="active">
+                    <a href="#" class="dashboard"><i class="material-icons">dashboard</i><span>Dashboard</span></a>
+                </li>
+		
+		      <div class="small-screen navbar-display">
+                <li class="dropdown d-lg-none d-md-block d-xl-none d-sm-block">
+                    <a href="#homeSubmenu0" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+					<i class="material-icons">notifications</i><span> 4 notification</span></a>
+                    <ul class="collapse list-unstyled menu" id="homeSubmenu0">
+                                    <li>
+                                    <a href="#">You have 5 new messages</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">landlord, allan added new property</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">new lease request!</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">5 warnings in Server Console</a>
+                                    </li>
+                    </ul>
+                </li>
+				
+				<li  class="d-lg-none d-md-block d-xl-none d-sm-block">
+                    <a href="#"><i class="material-icons">apps</i><span>apps</span></a>
+                </li>
+				
+				 <li  class="d-lg-none d-md-block d-xl-none d-sm-block">
+                    <a href="#"><i class="material-icons">person</i><span>user</span></a>
+                </li>
+				
+				<li  class="d-lg-none d-md-block d-xl-none d-sm-block">
+                    <a href="#"><i class="material-icons">settings</i><span>setting</span></a>
+                </li>
+				</div>
+			
+			
+                <li class="dropdown">
+                    <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+					<i class="material-icons">add-business</i><span>Properties</span></a>
+                    <ul class="collapse list-unstyled menu" id="homeSubmenu1">
+                       
+                        <li>
+                            <a href="#">View  Most popular properties</a>
+                        </li>
+                    </ul>
+                </li>
+                
+				
+			   
+               
+            </ul>
+
+           
+        </nav>
+		
+		
+
+        <!-- Page Content  -->
+        <div id="content">
+		
+		<div class="top-navbar">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="d-xl-block d-lg-block d-md-mone d-none">
+                        <span class="material-icons">arrow_back_ios</span>
+                    </button>
+					
+					<a class="navbar-brand" href="#"> Welcome To Rental Property Management System</a>
+					
+                    <button class="d-inline-block d-lg-none ml-auto more-button" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="material-icons">more_vert</span>
+                    </button>
+
+                    <div class="collapse navbar-collapse d-lg-block d-xl-block d-sm-none d-md-none d-none" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto"> 
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                  <span class="material-icons">person</span>
+                                  <span><%= username %></span>
+                                </a>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/api/users/logout">Logout</a>
+                              </li>  
+                            <li class="dropdown nav-item active">
+                                <a href="#" class="nav-link" data-toggle="dropdown">
+                                   <span class="material-icons">notifications</span>
+								   <span class="notification">4</span>
+                               </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">You have 5 new messages</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">land lord allan , added new property</a>
+                                    </li>                                    
+                                    
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+								<span class="material-icons">apps</span>
+								</a>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+								<span class="material-icons">person</span>
+								</a>
+                                </li>
+                            -->
+							<li class="nav-item">
+                                <a class="nav-link" href="#">
+								<span class="material-icons">settings</span>
+								</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+	    </div>
+			
+
+
+
+<!-- main content-->
+<div class="container">
+    <blockquote class="custom-blockquote">
+        <p>
+          Our platform is designed to streamline the rental process
+          and provide you with a seamless experience.
+          Feel free to explore the features and functionalities
+          we have to offer, and don't hesitate to reach out
+          to our support team if you have any questions or need assistance.
+          Thank you for choosing our Rental Property Management System,
+          and we hope you have a fantastic experience managing your rentals!
+        </p>
+      </blockquote>
+      <div class="row">
+        <div class="col-md-4">
+            <div class="card"> 
+                <img src="/images/apartments.jpg" class="card-img-top" alt="Image 1">                   
+                <div class="card-body">                        
+                    <h6 class="card-title">Modern and spacious apartment</h6>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse1">View Details</button>
+                        <div id="detailsCollapse1" class="collapse">
+                            <p>
+                                This luxurious property features high-end finishes, an open-concept layout, and floor-to-ceiling windows that flood the space with natural light.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                    </div>
+                    <button class="btn btn-primary like-button">Like</button>
+                    <button class="btn btn-primary liked-button" style="display: none;">Liked</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/aparts.jpg" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Charming and cozy cottage</h5>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse2">View Details</button>
+                        <div id="detailsCollapse2" class="collapse">
+                            <p>
+                                Nestled in a serene countryside setting. This picturesque house offers a peaceful retreat with its lush garden, rustic interiors, and a cozy fireplace perfect for chilly evenings.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                    </div>
+                    <button class="btn btn-primary like-btn">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/bedroom3.jpg" class="card-img-top" alt="Image 3">
+                <div class="card-body">
+                    <h6 class="card-title">Elegant and contemporary townhouse</h6>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse3">View Details</button>
+                        <div id="detailsCollapse3" class="collapse">
+                            <p>
+                                With a stylish design. This sophisticated property boasts a sleek kitchen, a private rooftop terrace for entertaining, and state-of-the-art amenities for a luxurious urban lifestyle.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                    </div>
+                    <button class="btn btn-primary like-btn">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card"> 
+                <img src="/images/executive.avif" class="card-img-top" alt="Image 1">                   
+                <div class="card-body">                       
+                    <h6 class="card-title">Quaint and historic Victorian home</h6>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse4">View Details</button>
+                        <div id="detailsCollapse4" class="collapse">
+                            <p>
+                                with timeless charm. Step back in time as you explore the intricate details, stained glass windows, and a wrap-around porch that exude old-world charm and character
+                            </p>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                      </div>
+                    <button class="btn btn-primary like-btn">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/countryside.avif" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title"> Spacious family home </h5>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse5">View Details</button>
+                        <div id="detailsCollapse5" class="collapse">
+                            <p>
+                                with a large backyard and a pool. Ideal for entertaining, this well-appointed house features multiple living areas, a gourmet kitchen, and an outdoor oasis perfect for summer gatherings
+                            </p>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                      </div>
+                    <button class="btn btn-primary like-btn">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/coparts.jpg" class="card-img-top" alt="Image 3">
+                <div class="card-body">
+                    <h5 class="card-title">Luxury beachfront villa </h5>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse6">View Details</button>
+                        <div id="detailsCollapse6" class="collapse">
+                            <p>
+                                with breathtaking ocean views. Enjoy the ultimate coastal living experience with private beach access, a sun-drenched patio, and luxurious amenities, including a spa and a home theater.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                      </div>
+                    <button class="btn btn-primary like-btn">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card"> 
+                <img src="/images/strolls.jpg" class="card-img-top" alt="Image 1">                   
+                <div class="card-body">                        
+                    <h5 class="card-title">Contemporary loft </h5>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse7">View Details</button>
+                        <div id="detailsCollapse7" class="collapse">
+                            <p>
+                                with an industrial chic aesthetic. This trendy urban space offers an open floor plan, exposed brick walls, high ceilings, and an abundance of natural light, creating a stylish and unique living environment.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                      </div>
+                    <button class="btn btn-primary like-btn">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/living2.jpg" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Rustic mountain retreat</h5>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse8">View Details</button>
+                        <div id="detailsCollapse8" class="collapse">
+                            <p>
+                                surrounded by scenic beauty. Escape to this charming cabin nestled in the woods, featuring a cozy fireplace, panoramic mountain views, and access to hiking trails for outdoor enthusiasts.
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                      </div>
+                    <button class="btn btn-primary like-btn">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/congested.avif" class="card-img-top" alt="Image 3">
+                <div class="card-body">
+                    <h5 class="card-title">Sleek and modern penthouse</h5>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse9">View Details</button>
+                        <div id="detailsCollapse9" class="collapse">
+                            <p>
+                                with panoramic city skyline views. This luxurious penthouse boasts a spacious rooftop terrace, high-end appliances, and elegant finishes, providing a sophisticated and exclusive living experience.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                      </div>
+                    <button class="btn btn-primary like-btn">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">  
+                <img src="/images/spartial.avif" class="card-img-top" alt="Image 1">                  
+                <div class="card-body">                       
+                    <h5 class="card-title">Traditional family house</h5>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse10">View Details</button>
+                        <div id="detailsCollapse10" class="collapse">
+                            <p>
+                                with a welcoming atmosphere. This comfortable home offers a warm and inviting ambiance, spacious bedrooms, a well-manicured backyard, and a charming front porch, perfect for creating lasting memories
+                            </p>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                      </div>
+                    <button class="btn btn-primary like-btn">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/family2.jpg" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">A charming bungalow</h5>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse11">View Details</button>
+                        <div id="detailsCollapse11" class="collapse">
+                            <p>
+                                nestled in a serene neighborhood, perfect for small families or couples seeking a cozy retreat. This property features a beautifully landscaped garden and a spacious patio area for outdoor gatherings
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                      </div>
+                    <button class="btn btn-primary like-btn">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="/images/livingroom.jpg" class="card-img-top" alt="Image 3">
+                <div class="card-body">
+                    <h6 class="card-title">An elegant and modern apartment</h6>
+                    <div class="card-text">
+                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse12">View Details</button>
+                        <div id="detailsCollapse12" class="collapse">
+                            <p>
+                                in the heart of the city, offering breathtaking views of the skyline. With its open-concept layout, luxurious amenities, and proximity to popular restaurants and shops, this property is ideal for urban professionals seeking a sophisticated living experience.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                        </svg>
+                        <span class="like-count">0</span>
+                      </div>
+                    <button class="btn btn-primary like-btn">Like</button>
+                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary comment-btn">Comment</button>
+                    <div class="comment-box">
+                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+	
+<footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+      <div class="col-md-6">
+        <nav class="d-flex">
+            <ul class="m-0 p-0">
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Company
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Portfolio
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Blog
+                    </a>
+                </li>
+            </ul>
+        </nav>
+       
+    </div>
+    <div class="col-md-6">
+     <p class="copyright d-flex justify-content-end"> &copy 2023 Design by
+            <a href="#">Mpairwe lauben</a> Group assignment COCIS BSSE
+        </p>
+    </div>
+      </div>
+        </div>
+</footer>
+        
+        </div>
+        
+    
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="/js/jquery-3.3.1.slim.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+  $('#sidebarCollapse').on('click', function () {
+    $('#sidebar').toggleClass('active');
+    $('#content').toggleClass('active');
+  });
+
+  $('.more-button, .body-overlay').on('click', function () {
+    $('#sidebar, .body-overlay').toggleClass('show-nav');
+  });
+
+  // Add event listeners for comment buttons
+  $('.comment-btn').click(function () {
+    var commentBox = $(this).siblings('.comment-box');
+    commentBox.toggle();
+
+    // Hide comment box if double-clicked
+    var timeout = 300; // Set a timeout value (in milliseconds)
+    var clicks = $(this).data('clicks');
+
+    if (!clicks) {
+      // First click
+      $(this).data('clicks', true);
+      setTimeout(function () {
+        if ($(this).data('clicks')) {
+          // If still a single click after the timeout, reset the data attribute
+          $(this).data('clicks', false);
+        }
+      }, timeout);
+    } else {
+      // Double-click
+      commentBox.hide();
+      $(this).data('clicks', false);
+    }
+  });
+
+  const likeButton = document.querySelector('.like-button');
+  const likedButton = document.querySelector('.liked-button');
+  const likeCount = document.querySelector('.like-count');
+
+  let likes = 0;
+  let isLiked = false;
+
+  likeButton.addEventListener('click', () => {
+    if (!isLiked) {
+      likes++;
+      likeCount.textContent = likes;
+      likeButton.style.display = 'none';
+      likedButton.style.display = 'inline-block';
+      isLiked = true;
+    }
+  });
+
+  likedButton.addEventListener('click', () => {
+    if (isLiked) {
+      likes--;
+      likeCount.textContent = likes;
+      likedButton.style.display = 'none';
+      likeButton.style.display = 'inline-block';
+      isLiked = false;
+    }
+  });
+
+  $(document).ready(function () {
+    $('.post-comment-btn').click(function () {
+      var comment = $(this).siblings('textarea').val();
+      // Perform the logic to post the comment to the server
+      // ...
+      // Display a success message or handle the response accordingly
+    });
+  });
+});
+
+
+</script>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

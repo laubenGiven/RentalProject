@@ -8,19 +8,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      display: flex;
-      margin: 0;
-      padding: 0;
-    }
-    .dashboard-container {
-      display: flex;
-    }
-    
-    .content {
-      flex: 1;
-    }
-
     .card {
       width: 18rem;
       margin-bottom: 20px;
@@ -63,6 +50,13 @@
       font-style: italic;
     }
 
+    .sidebar {
+      background-color: #f1f1f1;
+      width: 200px;
+      float:left;
+      position: relative;
+    }
+
     .navigation {
       list-style-type: none;
       padding: 0;
@@ -88,34 +82,8 @@
     .navigation li a:hover {
       background-color: #ddd;
     }
-
-    .container {
+    .container{
       position: relative;
-    }
-    
-    /* Customize the navbar and sidebar */
-    
-    .navbar {
-      background-color: #333;
-      color: #fff;
-    }
-    .sidebar {
-      background-color: #f1f1f1;
-      width: 200px;
-    }
-
-    .content {
-      flex-grow: 1;
-      padding: 20px;
-    }
-    
-    .sidebar ul.navigation li a {
-      color: #333;
-    }
-    
-    .sidebar ul.navigation li a.active {
-      background-color: #ddd;
-      color: #333;
     }
   </style>
 </head>
@@ -123,7 +91,7 @@
 <body>
   
   <nav class="navbar navbar-expand-lg bg-dark text-white">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand" href="#">RPMS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -151,8 +119,7 @@
   </nav>
   
   
-  <div class="container">
-    <div class="dashboard-container">
+  <div class="container-fluid">    
     <div id="sidebar" class="sidebar">
       <ul class="navigation">
         <li><a href="#" class="active">Most Popular</a></li>
@@ -160,7 +127,6 @@
         <li><a href="#">Likes</a></li>
         <li><a href="#">Dislikes</a></li>
       </ul>
-    </div>
     </div>
     <div id="content" class="content">
       <blockquote class="custom-blockquote">

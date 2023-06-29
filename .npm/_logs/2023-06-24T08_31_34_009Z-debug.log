@@ -1,0 +1,1666 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'npm@latest'
+1 verbose cli ]
+2 info using npm@6.14.15
+3 info using node@v12.22.6
+4 verbose npm-session a60b37b5002946df
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 http fetch GET 200 https://registry.npmjs.org/npm 2229ms
+8 http fetch GET 200 https://registry.npmjs.org/npm/-/npm-9.7.2.tgz 1322ms
+9 silly pacote tag manifest for npm@latest fetched in 3803ms
+10 timing stage:loadCurrentTree Completed in 8295ms
+11 silly install loadIdealTree
+12 silly install cloneCurrentTreeToIdealTree
+13 timing stage:loadIdealTree:cloneCurrentTree Completed in 28ms
+14 silly install loadShrinkwrap
+15 timing stage:loadIdealTree:loadShrinkwrap Completed in 588ms
+16 silly install loadAllDepsIntoIdealTree
+17 silly resolveWithNewModule npm@9.7.2 checking installable status
+18 silly tarball trying https://registry.npmjs.org/npm/-/npm-9.7.2.tgz by hash: sha512-LLoOudiSURxzRxfGj+vsD+hKKv2EfxyshDOznxruIkZMouvbaF5sFm4yAwHqxS8aVaOdRl03pRmGpcrFMqMt3g==
+19 silly extract https://registry.npmjs.org/npm/-/npm-9.7.2.tgz extracted to /tmp/npm-574-01542260/unpack-5181d7f7 (12800ms)
+20 silly addBundled read tarball
+21 silly cleanup remove extracted module
+22 silly removeObsoleteDep removing npm@6.14.15 from the tree as its been replaced by a newer version or is no longer required
+23 silly removeObsoleteDep removing ansicolors@0.3.2 from the tree as its been replaced by a newer version or is no longer required
+24 silly removeObsoleteDep removing ansistyles@0.1.3 from the tree as its been replaced by a newer version or is no longer required
+25 silly removeObsoleteDep removing archy@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+26 silly removeObsoleteDep removing byte-size@5.0.1 from the tree as its been replaced by a newer version or is no longer required
+27 silly removeObsoleteDep removing call-limit@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+28 silly removeObsoleteDep removing ci-info@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+29 silly removeObsoleteDep removing cli-columns@3.1.2 from the tree as its been replaced by a newer version or is no longer required
+30 silly removeObsoleteDep removing columnify@1.5.4 from the tree as its been replaced by a newer version or is no longer required
+31 silly removeObsoleteDep removing wcwidth@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+32 silly removeObsoleteDep removing defaults@1.0.3 from the tree as its been replaced by a newer version or is no longer required
+33 silly removeObsoleteDep removing clone@1.0.4 from the tree as its been replaced by a newer version or is no longer required
+34 silly removeObsoleteDep removing config-chain@1.1.12 from the tree as its been replaced by a newer version or is no longer required
+35 silly removeObsoleteDep removing proto-list@1.2.4 from the tree as its been replaced by a newer version or is no longer required
+36 silly removeObsoleteDep removing detect-indent@5.0.0 from the tree as its been replaced by a newer version or is no longer required
+37 silly removeObsoleteDep removing detect-newline@2.1.0 from the tree as its been replaced by a newer version or is no longer required
+38 silly removeObsoleteDep removing editor@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+39 silly removeObsoleteDep removing iferr@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+40 silly removeObsoleteDep removing init-package-json@1.10.3 from the tree as its been replaced by a newer version or is no longer required
+41 silly removeObsoleteDep removing promzard@0.3.0 from the tree as its been replaced by a newer version or is no longer required
+42 silly removeObsoleteDep removing is-cidr@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+43 silly removeObsoleteDep removing cidr-regex@2.0.10 from the tree as its been replaced by a newer version or is no longer required
+44 silly removeObsoleteDep removing ip-regex@2.1.0 from the tree as its been replaced by a newer version or is no longer required
+45 silly removeObsoleteDep removing lazy-property@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+46 silly removeObsoleteDep removing libcipm@4.0.8 from the tree as its been replaced by a newer version or is no longer required
+47 silly removeObsoleteDep removing libnpm@3.0.1 from the tree as its been replaced by a newer version or is no longer required
+48 silly removeObsoleteDep removing bin-links@1.1.8 from the tree as its been replaced by a newer version or is no longer required
+49 silly removeObsoleteDep removing cmd-shim@3.0.3 from the tree as its been replaced by a newer version or is no longer required
+50 silly removeObsoleteDep removing gentle-fs@2.3.1 from the tree as its been replaced by a newer version or is no longer required
+51 silly removeObsoleteDep removing aproba@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+52 silly removeObsoleteDep removing fs-vacuum@1.2.10 from the tree as its been replaced by a newer version or is no longer required
+53 silly removeObsoleteDep removing iferr@0.1.5 from the tree as its been replaced by a newer version or is no longer required
+54 silly removeObsoleteDep removing find-npm-prefix@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+55 silly removeObsoleteDep removing libnpmconfig@1.2.1 from the tree as its been replaced by a newer version or is no longer required
+56 silly removeObsoleteDep removing find-up@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+57 silly removeObsoleteDep removing locate-path@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+58 silly removeObsoleteDep removing p-locate@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+59 silly removeObsoleteDep removing p-limit@2.2.0 from the tree as its been replaced by a newer version or is no longer required
+60 silly removeObsoleteDep removing p-try@2.2.0 from the tree as its been replaced by a newer version or is no longer required
+61 silly removeObsoleteDep removing libnpmpublish@1.1.2 from the tree as its been replaced by a newer version or is no longer required
+62 silly removeObsoleteDep removing npm-logical-tree@1.2.1 from the tree as its been replaced by a newer version or is no longer required
+63 silly removeObsoleteDep removing libnpmaccess@3.0.2 from the tree as its been replaced by a newer version or is no longer required
+64 silly removeObsoleteDep removing libnpmhook@5.0.3 from the tree as its been replaced by a newer version or is no longer required
+65 silly removeObsoleteDep removing libnpmorg@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+66 silly removeObsoleteDep removing libnpmsearch@2.0.2 from the tree as its been replaced by a newer version or is no longer required
+67 silly removeObsoleteDep removing libnpmteam@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+68 silly removeObsoleteDep removing libnpx@10.2.4 from the tree as its been replaced by a newer version or is no longer required
+69 silly removeObsoleteDep removing dotenv@5.0.1 from the tree as its been replaced by a newer version or is no longer required
+70 silly removeObsoleteDep removing yargs@14.2.3 from the tree as its been replaced by a newer version or is no longer required
+71 silly removeObsoleteDep removing cliui@5.0.0 from the tree as its been replaced by a newer version or is no longer required
+72 silly removeObsoleteDep removing string-width@3.1.0 from the tree as its been replaced by a newer version or is no longer required
+73 silly removeObsoleteDep removing emoji-regex@7.0.3 from the tree as its been replaced by a newer version or is no longer required
+74 silly removeObsoleteDep removing is-fullwidth-code-point@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+75 silly removeObsoleteDep removing strip-ansi@5.2.0 from the tree as its been replaced by a newer version or is no longer required
+76 silly removeObsoleteDep removing ansi-regex@4.1.0 from the tree as its been replaced by a newer version or is no longer required
+77 silly removeObsoleteDep removing wrap-ansi@5.1.0 from the tree as its been replaced by a newer version or is no longer required
+78 silly removeObsoleteDep removing string-width@3.1.0 from the tree as its been replaced by a newer version or is no longer required
+79 silly removeObsoleteDep removing is-fullwidth-code-point@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+80 silly removeObsoleteDep removing strip-ansi@5.2.0 from the tree as its been replaced by a newer version or is no longer required
+81 silly removeObsoleteDep removing ansi-regex@4.1.0 from the tree as its been replaced by a newer version or is no longer required
+82 silly removeObsoleteDep removing decamelize@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+83 silly removeObsoleteDep removing find-up@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+84 silly removeObsoleteDep removing locate-path@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+85 silly removeObsoleteDep removing p-locate@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+86 silly removeObsoleteDep removing p-limit@2.3.0 from the tree as its been replaced by a newer version or is no longer required
+87 silly removeObsoleteDep removing p-try@2.2.0 from the tree as its been replaced by a newer version or is no longer required
+88 silly removeObsoleteDep removing path-exists@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+89 silly removeObsoleteDep removing get-caller-file@2.0.5 from the tree as its been replaced by a newer version or is no longer required
+90 silly removeObsoleteDep removing require-directory@2.1.1 from the tree as its been replaced by a newer version or is no longer required
+91 silly removeObsoleteDep removing require-main-filename@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+92 silly removeObsoleteDep removing string-width@3.1.0 from the tree as its been replaced by a newer version or is no longer required
+93 silly removeObsoleteDep removing is-fullwidth-code-point@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+94 silly removeObsoleteDep removing strip-ansi@5.2.0 from the tree as its been replaced by a newer version or is no longer required
+95 silly removeObsoleteDep removing ansi-regex@4.1.0 from the tree as its been replaced by a newer version or is no longer required
+96 silly removeObsoleteDep removing which-module@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+97 silly removeObsoleteDep removing yargs-parser@15.0.1 from the tree as its been replaced by a newer version or is no longer required
+98 silly removeObsoleteDep removing camelcase@5.3.1 from the tree as its been replaced by a newer version or is no longer required
+99 silly removeObsoleteDep removing lock-verify@2.1.0 from the tree as its been replaced by a newer version or is no longer required
+100 silly removeObsoleteDep removing lockfile@1.0.4 from the tree as its been replaced by a newer version or is no longer required
+101 silly removeObsoleteDep removing lodash._baseuniq@4.6.0 from the tree as its been replaced by a newer version or is no longer required
+102 silly removeObsoleteDep removing lodash._createset@4.0.3 from the tree as its been replaced by a newer version or is no longer required
+103 silly removeObsoleteDep removing lodash._root@3.0.1 from the tree as its been replaced by a newer version or is no longer required
+104 silly removeObsoleteDep removing lodash.clonedeep@4.5.0 from the tree as its been replaced by a newer version or is no longer required
+105 silly removeObsoleteDep removing lodash.union@4.6.0 from the tree as its been replaced by a newer version or is no longer required
+106 silly removeObsoleteDep removing lodash.uniq@4.5.0 from the tree as its been replaced by a newer version or is no longer required
+107 silly removeObsoleteDep removing lodash.without@4.4.0 from the tree as its been replaced by a newer version or is no longer required
+108 silly removeObsoleteDep removing meant@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+109 silly removeObsoleteDep removing npm-audit-report@1.3.3 from the tree as its been replaced by a newer version or is no longer required
+110 silly removeObsoleteDep removing cli-table3@0.5.1 from the tree as its been replaced by a newer version or is no longer required
+111 silly removeObsoleteDep removing colors@1.3.3 from the tree as its been replaced by a newer version or is no longer required
+112 silly removeObsoleteDep removing npm-cache-filename@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+113 silly removeObsoleteDep removing npm-install-checks@3.0.2 from the tree as its been replaced by a newer version or is no longer required
+114 silly removeObsoleteDep removing npm-lifecycle@3.1.5 from the tree as its been replaced by a newer version or is no longer required
+115 silly removeObsoleteDep removing byline@5.0.0 from the tree as its been replaced by a newer version or is no longer required
+116 silly removeObsoleteDep removing node-gyp@5.1.0 from the tree as its been replaced by a newer version or is no longer required
+117 silly removeObsoleteDep removing env-paths@2.2.0 from the tree as its been replaced by a newer version or is no longer required
+118 silly removeObsoleteDep removing nopt@4.0.3 from the tree as its been replaced by a newer version or is no longer required
+119 silly removeObsoleteDep removing abbrev@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+120 silly removeObsoleteDep removing resolve-from@4.0.0 from the tree as its been replaced by a newer version or is no longer required
+121 silly removeObsoleteDep removing npm-profile@4.0.4 from the tree as its been replaced by a newer version or is no longer required
+122 silly removeObsoleteDep removing aproba@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+123 silly removeObsoleteDep removing npm-user-validate@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+124 silly removeObsoleteDep removing npmlog@4.1.2 from the tree as its been replaced by a newer version or is no longer required
+125 silly removeObsoleteDep removing are-we-there-yet@1.1.4 from the tree as its been replaced by a newer version or is no longer required
+126 silly removeObsoleteDep removing delegates@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+127 silly removeObsoleteDep removing readable-stream@2.3.6 from the tree as its been replaced by a newer version or is no longer required
+128 silly removeObsoleteDep removing string_decoder@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+129 silly removeObsoleteDep removing console-control-strings@1.1.0 from the tree as its been replaced by a newer version or is no longer required
+130 silly removeObsoleteDep removing gauge@2.7.4 from the tree as its been replaced by a newer version or is no longer required
+131 silly removeObsoleteDep removing aproba@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+132 silly removeObsoleteDep removing has-unicode@2.0.1 from the tree as its been replaced by a newer version or is no longer required
+133 silly removeObsoleteDep removing object-assign@4.1.1 from the tree as its been replaced by a newer version or is no longer required
+134 silly removeObsoleteDep removing string-width@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+135 silly removeObsoleteDep removing code-point-at@1.1.0 from the tree as its been replaced by a newer version or is no longer required
+136 silly removeObsoleteDep removing is-fullwidth-code-point@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+137 silly removeObsoleteDep removing number-is-nan@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+138 silly removeObsoleteDep removing strip-ansi@3.0.1 from the tree as its been replaced by a newer version or is no longer required
+139 silly removeObsoleteDep removing ansi-regex@2.1.1 from the tree as its been replaced by a newer version or is no longer required
+140 silly removeObsoleteDep removing wide-align@1.1.2 from the tree as its been replaced by a newer version or is no longer required
+141 silly removeObsoleteDep removing string-width@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+142 silly removeObsoleteDep removing set-blocking@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+143 silly removeObsoleteDep removing opener@1.5.2 from the tree as its been replaced by a newer version or is no longer required
+144 silly removeObsoleteDep removing pacote@9.5.12 from the tree as its been replaced by a newer version or is no longer required
+145 silly removeObsoleteDep removing bluebird@3.5.5 from the tree as its been replaced by a newer version or is no longer required
+146 silly removeObsoleteDep removing cacache@12.0.3 from the tree as its been replaced by a newer version or is no longer required
+147 silly removeObsoleteDep removing infer-owner@1.0.4 from the tree as its been replaced by a newer version or is no longer required
+148 silly removeObsoleteDep removing lru-cache@5.1.1 from the tree as its been replaced by a newer version or is no longer required
+149 silly removeObsoleteDep removing mississippi@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+150 silly removeObsoleteDep removing concat-stream@1.6.2 from the tree as its been replaced by a newer version or is no longer required
+151 silly removeObsoleteDep removing buffer-from@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+152 silly removeObsoleteDep removing readable-stream@2.3.6 from the tree as its been replaced by a newer version or is no longer required
+153 silly removeObsoleteDep removing string_decoder@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+154 silly removeObsoleteDep removing typedarray@0.0.6 from the tree as its been replaced by a newer version or is no longer required
+155 silly removeObsoleteDep removing duplexify@3.6.0 from the tree as its been replaced by a newer version or is no longer required
+156 silly removeObsoleteDep removing end-of-stream@1.4.1 from the tree as its been replaced by a newer version or is no longer required
+157 silly removeObsoleteDep removing readable-stream@2.3.6 from the tree as its been replaced by a newer version or is no longer required
+158 silly removeObsoleteDep removing string_decoder@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+159 silly removeObsoleteDep removing flush-write-stream@1.0.3 from the tree as its been replaced by a newer version or is no longer required
+160 silly removeObsoleteDep removing readable-stream@2.3.6 from the tree as its been replaced by a newer version or is no longer required
+161 silly removeObsoleteDep removing string_decoder@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+162 silly removeObsoleteDep removing from2@2.3.0 from the tree as its been replaced by a newer version or is no longer required
+163 silly removeObsoleteDep removing readable-stream@2.3.6 from the tree as its been replaced by a newer version or is no longer required
+164 silly removeObsoleteDep removing string_decoder@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+165 silly removeObsoleteDep removing parallel-transform@1.1.0 from the tree as its been replaced by a newer version or is no longer required
+166 silly removeObsoleteDep removing cyclist@0.2.2 from the tree as its been replaced by a newer version or is no longer required
+167 silly removeObsoleteDep removing readable-stream@2.3.6 from the tree as its been replaced by a newer version or is no longer required
+168 silly removeObsoleteDep removing string_decoder@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+169 silly removeObsoleteDep removing pump@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+170 silly removeObsoleteDep removing pumpify@1.5.1 from the tree as its been replaced by a newer version or is no longer required
+171 silly removeObsoleteDep removing pump@2.0.1 from the tree as its been replaced by a newer version or is no longer required
+172 silly removeObsoleteDep removing stream-each@1.2.2 from the tree as its been replaced by a newer version or is no longer required
+173 silly removeObsoleteDep removing through2@2.0.3 from the tree as its been replaced by a newer version or is no longer required
+174 silly removeObsoleteDep removing readable-stream@2.3.6 from the tree as its been replaced by a newer version or is no longer required
+175 silly removeObsoleteDep removing string_decoder@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+176 silly removeObsoleteDep removing xtend@4.0.1 from the tree as its been replaced by a newer version or is no longer required
+177 silly removeObsoleteDep removing move-concurrently@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+178 silly removeObsoleteDep removing aproba@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+179 silly removeObsoleteDep removing copy-concurrently@1.0.5 from the tree as its been replaced by a newer version or is no longer required
+180 silly removeObsoleteDep removing aproba@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+181 silly removeObsoleteDep removing fs-write-stream-atomic@1.0.10 from the tree as its been replaced by a newer version or is no longer required
+182 silly removeObsoleteDep removing iferr@0.1.5 from the tree as its been replaced by a newer version or is no longer required
+183 silly removeObsoleteDep removing readable-stream@2.3.6 from the tree as its been replaced by a newer version or is no longer required
+184 silly removeObsoleteDep removing string_decoder@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+185 silly removeObsoleteDep removing iferr@0.1.5 from the tree as its been replaced by a newer version or is no longer required
+186 silly removeObsoleteDep removing run-queue@1.0.3 from the tree as its been replaced by a newer version or is no longer required
+187 silly removeObsoleteDep removing aproba@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+188 silly removeObsoleteDep removing y18n@4.0.1 from the tree as its been replaced by a newer version or is no longer required
+189 silly removeObsoleteDep removing get-stream@4.1.0 from the tree as its been replaced by a newer version or is no longer required
+190 silly removeObsoleteDep removing make-fetch-happen@5.0.2 from the tree as its been replaced by a newer version or is no longer required
+191 silly removeObsoleteDep removing agentkeepalive@3.5.2 from the tree as its been replaced by a newer version or is no longer required
+192 silly removeObsoleteDep removing humanize-ms@1.2.1 from the tree as its been replaced by a newer version or is no longer required
+193 silly removeObsoleteDep removing ms@2.1.1 from the tree as its been replaced by a newer version or is no longer required
+194 silly removeObsoleteDep removing http-cache-semantics@3.8.1 from the tree as its been replaced by a newer version or is no longer required
+195 silly removeObsoleteDep removing http-proxy-agent@2.1.0 from the tree as its been replaced by a newer version or is no longer required
+196 silly removeObsoleteDep removing agent-base@4.3.0 from the tree as its been replaced by a newer version or is no longer required
+197 silly removeObsoleteDep removing es6-promisify@5.0.0 from the tree as its been replaced by a newer version or is no longer required
+198 silly removeObsoleteDep removing es6-promise@4.2.8 from the tree as its been replaced by a newer version or is no longer required
+199 silly removeObsoleteDep removing debug@3.1.0 from the tree as its been replaced by a newer version or is no longer required
+200 silly removeObsoleteDep removing ms@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+201 silly removeObsoleteDep removing https-proxy-agent@2.2.4 from the tree as its been replaced by a newer version or is no longer required
+202 silly removeObsoleteDep removing node-fetch-npm@2.0.2 from the tree as its been replaced by a newer version or is no longer required
+203 silly removeObsoleteDep removing encoding@0.1.12 from the tree as its been replaced by a newer version or is no longer required
+204 silly removeObsoleteDep removing iconv-lite@0.4.23 from the tree as its been replaced by a newer version or is no longer required
+205 silly removeObsoleteDep removing promise-retry@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+206 silly removeObsoleteDep removing err-code@1.1.2 from the tree as its been replaced by a newer version or is no longer required
+207 silly removeObsoleteDep removing retry@0.10.1 from the tree as its been replaced by a newer version or is no longer required
+208 silly removeObsoleteDep removing socks-proxy-agent@4.0.2 from the tree as its been replaced by a newer version or is no longer required
+209 silly removeObsoleteDep removing agent-base@4.2.1 from the tree as its been replaced by a newer version or is no longer required
+210 silly removeObsoleteDep removing socks@2.3.3 from the tree as its been replaced by a newer version or is no longer required
+211 silly removeObsoleteDep removing ip@1.1.5 from the tree as its been replaced by a newer version or is no longer required
+212 silly removeObsoleteDep removing smart-buffer@4.1.0 from the tree as its been replaced by a newer version or is no longer required
+213 silly removeObsoleteDep removing minipass@2.9.0 from the tree as its been replaced by a newer version or is no longer required
+214 silly removeObsoleteDep removing npm-package-arg@6.1.1 from the tree as its been replaced by a newer version or is no longer required
+215 silly removeObsoleteDep removing osenv@0.1.5 from the tree as its been replaced by a newer version or is no longer required
+216 silly removeObsoleteDep removing os-homedir@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+217 silly removeObsoleteDep removing os-tmpdir@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+218 silly removeObsoleteDep removing npm-packlist@1.4.8 from the tree as its been replaced by a newer version or is no longer required
+219 silly removeObsoleteDep removing ignore-walk@3.0.3 from the tree as its been replaced by a newer version or is no longer required
+220 silly removeObsoleteDep removing npm-bundled@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+221 silly removeObsoleteDep removing npm-pick-manifest@3.0.2 from the tree as its been replaced by a newer version or is no longer required
+222 silly removeObsoleteDep removing npm-registry-fetch@4.0.7 from the tree as its been replaced by a newer version or is no longer required
+223 silly removeObsoleteDep removing JSONStream@1.3.5 from the tree as its been replaced by a newer version or is no longer required
+224 silly removeObsoleteDep removing jsonparse@1.3.1 from the tree as its been replaced by a newer version or is no longer required
+225 silly removeObsoleteDep removing through@2.3.8 from the tree as its been replaced by a newer version or is no longer required
+226 silly removeObsoleteDep removing safe-buffer@5.2.1 from the tree as its been replaced by a newer version or is no longer required
+227 silly removeObsoleteDep removing protoduck@5.0.1 from the tree as its been replaced by a newer version or is no longer required
+228 silly removeObsoleteDep removing genfun@5.0.0 from the tree as its been replaced by a newer version or is no longer required
+229 silly removeObsoleteDep removing promise-inflight@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+230 silly removeObsoleteDep removing qrcode-terminal@0.12.0 from the tree as its been replaced by a newer version or is no longer required
+231 silly removeObsoleteDep removing query-string@6.8.2 from the tree as its been replaced by a newer version or is no longer required
+232 silly removeObsoleteDep removing decode-uri-component@0.2.0 from the tree as its been replaced by a newer version or is no longer required
+233 silly removeObsoleteDep removing split-on-first@1.1.0 from the tree as its been replaced by a newer version or is no longer required
+234 silly removeObsoleteDep removing strict-uri-encode@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+235 silly removeObsoleteDep removing qw@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+236 silly removeObsoleteDep removing read@1.0.7 from the tree as its been replaced by a newer version or is no longer required
+237 silly removeObsoleteDep removing mute-stream@0.0.7 from the tree as its been replaced by a newer version or is no longer required
+238 silly removeObsoleteDep removing read-cmd-shim@1.0.5 from the tree as its been replaced by a newer version or is no longer required
+239 silly removeObsoleteDep removing read-installed@4.0.3 from the tree as its been replaced by a newer version or is no longer required
+240 silly removeObsoleteDep removing util-extend@1.0.3 from the tree as its been replaced by a newer version or is no longer required
+241 silly removeObsoleteDep removing read-package-tree@5.3.1 from the tree as its been replaced by a newer version or is no longer required
+242 silly removeObsoleteDep removing read-package-json@2.1.1 from the tree as its been replaced by a newer version or is no longer required
+243 silly removeObsoleteDep removing json-parse-better-errors@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+244 silly removeObsoleteDep removing normalize-package-data@2.5.0 from the tree as its been replaced by a newer version or is no longer required
+245 silly removeObsoleteDep removing hosted-git-info@2.8.9 from the tree as its been replaced by a newer version or is no longer required
+246 silly removeObsoleteDep removing resolve@1.10.0 from the tree as its been replaced by a newer version or is no longer required
+247 silly removeObsoleteDep removing path-parse@1.0.7 from the tree as its been replaced by a newer version or is no longer required
+248 silly removeObsoleteDep removing npm-normalize-package-bin@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+249 silly removeObsoleteDep removing util-promisify@2.1.0 from the tree as its been replaced by a newer version or is no longer required
+250 silly removeObsoleteDep removing object.getownpropertydescriptors@2.0.3 from the tree as its been replaced by a newer version or is no longer required
+251 silly removeObsoleteDep removing define-properties@1.1.3 from the tree as its been replaced by a newer version or is no longer required
+252 silly removeObsoleteDep removing object-keys@1.0.12 from the tree as its been replaced by a newer version or is no longer required
+253 silly removeObsoleteDep removing es-abstract@1.12.0 from the tree as its been replaced by a newer version or is no longer required
+254 silly removeObsoleteDep removing es-to-primitive@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+255 silly removeObsoleteDep removing is-callable@1.1.4 from the tree as its been replaced by a newer version or is no longer required
+256 silly removeObsoleteDep removing is-date-object@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+257 silly removeObsoleteDep removing is-symbol@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+258 silly removeObsoleteDep removing has-symbols@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+259 silly removeObsoleteDep removing function-bind@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+260 silly removeObsoleteDep removing has@1.0.3 from the tree as its been replaced by a newer version or is no longer required
+261 silly removeObsoleteDep removing is-regex@1.0.4 from the tree as its been replaced by a newer version or is no longer required
+262 silly removeObsoleteDep removing readable-stream@3.6.0 from the tree as its been replaced by a newer version or is no longer required
+263 silly removeObsoleteDep removing string_decoder@1.3.0 from the tree as its been replaced by a newer version or is no longer required
+264 silly removeObsoleteDep removing safe-buffer@5.2.0 from the tree as its been replaced by a newer version or is no longer required
+265 silly removeObsoleteDep removing readdir-scoped-modules@1.1.0 from the tree as its been replaced by a newer version or is no longer required
+266 silly removeObsoleteDep removing dezalgo@1.0.3 from the tree as its been replaced by a newer version or is no longer required
+267 silly removeObsoleteDep removing asap@2.0.6 from the tree as its been replaced by a newer version or is no longer required
+268 silly removeObsoleteDep removing request@2.88.0 from the tree as its been replaced by a newer version or is no longer required
+269 silly removeObsoleteDep removing aws-sign2@0.7.0 from the tree as its been replaced by a newer version or is no longer required
+270 silly removeObsoleteDep removing aws4@1.8.0 from the tree as its been replaced by a newer version or is no longer required
+271 silly removeObsoleteDep removing caseless@0.12.0 from the tree as its been replaced by a newer version or is no longer required
+272 silly removeObsoleteDep removing combined-stream@1.0.6 from the tree as its been replaced by a newer version or is no longer required
+273 silly removeObsoleteDep removing delayed-stream@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+274 silly removeObsoleteDep removing extend@3.0.2 from the tree as its been replaced by a newer version or is no longer required
+275 silly removeObsoleteDep removing forever-agent@0.6.1 from the tree as its been replaced by a newer version or is no longer required
+276 silly removeObsoleteDep removing form-data@2.3.2 from the tree as its been replaced by a newer version or is no longer required
+277 silly removeObsoleteDep removing asynckit@0.4.0 from the tree as its been replaced by a newer version or is no longer required
+278 silly removeObsoleteDep removing mime-types@2.1.19 from the tree as its been replaced by a newer version or is no longer required
+279 silly removeObsoleteDep removing mime-db@1.35.0 from the tree as its been replaced by a newer version or is no longer required
+280 silly removeObsoleteDep removing har-validator@5.1.5 from the tree as its been replaced by a newer version or is no longer required
+281 silly removeObsoleteDep removing ajv@6.12.6 from the tree as its been replaced by a newer version or is no longer required
+282 silly removeObsoleteDep removing fast-deep-equal@3.1.3 from the tree as its been replaced by a newer version or is no longer required
+283 silly removeObsoleteDep removing fast-json-stable-stringify@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+284 silly removeObsoleteDep removing json-schema-traverse@0.4.1 from the tree as its been replaced by a newer version or is no longer required
+285 silly removeObsoleteDep removing uri-js@4.4.0 from the tree as its been replaced by a newer version or is no longer required
+286 silly removeObsoleteDep removing punycode@2.1.1 from the tree as its been replaced by a newer version or is no longer required
+287 silly removeObsoleteDep removing har-schema@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+288 silly removeObsoleteDep removing http-signature@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+289 silly removeObsoleteDep removing assert-plus@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+290 silly removeObsoleteDep removing jsprim@1.4.1 from the tree as its been replaced by a newer version or is no longer required
+291 silly removeObsoleteDep removing extsprintf@1.3.0 from the tree as its been replaced by a newer version or is no longer required
+292 silly removeObsoleteDep removing json-schema@0.2.3 from the tree as its been replaced by a newer version or is no longer required
+293 silly removeObsoleteDep removing verror@1.10.0 from the tree as its been replaced by a newer version or is no longer required
+294 silly removeObsoleteDep removing sshpk@1.14.2 from the tree as its been replaced by a newer version or is no longer required
+295 silly removeObsoleteDep removing asn1@0.2.4 from the tree as its been replaced by a newer version or is no longer required
+296 silly removeObsoleteDep removing safer-buffer@2.1.2 from the tree as its been replaced by a newer version or is no longer required
+297 silly removeObsoleteDep removing bcrypt-pbkdf@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+298 silly removeObsoleteDep removing tweetnacl@0.14.5 from the tree as its been replaced by a newer version or is no longer required
+299 silly removeObsoleteDep removing dashdash@1.14.1 from the tree as its been replaced by a newer version or is no longer required
+300 silly removeObsoleteDep removing ecc-jsbn@0.1.2 from the tree as its been replaced by a newer version or is no longer required
+301 silly removeObsoleteDep removing jsbn@0.1.1 from the tree as its been replaced by a newer version or is no longer required
+302 silly removeObsoleteDep removing getpass@0.1.7 from the tree as its been replaced by a newer version or is no longer required
+303 silly removeObsoleteDep removing is-typedarray@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+304 silly removeObsoleteDep removing isstream@0.1.2 from the tree as its been replaced by a newer version or is no longer required
+305 silly removeObsoleteDep removing json-stringify-safe@5.0.1 from the tree as its been replaced by a newer version or is no longer required
+306 silly removeObsoleteDep removing oauth-sign@0.9.0 from the tree as its been replaced by a newer version or is no longer required
+307 silly removeObsoleteDep removing performance-now@2.1.0 from the tree as its been replaced by a newer version or is no longer required
+308 silly removeObsoleteDep removing qs@6.5.2 from the tree as its been replaced by a newer version or is no longer required
+309 silly removeObsoleteDep removing tough-cookie@2.4.3 from the tree as its been replaced by a newer version or is no longer required
+310 silly removeObsoleteDep removing psl@1.1.29 from the tree as its been replaced by a newer version or is no longer required
+311 silly removeObsoleteDep removing punycode@1.4.1 from the tree as its been replaced by a newer version or is no longer required
+312 silly removeObsoleteDep removing tunnel-agent@0.6.0 from the tree as its been replaced by a newer version or is no longer required
+313 silly removeObsoleteDep removing retry@0.12.0 from the tree as its been replaced by a newer version or is no longer required
+314 silly removeObsoleteDep removing rimraf@2.7.1 from the tree as its been replaced by a newer version or is no longer required
+315 silly removeObsoleteDep removing glob@7.1.6 from the tree as its been replaced by a newer version or is no longer required
+316 silly removeObsoleteDep removing fs.realpath@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+317 silly removeObsoleteDep removing inflight@1.0.6 from the tree as its been replaced by a newer version or is no longer required
+318 silly removeObsoleteDep removing once@1.4.0 from the tree as its been replaced by a newer version or is no longer required
+319 silly removeObsoleteDep removing wrappy@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+320 silly removeObsoleteDep removing minimatch@3.0.4 from the tree as its been replaced by a newer version or is no longer required
+321 silly removeObsoleteDep removing brace-expansion@1.1.11 from the tree as its been replaced by a newer version or is no longer required
+322 silly removeObsoleteDep removing balanced-match@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+323 silly removeObsoleteDep removing concat-map@0.0.1 from the tree as its been replaced by a newer version or is no longer required
+324 silly removeObsoleteDep removing path-is-absolute@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+325 silly removeObsoleteDep removing sha@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+326 silly removeObsoleteDep removing slide@1.1.6 from the tree as its been replaced by a newer version or is no longer required
+327 silly removeObsoleteDep removing sorted-object@2.0.1 from the tree as its been replaced by a newer version or is no longer required
+328 silly removeObsoleteDep removing sorted-union-stream@2.1.3 from the tree as its been replaced by a newer version or is no longer required
+329 silly removeObsoleteDep removing from2@1.3.0 from the tree as its been replaced by a newer version or is no longer required
+330 silly removeObsoleteDep removing inherits@2.0.4 from the tree as its been replaced by a newer version or is no longer required
+331 silly removeObsoleteDep removing readable-stream@1.1.14 from the tree as its been replaced by a newer version or is no longer required
+332 silly removeObsoleteDep removing core-util-is@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+333 silly removeObsoleteDep removing isarray@0.0.1 from the tree as its been replaced by a newer version or is no longer required
+334 silly removeObsoleteDep removing string_decoder@0.10.31 from the tree as its been replaced by a newer version or is no longer required
+335 silly removeObsoleteDep removing stream-iterate@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+336 silly removeObsoleteDep removing readable-stream@2.3.6 from the tree as its been replaced by a newer version or is no longer required
+337 silly removeObsoleteDep removing isarray@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+338 silly removeObsoleteDep removing process-nextick-args@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+339 silly removeObsoleteDep removing string_decoder@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+340 silly removeObsoleteDep removing util-deprecate@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+341 silly removeObsoleteDep removing stream-shift@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+342 silly removeObsoleteDep removing ssri@6.0.2 from the tree as its been replaced by a newer version or is no longer required
+343 silly removeObsoleteDep removing figgy-pudding@3.5.1 from the tree as its been replaced by a newer version or is no longer required
+344 silly removeObsoleteDep removing stringify-package@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+345 silly removeObsoleteDep removing tar@4.4.19 from the tree as its been replaced by a newer version or is no longer required
+346 silly removeObsoleteDep removing chownr@1.1.4 from the tree as its been replaced by a newer version or is no longer required
+347 silly removeObsoleteDep removing fs-minipass@1.2.7 from the tree as its been replaced by a newer version or is no longer required
+348 silly removeObsoleteDep removing minipass@2.9.0 from the tree as its been replaced by a newer version or is no longer required
+349 silly removeObsoleteDep removing yallist@3.0.3 from the tree as its been replaced by a newer version or is no longer required
+350 silly removeObsoleteDep removing minipass@2.9.0 from the tree as its been replaced by a newer version or is no longer required
+351 silly removeObsoleteDep removing safe-buffer@5.2.1 from the tree as its been replaced by a newer version or is no longer required
+352 silly removeObsoleteDep removing yallist@3.1.1 from the tree as its been replaced by a newer version or is no longer required
+353 silly removeObsoleteDep removing minizlib@1.3.3 from the tree as its been replaced by a newer version or is no longer required
+354 silly removeObsoleteDep removing minipass@2.9.0 from the tree as its been replaced by a newer version or is no longer required
+355 silly removeObsoleteDep removing mkdirp@0.5.5 from the tree as its been replaced by a newer version or is no longer required
+356 silly removeObsoleteDep removing minimist@1.2.5 from the tree as its been replaced by a newer version or is no longer required
+357 silly removeObsoleteDep removing text-table@0.2.0 from the tree as its been replaced by a newer version or is no longer required
+358 silly removeObsoleteDep removing tiny-relative-date@1.3.0 from the tree as its been replaced by a newer version or is no longer required
+359 silly removeObsoleteDep removing uid-number@0.0.6 from the tree as its been replaced by a newer version or is no longer required
+360 silly removeObsoleteDep removing umask@1.1.0 from the tree as its been replaced by a newer version or is no longer required
+361 silly removeObsoleteDep removing unique-filename@1.1.1 from the tree as its been replaced by a newer version or is no longer required
+362 silly removeObsoleteDep removing unique-slug@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+363 silly removeObsoleteDep removing unpipe@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+364 silly removeObsoleteDep removing update-notifier@2.5.0 from the tree as its been replaced by a newer version or is no longer required
+365 silly removeObsoleteDep removing boxen@1.3.0 from the tree as its been replaced by a newer version or is no longer required
+366 silly removeObsoleteDep removing ansi-align@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+367 silly removeObsoleteDep removing string-width@2.1.1 from the tree as its been replaced by a newer version or is no longer required
+368 silly removeObsoleteDep removing is-fullwidth-code-point@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+369 silly removeObsoleteDep removing strip-ansi@4.0.0 from the tree as its been replaced by a newer version or is no longer required
+370 silly removeObsoleteDep removing ansi-regex@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+371 silly removeObsoleteDep removing camelcase@4.1.0 from the tree as its been replaced by a newer version or is no longer required
+372 silly removeObsoleteDep removing chalk@2.4.1 from the tree as its been replaced by a newer version or is no longer required
+373 silly removeObsoleteDep removing ansi-styles@3.2.1 from the tree as its been replaced by a newer version or is no longer required
+374 silly removeObsoleteDep removing color-convert@1.9.1 from the tree as its been replaced by a newer version or is no longer required
+375 silly removeObsoleteDep removing color-name@1.1.3 from the tree as its been replaced by a newer version or is no longer required
+376 silly removeObsoleteDep removing escape-string-regexp@1.0.5 from the tree as its been replaced by a newer version or is no longer required
+377 silly removeObsoleteDep removing supports-color@5.4.0 from the tree as its been replaced by a newer version or is no longer required
+378 silly removeObsoleteDep removing has-flag@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+379 silly removeObsoleteDep removing cli-boxes@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+380 silly removeObsoleteDep removing term-size@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+381 silly removeObsoleteDep removing execa@0.7.0 from the tree as its been replaced by a newer version or is no longer required
+382 silly removeObsoleteDep removing cross-spawn@5.1.0 from the tree as its been replaced by a newer version or is no longer required
+383 silly removeObsoleteDep removing lru-cache@4.1.5 from the tree as its been replaced by a newer version or is no longer required
+384 silly removeObsoleteDep removing pseudomap@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+385 silly removeObsoleteDep removing yallist@2.1.2 from the tree as its been replaced by a newer version or is no longer required
+386 silly removeObsoleteDep removing shebang-command@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+387 silly removeObsoleteDep removing shebang-regex@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+388 silly removeObsoleteDep removing get-stream@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+389 silly removeObsoleteDep removing is-stream@1.1.0 from the tree as its been replaced by a newer version or is no longer required
+390 silly removeObsoleteDep removing npm-run-path@2.0.2 from the tree as its been replaced by a newer version or is no longer required
+391 silly removeObsoleteDep removing path-key@2.0.1 from the tree as its been replaced by a newer version or is no longer required
+392 silly removeObsoleteDep removing p-finally@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+393 silly removeObsoleteDep removing strip-eof@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+394 silly removeObsoleteDep removing widest-line@2.0.1 from the tree as its been replaced by a newer version or is no longer required
+395 silly removeObsoleteDep removing configstore@3.1.5 from the tree as its been replaced by a newer version or is no longer required
+396 silly removeObsoleteDep removing dot-prop@4.2.1 from the tree as its been replaced by a newer version or is no longer required
+397 silly removeObsoleteDep removing is-obj@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+398 silly removeObsoleteDep removing make-dir@1.3.0 from the tree as its been replaced by a newer version or is no longer required
+399 silly removeObsoleteDep removing pify@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+400 silly removeObsoleteDep removing unique-string@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+401 silly removeObsoleteDep removing crypto-random-string@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+402 silly removeObsoleteDep removing xdg-basedir@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+403 silly removeObsoleteDep removing import-lazy@2.1.0 from the tree as its been replaced by a newer version or is no longer required
+404 silly removeObsoleteDep removing is-ci@1.2.1 from the tree as its been replaced by a newer version or is no longer required
+405 silly removeObsoleteDep removing ci-info@1.6.0 from the tree as its been replaced by a newer version or is no longer required
+406 silly removeObsoleteDep removing is-installed-globally@0.1.0 from the tree as its been replaced by a newer version or is no longer required
+407 silly removeObsoleteDep removing global-dirs@0.1.1 from the tree as its been replaced by a newer version or is no longer required
+408 silly removeObsoleteDep removing ini@1.3.8 from the tree as its been replaced by a newer version or is no longer required
+409 silly removeObsoleteDep removing is-path-inside@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+410 silly removeObsoleteDep removing path-is-inside@1.0.2 from the tree as its been replaced by a newer version or is no longer required
+411 silly removeObsoleteDep removing is-npm@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+412 silly removeObsoleteDep removing latest-version@3.1.0 from the tree as its been replaced by a newer version or is no longer required
+413 silly removeObsoleteDep removing package-json@4.0.1 from the tree as its been replaced by a newer version or is no longer required
+414 silly removeObsoleteDep removing got@6.7.1 from the tree as its been replaced by a newer version or is no longer required
+415 silly removeObsoleteDep removing create-error-class@3.0.2 from the tree as its been replaced by a newer version or is no longer required
+416 silly removeObsoleteDep removing capture-stack-trace@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+417 silly removeObsoleteDep removing duplexer3@0.1.4 from the tree as its been replaced by a newer version or is no longer required
+418 silly removeObsoleteDep removing get-stream@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+419 silly removeObsoleteDep removing is-redirect@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+420 silly removeObsoleteDep removing is-retry-allowed@1.2.0 from the tree as its been replaced by a newer version or is no longer required
+421 silly removeObsoleteDep removing lowercase-keys@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+422 silly removeObsoleteDep removing safe-buffer@5.1.2 from the tree as its been replaced by a newer version or is no longer required
+423 silly removeObsoleteDep removing timed-out@4.0.1 from the tree as its been replaced by a newer version or is no longer required
+424 silly removeObsoleteDep removing unzip-response@2.0.1 from the tree as its been replaced by a newer version or is no longer required
+425 silly removeObsoleteDep removing url-parse-lax@1.0.0 from the tree as its been replaced by a newer version or is no longer required
+426 silly removeObsoleteDep removing prepend-http@1.0.4 from the tree as its been replaced by a newer version or is no longer required
+427 silly removeObsoleteDep removing registry-auth-token@3.4.0 from the tree as its been replaced by a newer version or is no longer required
+428 silly removeObsoleteDep removing rc@1.2.8 from the tree as its been replaced by a newer version or is no longer required
+429 silly removeObsoleteDep removing deep-extend@0.6.0 from the tree as its been replaced by a newer version or is no longer required
+430 silly removeObsoleteDep removing minimist@1.2.5 from the tree as its been replaced by a newer version or is no longer required
+431 silly removeObsoleteDep removing strip-json-comments@2.0.1 from the tree as its been replaced by a newer version or is no longer required
+432 silly removeObsoleteDep removing registry-url@3.1.0 from the tree as its been replaced by a newer version or is no longer required
+433 silly removeObsoleteDep removing semver@5.7.1 from the tree as its been replaced by a newer version or is no longer required
+434 silly removeObsoleteDep removing semver-diff@2.1.0 from the tree as its been replaced by a newer version or is no longer required
+435 silly removeObsoleteDep removing uuid@3.3.3 from the tree as its been replaced by a newer version or is no longer required
+436 silly removeObsoleteDep removing validate-npm-package-license@3.0.4 from the tree as its been replaced by a newer version or is no longer required
+437 silly removeObsoleteDep removing spdx-correct@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+438 silly removeObsoleteDep removing spdx-expression-parse@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+439 silly removeObsoleteDep removing spdx-exceptions@2.1.0 from the tree as its been replaced by a newer version or is no longer required
+440 silly removeObsoleteDep removing spdx-license-ids@3.0.5 from the tree as its been replaced by a newer version or is no longer required
+441 silly removeObsoleteDep removing validate-npm-package-name@3.0.0 from the tree as its been replaced by a newer version or is no longer required
+442 silly removeObsoleteDep removing builtins@1.0.3 from the tree as its been replaced by a newer version or is no longer required
+443 silly removeObsoleteDep removing which@1.3.1 from the tree as its been replaced by a newer version or is no longer required
+444 silly removeObsoleteDep removing isexe@2.0.0 from the tree as its been replaced by a newer version or is no longer required
+445 silly removeObsoleteDep removing worker-farm@1.7.0 from the tree as its been replaced by a newer version or is no longer required
+446 silly removeObsoleteDep removing errno@0.1.7 from the tree as its been replaced by a newer version or is no longer required
+447 silly removeObsoleteDep removing prr@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+448 silly removeObsoleteDep removing write-file-atomic@2.4.3 from the tree as its been replaced by a newer version or is no longer required
+449 silly removeObsoleteDep removing graceful-fs@4.2.4 from the tree as its been replaced by a newer version or is no longer required
+450 silly removeObsoleteDep removing signal-exit@3.0.2 from the tree as its been replaced by a newer version or is no longer required
+451 silly removeObsoleteDep removing debuglog@1.0.1 from the tree as its been replaced by a newer version or is no longer required
+452 silly removeObsoleteDep removing imurmurhash@0.1.4 from the tree as its been replaced by a newer version or is no longer required
+453 silly removeObsoleteDep removing lodash._baseindexof@3.1.0 from the tree as its been replaced by a newer version or is no longer required
+454 silly removeObsoleteDep removing lodash._bindcallback@3.0.1 from the tree as its been replaced by a newer version or is no longer required
+455 silly removeObsoleteDep removing lodash._cacheindexof@3.0.2 from the tree as its been replaced by a newer version or is no longer required
+456 silly removeObsoleteDep removing lodash._createcache@3.1.2 from the tree as its been replaced by a newer version or is no longer required
+457 silly removeObsoleteDep removing lodash._getnative@3.9.1 from the tree as its been replaced by a newer version or is no longer required
+458 silly removeObsoleteDep removing lodash.restparam@3.6.1 from the tree as its been replaced by a newer version or is no longer required
+459 timing stage:loadIdealTree:loadAllDepsIntoIdealTree Completed in 16308ms
+460 timing stage:loadIdealTree Completed in 17170ms
+461 silly currentTree lib
+461 silly currentTree └─┬ npm@6.14.15
+461 silly currentTree   ├── abbrev@1.1.1
+461 silly currentTree   ├── agent-base@4.3.0
+461 silly currentTree   ├── agentkeepalive@3.5.2
+461 silly currentTree   ├── ansi-align@2.0.0
+461 silly currentTree   ├── ansi-regex@2.1.1
+461 silly currentTree   ├── ansi-styles@3.2.1
+461 silly currentTree   ├── ansicolors@0.3.2
+461 silly currentTree   ├── ansistyles@0.1.3
+461 silly currentTree   ├── aproba@2.0.0
+461 silly currentTree   ├── archy@1.0.0
+461 silly currentTree   ├─┬ are-we-there-yet@1.1.4
+461 silly currentTree   │ ├── readable-stream@2.3.6
+461 silly currentTree   │ └── string_decoder@1.1.1
+461 silly currentTree   ├── asap@2.0.6
+461 silly currentTree   ├── asn1@0.2.4
+461 silly currentTree   ├── assert-plus@1.0.0
+461 silly currentTree   ├── asynckit@0.4.0
+461 silly currentTree   ├── aws-sign2@0.7.0
+461 silly currentTree   ├── aws4@1.8.0
+461 silly currentTree   ├── balanced-match@1.0.0
+461 silly currentTree   ├── bcrypt-pbkdf@1.0.2
+461 silly currentTree   ├── bin-links@1.1.8
+461 silly currentTree   ├── bluebird@3.5.5
+461 silly currentTree   ├── boxen@1.3.0
+461 silly currentTree   ├── brace-expansion@1.1.11
+461 silly currentTree   ├── buffer-from@1.0.0
+461 silly currentTree   ├── builtins@1.0.3
+461 silly currentTree   ├── byline@5.0.0
+461 silly currentTree   ├── byte-size@5.0.1
+461 silly currentTree   ├── cacache@12.0.3
+461 silly currentTree   ├── call-limit@1.1.1
+461 silly currentTree   ├── camelcase@4.1.0
+461 silly currentTree   ├── capture-stack-trace@1.0.0
+461 silly currentTree   ├── caseless@0.12.0
+461 silly currentTree   ├── chalk@2.4.1
+461 silly currentTree   ├── chownr@1.1.4
+461 silly currentTree   ├── ci-info@2.0.0
+461 silly currentTree   ├── cidr-regex@2.0.10
+461 silly currentTree   ├── cli-boxes@1.0.0
+461 silly currentTree   ├── cli-columns@3.1.2
+461 silly currentTree   ├── cli-table3@0.5.1
+461 silly currentTree   ├─┬ cliui@5.0.0
+461 silly currentTree   │ ├── ansi-regex@4.1.0
+461 silly currentTree   │ ├── is-fullwidth-code-point@2.0.0
+461 silly currentTree   │ ├── string-width@3.1.0
+461 silly currentTree   │ └── strip-ansi@5.2.0
+461 silly currentTree   ├── clone@1.0.4
+461 silly currentTree   ├── cmd-shim@3.0.3
+461 silly currentTree   ├── code-point-at@1.1.0
+461 silly currentTree   ├── color-convert@1.9.1
+461 silly currentTree   ├── color-name@1.1.3
+461 silly currentTree   ├── colors@1.3.3
+461 silly currentTree   ├── columnify@1.5.4
+461 silly currentTree   ├── combined-stream@1.0.6
+461 silly currentTree   ├── concat-map@0.0.1
+461 silly currentTree   ├─┬ concat-stream@1.6.2
+461 silly currentTree   │ ├── readable-stream@2.3.6
+461 silly currentTree   │ └── string_decoder@1.1.1
+461 silly currentTree   ├── config-chain@1.1.12
+461 silly currentTree   ├── configstore@3.1.5
+461 silly currentTree   ├── console-control-strings@1.1.0
+461 silly currentTree   ├─┬ copy-concurrently@1.0.5
+461 silly currentTree   │ ├── aproba@1.2.0
+461 silly currentTree   │ └── iferr@0.1.5
+461 silly currentTree   ├── core-util-is@1.0.2
+461 silly currentTree   ├── create-error-class@3.0.2
+461 silly currentTree   ├─┬ cross-spawn@5.1.0
+461 silly currentTree   │ ├── lru-cache@4.1.5
+461 silly currentTree   │ └── yallist@2.1.2
+461 silly currentTree   ├── crypto-random-string@1.0.0
+461 silly currentTree   ├── cyclist@0.2.2
+461 silly currentTree   ├── dashdash@1.14.1
+461 silly currentTree   ├─┬ debug@3.1.0
+461 silly currentTree   │ └── ms@2.0.0
+461 silly currentTree   ├── debuglog@1.0.1
+461 silly currentTree   ├── decamelize@1.2.0
+461 silly currentTree   ├── decode-uri-component@0.2.0
+461 silly currentTree   ├── deep-extend@0.6.0
+461 silly currentTree   ├── defaults@1.0.3
+461 silly currentTree   ├── define-properties@1.1.3
+461 silly currentTree   ├── delayed-stream@1.0.0
+461 silly currentTree   ├── delegates@1.0.0
+461 silly currentTree   ├── detect-indent@5.0.0
+461 silly currentTree   ├── detect-newline@2.1.0
+461 silly currentTree   ├── dezalgo@1.0.3
+461 silly currentTree   ├── dot-prop@4.2.1
+461 silly currentTree   ├── dotenv@5.0.1
+461 silly currentTree   ├── duplexer3@0.1.4
+461 silly currentTree   ├─┬ duplexify@3.6.0
+461 silly currentTree   │ ├── readable-stream@2.3.6
+461 silly currentTree   │ └── string_decoder@1.1.1
+461 silly currentTree   ├── ecc-jsbn@0.1.2
+461 silly currentTree   ├── editor@1.0.0
+461 silly currentTree   ├── emoji-regex@7.0.3
+461 silly currentTree   ├── encoding@0.1.12
+461 silly currentTree   ├── end-of-stream@1.4.1
+461 silly currentTree   ├── env-paths@2.2.0
+461 silly currentTree   ├── err-code@1.1.2
+461 silly currentTree   ├── errno@0.1.7
+461 silly currentTree   ├── es-abstract@1.12.0
+461 silly currentTree   ├── es-to-primitive@1.2.0
+461 silly currentTree   ├── es6-promise@4.2.8
+461 silly currentTree   ├── es6-promisify@5.0.0
+461 silly currentTree   ├── escape-string-regexp@1.0.5
+461 silly currentTree   ├─┬ execa@0.7.0
+461 silly currentTree   │ └── get-stream@3.0.0
+461 silly currentTree   ├── extend@3.0.2
+461 silly currentTree   ├── extsprintf@1.3.0
+461 silly currentTree   ├── fast-json-stable-stringify@2.0.0
+461 silly currentTree   ├── figgy-pudding@3.5.1
+461 silly currentTree   ├── find-npm-prefix@1.0.2
+461 silly currentTree   ├─┬ flush-write-stream@1.0.3
+461 silly currentTree   │ ├── readable-stream@2.3.6
+461 silly currentTree   │ └── string_decoder@1.1.1
+461 silly currentTree   ├── forever-agent@0.6.1
+461 silly currentTree   ├── form-data@2.3.2
+461 silly currentTree   ├─┬ from2@2.3.0
+461 silly currentTree   │ ├── readable-stream@2.3.6
+461 silly currentTree   │ └── string_decoder@1.1.1
+461 silly currentTree   ├─┬ fs-minipass@1.2.7
+461 silly currentTree   │ └── minipass@2.9.0
+461 silly currentTree   ├── fs-vacuum@1.2.10
+461 silly currentTree   ├─┬ fs-write-stream-atomic@1.0.10
+461 silly currentTree   │ ├── iferr@0.1.5
+461 silly currentTree   │ ├── readable-stream@2.3.6
+461 silly currentTree   │ └── string_decoder@1.1.1
+461 silly currentTree   ├── fs.realpath@1.0.0
+461 silly currentTree   ├── function-bind@1.1.1
+461 silly currentTree   ├─┬ gauge@2.7.4
+461 silly currentTree   │ ├── aproba@1.2.0
+461 silly currentTree   │ └── string-width@1.0.2
+461 silly currentTree   ├── genfun@5.0.0
+461 silly currentTree   ├─┬ gentle-fs@2.3.1
+461 silly currentTree   │ ├── aproba@1.2.0
+461 silly currentTree   │ └── iferr@0.1.5
+461 silly currentTree   ├── get-caller-file@2.0.5
+461 silly currentTree   ├── get-stream@4.1.0
+461 silly currentTree   ├── getpass@0.1.7
+461 silly currentTree   ├── glob@7.1.6
+461 silly currentTree   ├── global-dirs@0.1.1
+461 silly currentTree   ├─┬ got@6.7.1
+461 silly currentTree   │ └── get-stream@3.0.0
+461 silly currentTree   ├── graceful-fs@4.2.4
+461 silly currentTree   ├── har-schema@2.0.0
+461 silly currentTree   ├─┬ har-validator@5.1.5
+461 silly currentTree   │ ├── ajv@6.12.6
+461 silly currentTree   │ ├── fast-deep-equal@3.1.3
+461 silly currentTree   │ └── json-schema-traverse@0.4.1
+461 silly currentTree   ├── has-flag@3.0.0
+461 silly currentTree   ├── has-symbols@1.0.0
+461 silly currentTree   ├── has-unicode@2.0.1
+461 silly currentTree   ├── has@1.0.3
+461 silly currentTree   ├── hosted-git-info@2.8.9
+461 silly currentTree   ├── http-cache-semantics@3.8.1
+461 silly currentTree   ├── http-proxy-agent@2.1.0
+461 silly currentTree   ├── http-signature@1.2.0
+461 silly currentTree   ├── https-proxy-agent@2.2.4
+461 silly currentTree   ├── humanize-ms@1.2.1
+461 silly currentTree   ├── iconv-lite@0.4.23
+461 silly currentTree   ├── iferr@1.0.2
+461 silly currentTree   ├── ignore-walk@3.0.3
+461 silly currentTree   ├── import-lazy@2.1.0
+461 silly currentTree   ├── imurmurhash@0.1.4
+461 silly currentTree   ├── infer-owner@1.0.4
+461 silly currentTree   ├── inflight@1.0.6
+461 silly currentTree   ├── inherits@2.0.4
+461 silly currentTree   ├── ini@1.3.8
+461 silly currentTree   ├── init-package-json@1.10.3
+461 silly currentTree   ├── ip-regex@2.1.0
+461 silly currentTree   ├── ip@1.1.5
+461 silly currentTree   ├── is-callable@1.1.4
+461 silly currentTree   ├─┬ is-ci@1.2.1
+461 silly currentTree   │ └── ci-info@1.6.0
+461 silly currentTree   ├── is-cidr@3.0.0
+461 silly currentTree   ├── is-date-object@1.0.1
+461 silly currentTree   ├── is-fullwidth-code-point@1.0.0
+461 silly currentTree   ├── is-installed-globally@0.1.0
+461 silly currentTree   ├── is-npm@1.0.0
+461 silly currentTree   ├── is-obj@1.0.1
+461 silly currentTree   ├── is-path-inside@1.0.1
+461 silly currentTree   ├── is-redirect@1.0.0
+461 silly currentTree   ├── is-regex@1.0.4
+461 silly currentTree   ├── is-retry-allowed@1.2.0
+461 silly currentTree   ├── is-stream@1.1.0
+461 silly currentTree   ├── is-symbol@1.0.2
+461 silly currentTree   ├── is-typedarray@1.0.0
+461 silly currentTree   ├── isarray@1.0.0
+461 silly currentTree   ├── isexe@2.0.0
+461 silly currentTree   ├── isstream@0.1.2
+461 silly currentTree   ├── jsbn@0.1.1
+461 silly currentTree   ├── json-parse-better-errors@1.0.2
+461 silly currentTree   ├── json-schema@0.2.3
+461 silly currentTree   ├── json-stringify-safe@5.0.1
+461 silly currentTree   ├── jsonparse@1.3.1
+461 silly currentTree   ├── JSONStream@1.3.5
+461 silly currentTree   ├── jsprim@1.4.1
+461 silly currentTree   ├── latest-version@3.1.0
+461 silly currentTree   ├── lazy-property@1.0.0
+461 silly currentTree   ├── libcipm@4.0.8
+461 silly currentTree   ├── libnpm@3.0.1
+461 silly currentTree   ├── libnpmaccess@3.0.2
+461 silly currentTree   ├─┬ libnpmconfig@1.2.1
+461 silly currentTree   │ ├── find-up@3.0.0
+461 silly currentTree   │ ├── locate-path@3.0.0
+461 silly currentTree   │ ├── p-limit@2.2.0
+461 silly currentTree   │ ├── p-locate@3.0.0
+461 silly currentTree   │ └── p-try@2.2.0
+461 silly currentTree   ├── libnpmhook@5.0.3
+461 silly currentTree   ├── libnpmorg@1.0.1
+461 silly currentTree   ├── libnpmpublish@1.1.2
+461 silly currentTree   ├── libnpmsearch@2.0.2
+461 silly currentTree   ├── libnpmteam@1.0.2
+461 silly currentTree   ├── libnpx@10.2.4
+461 silly currentTree   ├── lock-verify@2.1.0
+461 silly currentTree   ├── lockfile@1.0.4
+461 silly currentTree   ├── lodash._baseindexof@3.1.0
+461 silly currentTree   ├── lodash._baseuniq@4.6.0
+461 silly currentTree   ├── lodash._bindcallback@3.0.1
+461 silly currentTree   ├── lodash._cacheindexof@3.0.2
+461 silly currentTree   ├── lodash._createcache@3.1.2
+461 silly currentTree   ├── lodash._createset@4.0.3
+461 silly currentTree   ├── lodash._getnative@3.9.1
+461 silly currentTree   ├── lodash._root@3.0.1
+461 silly currentTree   ├── lodash.clonedeep@4.5.0
+461 silly currentTree   ├── lodash.restparam@3.6.1
+461 silly currentTree   ├── lodash.union@4.6.0
+461 silly currentTree   ├── lodash.uniq@4.5.0
+461 silly currentTree   ├── lodash.without@4.4.0
+461 silly currentTree   ├── lowercase-keys@1.0.1
+461 silly currentTree   ├── lru-cache@5.1.1
+461 silly currentTree   ├── make-dir@1.3.0
+461 silly currentTree   ├── make-fetch-happen@5.0.2
+461 silly currentTree   ├── meant@1.0.2
+461 silly currentTree   ├── mime-db@1.35.0
+461 silly currentTree   ├── mime-types@2.1.19
+461 silly currentTree   ├── minimatch@3.0.4
+461 silly currentTree   ├── minimist@1.2.5
+461 silly currentTree   ├─┬ minizlib@1.3.3
+461 silly currentTree   │ └── minipass@2.9.0
+461 silly currentTree   ├── mississippi@3.0.0
+461 silly currentTree   ├─┬ mkdirp@0.5.5
+461 silly currentTree   │ └── minimist@1.2.5
+461 silly currentTree   ├─┬ move-concurrently@1.0.1
+461 silly currentTree   │ └── aproba@1.2.0
+461 silly currentTree   ├── ms@2.1.1
+461 silly currentTree   ├── mute-stream@0.0.7
+461 silly currentTree   ├── node-fetch-npm@2.0.2
+461 silly currentTree   ├── node-gyp@5.1.0
+461 silly currentTree   ├── nopt@4.0.3
+461 silly currentTree   ├─┬ normalize-package-data@2.5.0
+461 silly currentTree   │ └── resolve@1.10.0
+461 silly currentTree   ├── npm-audit-report@1.3.3
+461 silly currentTree   ├── npm-bundled@1.1.1
+461 silly currentTree   ├── npm-cache-filename@1.0.2
+461 silly currentTree   ├── npm-install-checks@3.0.2
+461 silly currentTree   ├── npm-lifecycle@3.1.5
+461 silly currentTree   ├── npm-logical-tree@1.2.1
+461 silly currentTree   ├── npm-normalize-package-bin@1.0.1
+461 silly currentTree   ├── npm-package-arg@6.1.1
+461 silly currentTree   ├── npm-packlist@1.4.8
+461 silly currentTree   ├── npm-pick-manifest@3.0.2
+461 silly currentTree   ├── npm-profile@4.0.4
+461 silly currentTree   ├─┬ npm-registry-fetch@4.0.7
+461 silly currentTree   │ └── safe-buffer@5.2.1
+461 silly currentTree   ├── npm-run-path@2.0.2
+461 silly currentTree   ├── npm-user-validate@1.0.1
+461 silly currentTree   ├── npmlog@4.1.2
+461 silly currentTree   ├── number-is-nan@1.0.1
+461 silly currentTree   ├── oauth-sign@0.9.0
+461 silly currentTree   ├── object-assign@4.1.1
+461 silly currentTree   ├── object-keys@1.0.12
+461 silly currentTree   ├── object.getownpropertydescriptors@2.0.3
+461 silly currentTree   ├── once@1.4.0
+461 silly currentTree   ├── opener@1.5.2
+461 silly currentTree   ├── os-homedir@1.0.2
+461 silly currentTree   ├── os-tmpdir@1.0.2
+461 silly currentTree   ├── osenv@0.1.5
+461 silly currentTree   ├── p-finally@1.0.0
+461 silly currentTree   ├── package-json@4.0.1
+461 silly currentTree   ├─┬ pacote@9.5.12
+461 silly currentTree   │ └── minipass@2.9.0
+461 silly currentTree   ├─┬ parallel-transform@1.1.0
+461 silly currentTree   │ ├── readable-stream@2.3.6
+461 silly currentTree   │ └── string_decoder@1.1.1
+461 silly currentTree   ├── path-exists@3.0.0
+461 silly currentTree   ├── path-is-absolute@1.0.1
+461 silly currentTree   ├── path-is-inside@1.0.2
+461 silly currentTree   ├── path-key@2.0.1
+461 silly currentTree   ├── path-parse@1.0.7
+461 silly currentTree   ├── performance-now@2.1.0
+461 silly currentTree   ├── pify@3.0.0
+461 silly currentTree   ├── prepend-http@1.0.4
+461 silly currentTree   ├── process-nextick-args@2.0.0
+461 silly currentTree   ├── promise-inflight@1.0.1
+461 silly currentTree   ├─┬ promise-retry@1.1.1
+461 silly currentTree   │ └── retry@0.10.1
+461 silly currentTree   ├── promzard@0.3.0
+461 silly currentTree   ├── proto-list@1.2.4
+461 silly currentTree   ├── protoduck@5.0.1
+461 silly currentTree   ├── prr@1.0.1
+461 silly currentTree   ├── pseudomap@1.0.2
+461 silly currentTree   ├── psl@1.1.29
+461 silly currentTree   ├── pump@3.0.0
+461 silly currentTree   ├─┬ pumpify@1.5.1
+461 silly currentTree   │ └── pump@2.0.1
+461 silly currentTree   ├── punycode@1.4.1
+461 silly currentTree   ├── qrcode-terminal@0.12.0
+461 silly currentTree   ├── qs@6.5.2
+461 silly currentTree   ├── query-string@6.8.2
+461 silly currentTree   ├── qw@1.0.1
+461 silly currentTree   ├── rc@1.2.8
+461 silly currentTree   ├── read-cmd-shim@1.0.5
+461 silly currentTree   ├── read-installed@4.0.3
+461 silly currentTree   ├── read-package-json@2.1.1
+461 silly currentTree   ├── read-package-tree@5.3.1
+461 silly currentTree   ├── read@1.0.7
+461 silly currentTree   ├── readable-stream@3.6.0
+461 silly currentTree   ├── readdir-scoped-modules@1.1.0
+461 silly currentTree   ├── registry-auth-token@3.4.0
+461 silly currentTree   ├── registry-url@3.1.0
+461 silly currentTree   ├── request@2.88.0
+461 silly currentTree   ├── require-directory@2.1.1
+461 silly currentTree   ├── require-main-filename@2.0.0
+461 silly currentTree   ├── resolve-from@4.0.0
+461 silly currentTree   ├── retry@0.12.0
+461 silly currentTree   ├── rimraf@2.7.1
+461 silly currentTree   ├─┬ run-queue@1.0.3
+461 silly currentTree   │ └── aproba@1.2.0
+461 silly currentTree   ├── safe-buffer@5.1.2
+461 silly currentTree   ├── safer-buffer@2.1.2
+461 silly currentTree   ├── semver-diff@2.1.0
+461 silly currentTree   ├── semver@5.7.1
+461 silly currentTree   ├── set-blocking@2.0.0
+461 silly currentTree   ├── sha@3.0.0
+461 silly currentTree   ├── shebang-command@1.2.0
+461 silly currentTree   ├── shebang-regex@1.0.0
+461 silly currentTree   ├── signal-exit@3.0.2
+461 silly currentTree   ├── slide@1.1.6
+461 silly currentTree   ├── smart-buffer@4.1.0
+461 silly currentTree   ├─┬ socks-proxy-agent@4.0.2
+461 silly currentTree   │ └── agent-base@4.2.1
+461 silly currentTree   ├── socks@2.3.3
+461 silly currentTree   ├── sorted-object@2.0.1
+461 silly currentTree   ├─┬ sorted-union-stream@2.1.3
+461 silly currentTree   │ ├── from2@1.3.0
+461 silly currentTree   │ ├── isarray@0.0.1
+461 silly currentTree   │ ├── readable-stream@1.1.14
+461 silly currentTree   │ └── string_decoder@0.10.31
+461 silly currentTree   ├── spdx-correct@3.0.0
+461 silly currentTree   ├── spdx-exceptions@2.1.0
+461 silly currentTree   ├── spdx-expression-parse@3.0.0
+461 silly currentTree   ├── spdx-license-ids@3.0.5
+461 silly currentTree   ├── split-on-first@1.1.0
+461 silly currentTree   ├── sshpk@1.14.2
+461 silly currentTree   ├── ssri@6.0.2
+461 silly currentTree   ├── stream-each@1.2.2
+461 silly currentTree   ├─┬ stream-iterate@1.2.0
+461 silly currentTree   │ ├── readable-stream@2.3.6
+461 silly currentTree   │ └── string_decoder@1.1.1
+461 silly currentTree   ├── stream-shift@1.0.0
+461 silly currentTree   ├── strict-uri-encode@2.0.0
+461 silly currentTree   ├─┬ string_decoder@1.3.0
+461 silly currentTree   │ └── safe-buffer@5.2.0
+461 silly currentTree   ├─┬ string-width@2.1.1
+461 silly currentTree   │ ├── ansi-regex@3.0.0
+461 silly currentTree   │ ├── is-fullwidth-code-point@2.0.0
+461 silly currentTree   │ └── strip-ansi@4.0.0
+461 silly currentTree   ├── stringify-package@1.0.1
+461 silly currentTree   ├── strip-ansi@3.0.1
+461 silly currentTree   ├── strip-eof@1.0.0
+461 silly currentTree   ├── strip-json-comments@2.0.1
+461 silly currentTree   ├── supports-color@5.4.0
+461 silly currentTree   ├─┬ tar@4.4.19
+461 silly currentTree   │ ├── minipass@2.9.0
+461 silly currentTree   │ ├── safe-buffer@5.2.1
+461 silly currentTree   │ └── yallist@3.1.1
+461 silly currentTree   ├── term-size@1.2.0
+461 silly currentTree   ├── text-table@0.2.0
+461 silly currentTree   ├── through@2.3.8
+461 silly currentTree   ├─┬ through2@2.0.3
+461 silly currentTree   │ ├── readable-stream@2.3.6
+461 silly currentTree   │ └── string_decoder@1.1.1
+461 silly currentTree   ├── timed-out@4.0.1
+461 silly currentTree   ├── tiny-relative-date@1.3.0
+461 silly currentTree   ├── tough-cookie@2.4.3
+461 silly currentTree   ├── tunnel-agent@0.6.0
+461 silly currentTree   ├── tweetnacl@0.14.5
+461 silly currentTree   ├── typedarray@0.0.6
+461 silly currentTree   ├── uid-number@0.0.6
+461 silly currentTree   ├── umask@1.1.0
+461 silly currentTree   ├── unique-filename@1.1.1
+461 silly currentTree   ├── unique-slug@2.0.0
+461 silly currentTree   ├── unique-string@1.0.0
+461 silly currentTree   ├── unpipe@1.0.0
+461 silly currentTree   ├── unzip-response@2.0.1
+461 silly currentTree   ├── update-notifier@2.5.0
+461 silly currentTree   ├─┬ uri-js@4.4.0
+461 silly currentTree   │ └── punycode@2.1.1
+461 silly currentTree   ├── url-parse-lax@1.0.0
+461 silly currentTree   ├── util-deprecate@1.0.2
+461 silly currentTree   ├── util-extend@1.0.3
+461 silly currentTree   ├── util-promisify@2.1.0
+461 silly currentTree   ├── uuid@3.3.3
+461 silly currentTree   ├── validate-npm-package-license@3.0.4
+461 silly currentTree   ├── validate-npm-package-name@3.0.0
+461 silly currentTree   ├── verror@1.10.0
+461 silly currentTree   ├── wcwidth@1.0.1
+461 silly currentTree   ├── which-module@2.0.0
+461 silly currentTree   ├── which@1.3.1
+461 silly currentTree   ├─┬ wide-align@1.1.2
+461 silly currentTree   │ └── string-width@1.0.2
+461 silly currentTree   ├── widest-line@2.0.1
+461 silly currentTree   ├── worker-farm@1.7.0
+461 silly currentTree   ├─┬ wrap-ansi@5.1.0
+461 silly currentTree   │ ├── ansi-regex@4.1.0
+461 silly currentTree   │ ├── is-fullwidth-code-point@2.0.0
+461 silly currentTree   │ ├── string-width@3.1.0
+461 silly currentTree   │ └── strip-ansi@5.2.0
+461 silly currentTree   ├── wrappy@1.0.2
+461 silly currentTree   ├── write-file-atomic@2.4.3
+461 silly currentTree   ├── xdg-basedir@3.0.0
+461 silly currentTree   ├── xtend@4.0.1
+461 silly currentTree   ├── y18n@4.0.1
+461 silly currentTree   ├── yallist@3.0.3
+461 silly currentTree   ├─┬ yargs-parser@15.0.1
+461 silly currentTree   │ └── camelcase@5.3.1
+461 silly currentTree   └─┬ yargs@14.2.3
+461 silly currentTree     ├── ansi-regex@4.1.0
+461 silly currentTree     ├── find-up@3.0.0
+461 silly currentTree     ├── is-fullwidth-code-point@2.0.0
+461 silly currentTree     ├── locate-path@3.0.0
+461 silly currentTree     ├── p-limit@2.3.0
+461 silly currentTree     ├── p-locate@3.0.0
+461 silly currentTree     ├── p-try@2.2.0
+461 silly currentTree     ├── string-width@3.1.0
+461 silly currentTree     └── strip-ansi@5.2.0
+462 silly idealTree lib
+462 silly idealTree └─┬ npm@9.7.2
+462 silly idealTree   ├── @colors/colors@1.5.0
+462 silly idealTree   ├─┬ @isaacs/cliui@8.0.2
+462 silly idealTree   │ ├── ansi-regex@6.0.1
+462 silly idealTree   │ ├── emoji-regex@9.2.2
+462 silly idealTree   │ ├── string-width@5.1.2
+462 silly idealTree   │ └── strip-ansi@7.1.0
+462 silly idealTree   ├── @isaacs/string-locale-compare@1.1.0
+462 silly idealTree   ├── @npmcli/arborist@6.2.10
+462 silly idealTree   ├── @npmcli/config@6.2.1
+462 silly idealTree   ├── @npmcli/disparity-colors@3.0.0
+462 silly idealTree   ├── @npmcli/fs@3.1.0
+462 silly idealTree   ├── @npmcli/git@4.1.0
+462 silly idealTree   ├── @npmcli/installed-package-contents@2.0.2
+462 silly idealTree   ├── @npmcli/map-workspaces@3.0.4
+462 silly idealTree   ├── @npmcli/metavuln-calculator@5.0.1
+462 silly idealTree   ├── @npmcli/name-from-folder@2.0.0
+462 silly idealTree   ├── @npmcli/node-gyp@3.0.0
+462 silly idealTree   ├── @npmcli/package-json@3.1.1
+462 silly idealTree   ├── @npmcli/promise-spawn@6.0.2
+462 silly idealTree   ├── @npmcli/query@3.0.0
+462 silly idealTree   ├── @npmcli/run-script@6.0.2
+462 silly idealTree   ├── @pkgjs/parseargs@0.11.0
+462 silly idealTree   ├── @sigstore/protobuf-specs@0.1.0
+462 silly idealTree   ├── @sigstore/tuf@1.0.0
+462 silly idealTree   ├── @tootallnate/once@2.0.0
+462 silly idealTree   ├── @tufjs/canonical-json@1.0.0
+462 silly idealTree   ├── @tufjs/models@1.0.4
+462 silly idealTree   ├── abbrev@2.0.0
+462 silly idealTree   ├── abort-controller@3.0.0
+462 silly idealTree   ├── agent-base@6.0.2
+462 silly idealTree   ├── agentkeepalive@4.3.0
+462 silly idealTree   ├── aggregate-error@3.1.0
+462 silly idealTree   ├── ansi-regex@5.0.1
+462 silly idealTree   ├── ansi-styles@4.3.0
+462 silly idealTree   ├── aproba@2.0.0
+462 silly idealTree   ├── archy@1.0.0
+462 silly idealTree   ├── are-we-there-yet@4.0.0
+462 silly idealTree   ├── balanced-match@1.0.2
+462 silly idealTree   ├── base64-js@1.5.1
+462 silly idealTree   ├── bin-links@4.0.1
+462 silly idealTree   ├── binary-extensions@2.2.0
+462 silly idealTree   ├── brace-expansion@2.0.1
+462 silly idealTree   ├── buffer@6.0.3
+462 silly idealTree   ├── builtins@5.0.1
+462 silly idealTree   ├── cacache@17.1.3
+462 silly idealTree   ├── chalk@5.2.0
+462 silly idealTree   ├── chownr@2.0.0
+462 silly idealTree   ├── ci-info@3.8.0
+462 silly idealTree   ├── cidr-regex@3.1.1
+462 silly idealTree   ├── clean-stack@2.2.0
+462 silly idealTree   ├── cli-columns@4.0.0
+462 silly idealTree   ├── cli-table3@0.6.3
+462 silly idealTree   ├── clone@1.0.4
+462 silly idealTree   ├── cmd-shim@6.0.1
+462 silly idealTree   ├── color-convert@2.0.1
+462 silly idealTree   ├── color-name@1.1.4
+462 silly idealTree   ├── color-support@1.1.3
+462 silly idealTree   ├── columnify@1.6.0
+462 silly idealTree   ├── common-ancestor-path@1.0.1
+462 silly idealTree   ├── concat-map@0.0.1
+462 silly idealTree   ├── console-control-strings@1.1.0
+462 silly idealTree   ├─┬ cross-spawn@7.0.3
+462 silly idealTree   │ └── which@2.0.2
+462 silly idealTree   ├── cssesc@3.0.0
+462 silly idealTree   ├─┬ debug@4.3.4
+462 silly idealTree   │ └── ms@2.1.2
+462 silly idealTree   ├── defaults@1.0.4
+462 silly idealTree   ├── delegates@1.0.0
+462 silly idealTree   ├── depd@2.0.0
+462 silly idealTree   ├── diff@5.1.0
+462 silly idealTree   ├── eastasianwidth@0.2.0
+462 silly idealTree   ├── emoji-regex@8.0.0
+462 silly idealTree   ├── encoding@0.1.13
+462 silly idealTree   ├── env-paths@2.2.1
+462 silly idealTree   ├── err-code@2.0.3
+462 silly idealTree   ├── event-target-shim@5.0.1
+462 silly idealTree   ├── events@3.3.0
+462 silly idealTree   ├── exponential-backoff@3.1.1
+462 silly idealTree   ├── fastest-levenshtein@1.0.16
+462 silly idealTree   ├── foreground-child@3.1.1
+462 silly idealTree   ├── fs-minipass@3.0.2
+462 silly idealTree   ├── fs.realpath@1.0.0
+462 silly idealTree   ├── function-bind@1.1.1
+462 silly idealTree   ├── gauge@5.0.1
+462 silly idealTree   ├── glob@10.2.7
+462 silly idealTree   ├── graceful-fs@4.2.11
+462 silly idealTree   ├── has-unicode@2.0.1
+462 silly idealTree   ├── has@1.0.3
+462 silly idealTree   ├── hosted-git-info@6.1.1
+462 silly idealTree   ├── http-cache-semantics@4.1.1
+462 silly idealTree   ├── http-proxy-agent@5.0.0
+462 silly idealTree   ├── https-proxy-agent@5.0.1
+462 silly idealTree   ├── humanize-ms@1.2.1
+462 silly idealTree   ├── iconv-lite@0.6.3
+462 silly idealTree   ├── ieee754@1.2.1
+462 silly idealTree   ├── ignore-walk@6.0.3
+462 silly idealTree   ├── imurmurhash@0.1.4
+462 silly idealTree   ├── indent-string@4.0.0
+462 silly idealTree   ├── inflight@1.0.6
+462 silly idealTree   ├── inherits@2.0.4
+462 silly idealTree   ├── ini@4.1.1
+462 silly idealTree   ├── init-package-json@5.0.0
+462 silly idealTree   ├── ip-regex@4.3.0
+462 silly idealTree   ├── ip@2.0.0
+462 silly idealTree   ├── is-cidr@4.0.2
+462 silly idealTree   ├── is-core-module@2.12.1
+462 silly idealTree   ├── is-fullwidth-code-point@3.0.0
+462 silly idealTree   ├── is-lambda@1.0.1
+462 silly idealTree   ├── isexe@2.0.0
+462 silly idealTree   ├── jackspeak@2.2.1
+462 silly idealTree   ├── json-parse-even-better-errors@3.0.0
+462 silly idealTree   ├── json-stringify-nice@1.1.4
+462 silly idealTree   ├── jsonparse@1.3.1
+462 silly idealTree   ├── just-diff-apply@5.5.0
+462 silly idealTree   ├── just-diff@6.0.2
+462 silly idealTree   ├── libnpmaccess@7.0.2
+462 silly idealTree   ├── libnpmdiff@5.0.18
+462 silly idealTree   ├── libnpmexec@6.0.1
+462 silly idealTree   ├── libnpmfund@4.0.18
+462 silly idealTree   ├── libnpmhook@9.0.3
+462 silly idealTree   ├── libnpmorg@5.0.4
+462 silly idealTree   ├── libnpmpack@5.0.18
+462 silly idealTree   ├── libnpmpublish@7.4.0
+462 silly idealTree   ├── libnpmsearch@6.0.2
+462 silly idealTree   ├── libnpmteam@5.0.3
+462 silly idealTree   ├── libnpmversion@4.0.2
+462 silly idealTree   ├── lru-cache@7.18.3
+462 silly idealTree   ├── make-fetch-happen@11.1.1
+462 silly idealTree   ├── minimatch@9.0.1
+462 silly idealTree   ├─┬ minipass-collect@1.0.2
+462 silly idealTree   │ └── minipass@3.3.6
+462 silly idealTree   ├── minipass-fetch@3.0.3
+462 silly idealTree   ├─┬ minipass-flush@1.0.5
+462 silly idealTree   │ └── minipass@3.3.6
+462 silly idealTree   ├─┬ minipass-json-stream@1.0.1
+462 silly idealTree   │ └── minipass@3.3.6
+462 silly idealTree   ├─┬ minipass-pipeline@1.2.4
+462 silly idealTree   │ └── minipass@3.3.6
+462 silly idealTree   ├─┬ minipass-sized@1.0.3
+462 silly idealTree   │ └── minipass@3.3.6
+462 silly idealTree   ├── minipass@5.0.0
+462 silly idealTree   ├─┬ minizlib@2.1.2
+462 silly idealTree   │ └── minipass@3.3.6
+462 silly idealTree   ├── mkdirp@1.0.4
+462 silly idealTree   ├── ms@2.1.3
+462 silly idealTree   ├── mute-stream@1.0.0
+462 silly idealTree   ├── negotiator@0.6.3
+462 silly idealTree   ├─┬ node-gyp@9.4.0
+462 silly idealTree   │ ├── abbrev@1.1.1
+462 silly idealTree   │ ├── are-we-there-yet@3.0.1
+462 silly idealTree   │ ├── brace-expansion@1.1.11
+462 silly idealTree   │ ├── gauge@4.0.4
+462 silly idealTree   │ ├── glob@7.2.3
+462 silly idealTree   │ ├── minimatch@3.1.2
+462 silly idealTree   │ ├── nopt@6.0.0
+462 silly idealTree   │ ├── npmlog@6.0.2
+462 silly idealTree   │ ├── readable-stream@3.6.2
+462 silly idealTree   │ ├── signal-exit@3.0.7
+462 silly idealTree   │ └── which@2.0.2
+462 silly idealTree   ├── nopt@7.2.0
+462 silly idealTree   ├── normalize-package-data@5.0.0
+462 silly idealTree   ├── npm-audit-report@5.0.0
+462 silly idealTree   ├── npm-bundled@3.0.0
+462 silly idealTree   ├── npm-install-checks@6.1.1
+462 silly idealTree   ├── npm-normalize-package-bin@3.0.1
+462 silly idealTree   ├── npm-package-arg@10.1.0
+462 silly idealTree   ├── npm-packlist@7.0.4
+462 silly idealTree   ├── npm-pick-manifest@8.0.1
+462 silly idealTree   ├── npm-profile@7.0.1
+462 silly idealTree   ├── npm-registry-fetch@14.0.5
+462 silly idealTree   ├── npm-user-validate@2.0.0
+462 silly idealTree   ├── npmlog@7.0.1
+462 silly idealTree   ├── once@1.4.0
+462 silly idealTree   ├── p-map@4.0.0
+462 silly idealTree   ├── pacote@15.2.0
+462 silly idealTree   ├── parse-conflict-json@3.0.1
+462 silly idealTree   ├── path-is-absolute@1.0.1
+462 silly idealTree   ├── path-key@3.1.1
+462 silly idealTree   ├─┬ path-scurry@1.9.2
+462 silly idealTree   │ └── lru-cache@9.1.1
+462 silly idealTree   ├── postcss-selector-parser@6.0.13
+462 silly idealTree   ├── proc-log@3.0.0
+462 silly idealTree   ├── process@0.11.10
+462 silly idealTree   ├── promise-all-reject-late@1.0.1
+462 silly idealTree   ├── promise-call-limit@1.0.2
+462 silly idealTree   ├── promise-inflight@1.0.1
+462 silly idealTree   ├── promise-retry@2.0.1
+462 silly idealTree   ├── promzard@1.0.0
+462 silly idealTree   ├── qrcode-terminal@0.12.0
+462 silly idealTree   ├── read-cmd-shim@4.0.0
+462 silly idealTree   ├── read-package-json-fast@3.0.2
+462 silly idealTree   ├── read-package-json@6.0.4
+462 silly idealTree   ├── read@2.1.0
+462 silly idealTree   ├── readable-stream@4.4.0
+462 silly idealTree   ├── retry@0.12.0
+462 silly idealTree   ├─┬ rimraf@3.0.2
+462 silly idealTree   │ ├── brace-expansion@1.1.11
+462 silly idealTree   │ ├── glob@7.2.3
+462 silly idealTree   │ └── minimatch@3.1.2
+462 silly idealTree   ├── safe-buffer@5.2.1
+462 silly idealTree   ├── safer-buffer@2.1.2
+462 silly idealTree   ├─┬ semver@7.5.2
+462 silly idealTree   │ └── lru-cache@6.0.0
+462 silly idealTree   ├── set-blocking@2.0.0
+462 silly idealTree   ├── shebang-command@2.0.0
+462 silly idealTree   ├── shebang-regex@3.0.0
+462 silly idealTree   ├── signal-exit@4.0.2
+462 silly idealTree   ├── sigstore@1.6.0
+462 silly idealTree   ├── smart-buffer@4.2.0
+462 silly idealTree   ├── socks-proxy-agent@7.0.0
+462 silly idealTree   ├── socks@2.7.1
+462 silly idealTree   ├── spdx-correct@3.2.0
+462 silly idealTree   ├── spdx-exceptions@2.3.0
+462 silly idealTree   ├── spdx-expression-parse@3.0.1
+462 silly idealTree   ├── spdx-license-ids@3.0.13
+462 silly idealTree   ├── ssri@10.0.4
+462 silly idealTree   ├── string_decoder@1.3.0
+462 silly idealTree   ├── string-width@4.2.3
+462 silly idealTree   ├── string-width@4.2.3
+462 silly idealTree   ├── strip-ansi@6.0.1
+462 silly idealTree   ├── strip-ansi@6.0.1
+462 silly idealTree   ├── supports-color@9.3.1
+462 silly idealTree   ├─┬ tar@6.1.15
+462 silly idealTree   │ └─┬ fs-minipass@2.1.0
+462 silly idealTree   │   └── minipass@3.3.6
+462 silly idealTree   ├── text-table@0.2.0
+462 silly idealTree   ├── tiny-relative-date@1.3.0
+462 silly idealTree   ├── treeverse@3.0.0
+462 silly idealTree   ├── tuf-js@1.1.7
+462 silly idealTree   ├── unique-filename@3.0.0
+462 silly idealTree   ├── unique-slug@4.0.0
+462 silly idealTree   ├── util-deprecate@1.0.2
+462 silly idealTree   ├── validate-npm-package-license@3.0.4
+462 silly idealTree   ├── validate-npm-package-name@5.0.0
+462 silly idealTree   ├── walk-up-path@3.0.1
+462 silly idealTree   ├── wcwidth@1.0.1
+462 silly idealTree   ├── which@3.0.1
+462 silly idealTree   ├── wide-align@1.1.5
+462 silly idealTree   ├── wrap-ansi@7.0.0
+462 silly idealTree   ├─┬ wrap-ansi@8.1.0
+462 silly idealTree   │ ├── ansi-regex@6.0.1
+462 silly idealTree   │ ├── ansi-styles@6.2.1
+462 silly idealTree   │ ├── emoji-regex@9.2.2
+462 silly idealTree   │ ├── string-width@5.1.2
+462 silly idealTree   │ └── strip-ansi@7.1.0
+462 silly idealTree   ├── wrappy@1.0.2
+462 silly idealTree   ├── write-file-atomic@5.0.1
+462 silly idealTree   └── yallist@4.0.0
+463 silly install generateActionsToTake
+464 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/abbrev
+465 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ansi-align
+466 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ansi-regex
+467 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ansicolors
+468 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ansistyles
+469 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/aproba
+470 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/are-we-there-yet/node_modules/string_decoder
+471 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/asap
+472 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/asn1
+473 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/assert-plus
+474 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/asynckit
+475 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/aws-sign2
+476 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/aws4
+477 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/balanced-match
+478 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/bluebird
+479 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/brace-expansion
+480 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/buffer-from
+481 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/byline
+482 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/byte-size
+483 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/call-limit
+484 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/camelcase
+485 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/capture-stack-trace
+486 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/caseless
+487 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/chownr
+488 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ci-info
+489 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cli-boxes
+490 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cliui/node_modules/ansi-regex
+491 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cliui/node_modules/is-fullwidth-code-point
+492 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cliui/node_modules/strip-ansi
+493 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cliui/node_modules/string-width
+494 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cliui
+495 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/clone
+496 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cmd-shim
+497 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/code-point-at
+498 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/color-name
+499 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/color-convert
+500 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ansi-styles
+501 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/colors
+502 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/concat-map
+503 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/concat-stream/node_modules/string_decoder
+504 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/console-control-strings
+505 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/copy-concurrently/node_modules/aproba
+506 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/copy-concurrently/node_modules/iferr
+507 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/core-util-is
+508 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/create-error-class
+509 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cross-spawn/node_modules/yallist
+510 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/crypto-random-string
+511 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cyclist
+512 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/dashdash
+513 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/debug/node_modules/ms
+514 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/debug
+515 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/debuglog
+516 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/decamelize
+517 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/decode-uri-component
+518 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/deep-extend
+519 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/defaults
+520 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/delayed-stream
+521 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/combined-stream
+522 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/delegates
+523 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/detect-indent
+524 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/detect-newline
+525 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/dezalgo
+526 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/dotenv
+527 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/duplexer3
+528 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/duplexify/node_modules/string_decoder
+529 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/editor
+530 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/emoji-regex
+531 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/end-of-stream
+532 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/env-paths
+533 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/err-code
+534 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/es6-promise
+535 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/es6-promisify
+536 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/agent-base
+537 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/escape-string-regexp
+538 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/execa/node_modules/get-stream
+539 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/extend
+540 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/extsprintf
+541 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/fast-json-stable-stringify
+542 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/figgy-pudding
+543 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/find-npm-prefix
+544 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/flush-write-stream/node_modules/string_decoder
+545 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/forever-agent
+546 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/from2/node_modules/string_decoder
+547 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/fs-minipass/node_modules/minipass
+548 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/fs-write-stream-atomic/node_modules/iferr
+549 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/fs-write-stream-atomic/node_modules/string_decoder
+550 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/fs.realpath
+551 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/function-bind
+552 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/gauge/node_modules/aproba
+553 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/gauge/node_modules/string-width
+554 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/genfun
+555 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/gentle-fs/node_modules/aproba
+556 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/gentle-fs/node_modules/iferr
+557 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/get-caller-file
+558 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/getpass
+559 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/global-dirs
+560 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/got/node_modules/get-stream
+561 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/graceful-fs
+562 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/har-schema
+563 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/har-validator/node_modules/fast-deep-equal
+564 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/har-validator/node_modules/json-schema-traverse
+565 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/has
+566 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/has-flag
+567 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/has-symbols
+568 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/has-unicode
+569 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/http-cache-semantics
+570 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/http-proxy-agent
+571 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/https-proxy-agent
+572 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/iferr
+573 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/import-lazy
+574 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/imurmurhash
+575 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/infer-owner
+576 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/inherits
+577 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ini
+578 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ip
+579 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ip-regex
+580 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cidr-regex
+581 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-callable
+582 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-ci/node_modules/ci-info
+583 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-ci
+584 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-date-object
+585 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-npm
+586 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-obj
+587 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/dot-prop
+588 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-redirect
+589 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-regex
+590 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-retry-allowed
+591 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-stream
+592 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-symbol
+593 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/es-to-primitive
+594 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/es-abstract
+595 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-typedarray
+596 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/isarray
+597 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/isexe
+598 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/isstream
+599 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/jsbn
+600 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ecc-jsbn
+601 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/json-parse-better-errors
+602 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/json-schema
+603 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/json-stringify-safe
+604 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/jsonparse
+605 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lazy-property
+606 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmconfig/node_modules/p-try
+607 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmconfig/node_modules/p-limit
+608 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmconfig/node_modules/p-locate
+609 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lock-verify
+610 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lockfile
+611 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash._baseindexof
+612 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash._bindcallback
+613 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash._cacheindexof
+614 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash._createset
+615 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash._getnative
+616 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash._createcache
+617 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash._root
+618 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash._baseuniq
+619 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash.clonedeep
+620 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash.restparam
+621 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash.union
+622 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash.uniq
+623 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lodash.without
+624 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lowercase-keys
+625 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/lru-cache
+626 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/hosted-git-info
+627 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/meant
+628 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/mime-db
+629 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/mime-types
+630 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/form-data
+631 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/minimatch
+632 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ignore-walk
+633 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/minimist
+634 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/fs-minipass
+635 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/mkdirp/node_modules/minimist
+636 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/mkdirp
+637 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/move-concurrently/node_modules/aproba
+638 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ms
+639 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/humanize-ms
+640 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/agentkeepalive
+641 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/mute-stream
+642 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-fetch-npm
+643 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-cache-filename
+644 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-logical-tree
+645 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-normalize-package-bin
+646 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-bundled
+647 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-packlist
+648 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-registry-fetch/node_modules/safe-buffer
+649 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-run-path
+650 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/number-is-nan
+651 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-fullwidth-code-point
+652 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/oauth-sign
+653 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/object-assign
+654 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/object-keys
+655 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/define-properties
+656 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/object.getownpropertydescriptors
+657 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/opener
+658 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/os-homedir
+659 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/os-tmpdir
+660 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/osenv
+661 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/nopt
+662 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/p-finally
+663 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/pacote/node_modules/minipass
+664 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/parallel-transform/node_modules/string_decoder
+665 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/path-exists
+666 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmconfig/node_modules/locate-path
+667 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmconfig/node_modules/find-up
+668 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmconfig
+669 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/path-is-absolute
+670 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/path-is-inside
+671 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/fs-vacuum
+672 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-path-inside
+673 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-installed-globally
+674 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/path-key
+675 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/path-parse
+676 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/normalize-package-data/node_modules/resolve
+677 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/performance-now
+678 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/pify
+679 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/make-dir
+680 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/prepend-http
+681 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/process-nextick-args
+682 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/are-we-there-yet/node_modules/readable-stream
+683 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/concat-stream/node_modules/readable-stream
+684 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/duplexify/node_modules/readable-stream
+685 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/flush-write-stream/node_modules/readable-stream
+686 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/flush-write-stream
+687 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/from2/node_modules/readable-stream
+688 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/from2
+689 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/fs-write-stream-atomic/node_modules/readable-stream
+690 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/fs-write-stream-atomic
+691 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/parallel-transform/node_modules/readable-stream
+692 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/parallel-transform
+693 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/promise-inflight
+694 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/promise-retry/node_modules/retry
+695 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/proto-list
+696 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/config-chain
+697 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/protoduck
+698 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/prr
+699 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/errno
+700 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/pseudomap
+701 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/psl
+702 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cross-spawn/node_modules/lru-cache
+703 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/pump
+704 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/get-stream
+705 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/pumpify/node_modules/pump
+706 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/punycode
+707 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/qs
+708 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/qw
+709 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/read
+710 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/promzard
+711 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/read-cmd-shim
+712 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/readable-stream
+713 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/are-we-there-yet
+714 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/readdir-scoped-modules
+715 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/require-directory
+716 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/require-main-filename
+717 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/resolve-from
+718 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/retry
+719 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/promise-retry
+720 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/run-queue/node_modules/aproba
+721 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/run-queue
+722 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/copy-concurrently
+723 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/move-concurrently
+724 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/safe-buffer
+725 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/safer-buffer
+726 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/iconv-lite
+727 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/encoding
+728 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/semver-diff
+729 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/set-blocking
+730 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/sha
+731 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/shebang-regex
+732 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/shebang-command
+733 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cross-spawn
+734 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/signal-exit
+735 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/slide
+736 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/gentle-fs
+737 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/smart-buffer
+738 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/socks
+739 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/socks-proxy-agent/node_modules/agent-base
+740 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/socks-proxy-agent
+741 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/sorted-object
+742 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/sorted-union-stream/node_modules/isarray
+743 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/sorted-union-stream/node_modules/string_decoder
+744 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/sorted-union-stream/node_modules/readable-stream
+745 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/sorted-union-stream/node_modules/from2
+746 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/spdx-exceptions
+747 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/spdx-license-ids
+748 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/spdx-expression-parse
+749 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/spdx-correct
+750 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/split-on-first
+751 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/ssri
+752 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/stream-iterate/node_modules/string_decoder
+753 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/stream-shift
+754 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/stream-iterate/node_modules/readable-stream
+755 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/duplexify
+756 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/pumpify
+757 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/stream-each
+758 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/stream-iterate
+759 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/sorted-union-stream
+760 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/strict-uri-encode
+761 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/query-string
+762 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/string_decoder/node_modules/safe-buffer
+763 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/string_decoder
+764 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/string-width/node_modules/ansi-regex
+765 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/string-width/node_modules/is-fullwidth-code-point
+766 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/string-width/node_modules/strip-ansi
+767 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/stringify-package
+768 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/strip-ansi
+769 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/string-width
+770 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/strip-eof
+771 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/execa
+772 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/strip-json-comments
+773 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/rc
+774 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/registry-auth-token
+775 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/registry-url
+776 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/tar/node_modules/safe-buffer
+777 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/tar/node_modules/yallist
+778 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/tar/node_modules/minipass
+779 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/term-size
+780 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/through
+781 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/JSONStream
+782 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/through2/node_modules/string_decoder
+783 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/through2/node_modules/readable-stream
+784 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/timed-out
+785 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/tough-cookie
+786 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/tunnel-agent
+787 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/tweetnacl
+788 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/bcrypt-pbkdf
+789 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/sshpk
+790 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/typedarray
+791 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/concat-stream
+792 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/uid-number
+793 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/umask
+794 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle
+795 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpm
+796 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/unique-slug
+797 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/unique-filename
+798 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/unique-string
+799 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/unpipe
+800 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/unzip-response
+801 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/uri-js/node_modules/punycode
+802 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/uri-js
+803 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/har-validator/node_modules/ajv
+804 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/har-validator
+805 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/url-parse-lax
+806 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/got
+807 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/package-json
+808 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/latest-version
+809 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/util-deprecate
+810 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/util-extend
+811 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/read-installed
+812 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/util-promisify
+813 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/read-package-tree
+814 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/uuid
+815 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/validate-npm-package-license
+816 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/verror
+817 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/jsprim
+818 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/http-signature
+819 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/request
+820 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/wcwidth
+821 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/which
+822 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/which-module
+823 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/wide-align/node_modules/string-width
+824 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/wide-align
+825 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/gauge
+826 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npmlog
+827 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/widest-line
+828 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/boxen
+829 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/worker-farm
+830 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libcipm
+831 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/wrap-ansi/node_modules/ansi-regex
+832 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/wrap-ansi/node_modules/is-fullwidth-code-point
+833 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/wrap-ansi/node_modules/strip-ansi
+834 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/wrap-ansi/node_modules/string-width
+835 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/wrap-ansi
+836 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/glob
+837 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/wrappy
+838 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/once
+839 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/inflight
+840 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/rimraf
+841 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/write-file-atomic
+842 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/bin-links
+843 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/xdg-basedir
+844 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/configstore
+845 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/xtend
+846 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/update-notifier
+847 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/through2
+848 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/y18n
+849 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/mississippi
+850 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yallist
+851 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/minizlib/node_modules/minipass
+852 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/minizlib
+853 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/semver
+854 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/builtins
+855 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/validate-npm-package-name
+856 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/normalize-package-data
+857 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/read-package-json
+858 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-install-checks
+859 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-package-arg
+860 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-pick-manifest
+861 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/tar
+862 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cacache
+863 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/make-fetch-happen
+864 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-registry-fetch
+865 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/node-gyp
+866 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/pacote
+867 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs-parser/node_modules/camelcase
+868 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs-parser
+869 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs/node_modules/ansi-regex
+870 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs/node_modules/is-fullwidth-code-point
+871 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs/node_modules/p-try
+872 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs/node_modules/p-limit
+873 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs/node_modules/p-locate
+874 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs/node_modules/locate-path
+875 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs/node_modules/find-up
+876 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs/node_modules/strip-ansi
+877 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs/node_modules/string-width
+878 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs
+879 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpx
+880 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/archy
+881 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/chalk
+882 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cli-columns
+883 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cli-table3
+884 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/columnify
+885 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/init-package-json
+886 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-cidr
+887 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmaccess
+888 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmhook
+889 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmorg
+890 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmpublish
+891 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmsearch
+892 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmteam
+893 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-audit-report
+894 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-profile
+895 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-user-validate
+896 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/qrcode-terminal
+897 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/supports-color
+898 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/text-table
+899 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/tiny-relative-date
+900 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm
+901 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules
+902 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/are-we-there-yet/node_modules
+903 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cliui/node_modules
+904 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/concat-stream/node_modules
+905 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/copy-concurrently/node_modules
+906 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/cross-spawn/node_modules
+907 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/debug/node_modules
+908 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/duplexify/node_modules
+909 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/execa/node_modules
+910 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/flush-write-stream/node_modules
+911 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/from2/node_modules
+912 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/fs-minipass/node_modules
+913 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/fs-write-stream-atomic/node_modules
+914 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/gauge/node_modules
+915 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/gentle-fs/node_modules
+916 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/got/node_modules
+917 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/har-validator/node_modules
+918 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/is-ci/node_modules
+919 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/libnpmconfig/node_modules
+920 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/mkdirp/node_modules
+921 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/move-concurrently/node_modules
+922 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/npm-registry-fetch/node_modules
+923 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/pacote/node_modules
+924 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/parallel-transform/node_modules
+925 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/normalize-package-data/node_modules
+926 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/promise-retry/node_modules
+927 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/pumpify/node_modules
+928 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/run-queue/node_modules
+929 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/socks-proxy-agent/node_modules
+930 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/sorted-union-stream/node_modules
+931 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/stream-iterate/node_modules
+932 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/string_decoder/node_modules
+933 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/string-width/node_modules
+934 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/tar/node_modules
+935 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/through2/node_modules
+936 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/uri-js/node_modules
+937 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/wide-align/node_modules
+938 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/wrap-ansi/node_modules
+939 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/minizlib/node_modules
+940 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs-parser/node_modules
+941 warn checkPermissions Missing write access to /usr/local/lib/node_modules/npm/node_modules/yargs/node_modules
+942 warn checkPermissions Missing write access to /usr/local/lib/node_modules
+943 timing stage:rollbackFailedOptional Completed in 6ms
+944 timing stage:runTopLevelLifecycles Completed in 26048ms
+945 warn notsup Unsupported engine for npm@9.7.2: wanted: {"node":"^14.17.0 || ^16.13.0 || >=18.0.0"} (current: {"node":"12.22.6","npm":"6.14.15"})
+946 warn notsup Not compatible with your version of node/npm: npm@9.7.2
+947 verbose notsup Not compatible with your version of node/npm: npm@9.7.2
+947 verbose notsup Required: {"node":"^14.17.0 || ^16.13.0 || >=18.0.0"}
+947 verbose notsup Actual:   {"npm":"6.14.15","node":"12.22.6"}
+948 verbose stack Error: EACCES: permission denied, access '/usr/local/lib/node_modules/npm/node_modules/abbrev'
+949 verbose cwd /
+950 verbose Linux 6.3.7-200.fc38.x86_64
+951 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "npm@latest"
+952 verbose node v12.22.6
+953 verbose npm  v6.14.15
+954 error code EACCES
+955 error syscall access
+956 error path /usr/local/lib/node_modules/npm/node_modules/abbrev
+957 error errno -13
+958 error Error: EACCES: permission denied, access '/usr/local/lib/node_modules/npm/node_modules/abbrev'
+958 error  [Error: EACCES: permission denied, access '/usr/local/lib/node_modules/npm/node_modules/abbrev'] {
+958 error   errno: -13,
+958 error   code: 'EACCES',
+958 error   syscall: 'access',
+958 error   path: '/usr/local/lib/node_modules/npm/node_modules/abbrev'
+958 error }
+959 error The operation was rejected by your operating system.
+959 error It is likely you do not have the permissions to access this file as the current user
+959 error
+959 error If you believe this might be a permissions issue, please double-check the
+959 error permissions of the file and its containing directories, or try running
+959 error the command again as root/Administrator.
+960 verbose exit [ -13, true ]

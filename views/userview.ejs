@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+  <script src="https://use.fontawesome.com/c5cc271f92.js"></script>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>User List</h1>
+    
+    <% if (Users.length === 0) { %>
+      <p>No users found.</p>
+    <% } else { %>
+      <div class="table-responsive">
+      <table class="table table-striped  text-center">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Role</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Users.forEach((user,index) => { %>
+            <tr class="align-middle">
+              <td><%= user.username %></td>
+              <td><%= user.email %></td>
+              <td><%= user.role %></td>
+              <td>
+                <% if (user.photo) { %>
+                  <img src="/uploads/<%=  user.photo %>" width="50" class="img-thumbnail" height="auto" alt="">
+                <% } else { %>
+                  No photo available
+                <% } %>
+              </td>
+              <td>
+                <a href="/edit/<%= user._id %>" class="text-success" title="Edit"><i class="fas fa-edit"></i></a>
+                <a href="/delete/<%= user._id %>" class="text-danger" title="Delete"><i class="fas fa-trash"></i></a>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+    <% } %>
+  </div>
+</body>
+</html>

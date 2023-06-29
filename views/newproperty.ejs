@@ -5,55 +5,7 @@
   <link rel="stylesheet" href="/css/newproperty.css">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/landlord.csss" type="stylesheet">
-   <style>
-    .container{
-      margin: 2rem;
-      padding: 2rem;
-      float: left;
-      width: 1200px;;      
-      background-color: springgreen;
-    }
-    h1,h4,h2{
-      text-align: center;
-      font-size: xx-large;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      color: maroon;
-      font-weight: bolder;
-    }
-
-    .div-spacing {
-    margin-bottom: 10rem;
-    margin-top: 2rem;
-  }
-
-    .properties-container {
-      float: right;
-      width: 50%;
-      padding-left: 10px;
-      margin-bottom: 2rem;
-      border-bottom: 5rem;
-      display: block;
-    }
-
-    @media (max-width: 768px) {
-      .form-container,
-      .properties-container ,
-      .properties-container2 {
-        width: 100%;
-        float: right;
-        padding: 0;
-      }
-    }
-
-    /* Adjust the CSS to make the property list and most popular property list divs appear on the right */
-    .properties-container {
-      float: right;
-    }
-
-    .form-container {
-      float: left;
-    }
-  </style>
+   
 </head>
 <body>
   <div class="container">
@@ -100,7 +52,7 @@
           </div>
           <div class="mb-3">
             <label for="photos" class="form-label">Photos:</label>
-            <input type="file" class="form-control" id="photos" name="photos" multiple accept="image/*" required>
+            <input type="file" class="form-control" id="photos" name="photos"  accept="image/*" required>
           </div>
           <div class="mb-3">
             <label for="maps" class="form-label">Maps:</label>
@@ -121,234 +73,264 @@
         </div>
       </div>      
   </div>     
-
-<script>
-  // Property array to store added properties
-  var properties = [];
-
-  // DOM elements
-  var addPropertyForm = document.getElementById('addPropertyForm');
-  var propertiesList = document.getElementById('propertiesList');
-
-  // Add property event listener
-  addPropertyForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    var property_name = document.getElementById('property_name').value;
-    var property_type = document.getElementById('property_type').value;
-    var location = document.getElementById('location').value;
-    var description = document.getElementById('description').value;
-    var bedrooms = document.getElementById('bedrooms').value;
-    var bathrooms = document.getElementById('bathrooms').value;
-    var cost = document.getElementById('cost').value;
-
-    var property = {
-      property_name: property_name,
-      property_type: property_type,
-      location: location,
-      description: description,
-      bedrooms: bedrooms,
-      bathrooms: bathrooms,
-      cost: cost
-    };
-
-    properties.push(property);
-    renderPropertiesList();
-    addPropertyForm.reset();
-  });
-
-  // Delete property event listener
-  function deleteProperty(index) {
-    properties.splice(index, 1);
-    renderPropertiesList();
-  }
-
-  // Edit property event listener
-  function editProperty(index) {
-    var property = properties[index];
-    var updatedName = prompt('Enter the updated name:', property.property_name);
-    var updatedType = prompt('Enter the updated type:', property.property_type);
-    var updatedLocation = prompt('Enter the updated location:', property.location);
-    var updatedDescription = prompt('Enter the updated description:', property.description);
-    var updatedBedrooms = prompt('Enter the updated number of bedrooms:', property.bedrooms);
-    var updatedBathrooms = prompt('Enter the updated number of bathrooms:', property.bathrooms);
-    var updatedCost = prompt('Enter the updated cost:', property.cost);
-
-    if (updatedName && updatedType && updatedLocation && updatedDescription && updatedBedrooms && updatedBathrooms && updatedCost) {
-      property.property_name = updatedName;
-      property.property_type = updatedType;
-      property.location = updatedLocation;
-      property.description = updatedDescription;
-      property.bedrooms = updatedBedrooms;
-      property.bathrooms = updatedBathrooms;
-      property.cost = updatedCost;
+  <script>
+    /*
+    // Property array to store added properties
+    var properties = [];
+  
+    // DOM elements
+    var addPropertyForm = document.getElementById('addPropertyForm');
+    var propertiesList = document.getElementById('propertiesList');
+  
+    // Add property event listener
+    addPropertyForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      var property_name = document.getElementById('property_name').value;
+      var property_type = document.getElementById('property_type').value;
+      var location = document.getElementById('location').value;
+      var description = document.getElementById('description').value;
+      var bedrooms = document.getElementById('bedrooms').value;
+      var bathrooms = document.getElementById('bathrooms').value;
+      var cost = document.getElementById('cost').value;
+      var photos = document.getElementById('photos').files;
+      var maps = document.getElementById('maps').files;
+  
+      var property = {
+        property_name: property_name,
+        property_type: property_type,
+        location: location,
+        description: description,
+        bedrooms: bedrooms,
+        bathrooms: bathrooms,
+        cost: cost,
+        photos: photos,
+        maps: maps
+      };
+  
+      properties.push(property);
+      renderPropertiesList();
+      addPropertyForm.reset();
+    });
+  
+    // Delete property event listener
+    function deleteProperty(index) {
+      properties.splice(index, 1);
       renderPropertiesList();
     }
-  }
-
-  // Save property event listener
-  function saveProperty(index) {
-    var property = properties[index];
-
-    var form = document.createElement('form');
-    form.action = '/api/property/register';
-    form.method = 'POST';
-    form.enctype = 'multipart/form-data';
-
-    var propertyNameInput = document.createElement('input');
-    propertyNameInput.type = 'hidden';
-    propertyNameInput.name = 'property_name';
-    propertyNameInput.value = property.property_name;
-
-    var propertyTypeInput = document.createElement('input');
-    propertyTypeInput.type = 'hidden';
-    propertyTypeInput.name = 'property_type';
-    propertyTypeInput.value = property.property_type;
-
-    var locationInput = document.createElement('input');
-    locationInput.type = 'hidden';
-    locationInput.name = 'location';
-    locationInput.value = property.location;
-
-    var descriptionInput = document.createElement('textarea');
-    descriptionInput.name = 'description';
-    descriptionInput.value = property.description;
-
-    var bedroomsInput = document.createElement('input');
-    bedroomsInput.type = 'hidden';
-    bedroomsInput.name = 'bedrooms';
-    bedroomsInput.value = property.bedrooms;
-
-    var bathroomsInput = document.createElement('input');
-    bathroomsInput.type = 'hidden';
-    bathroomsInput.name = 'bathrooms';
-    bathroomsInput.value = property.bathrooms;
-
-    var costInput = document.createElement('input');
-    costInput.type = 'hidden';
-    costInput.name = 'cost';
-    costInput.value = property.cost;
-
-    var photosInput = document.createElement('input');
-    photosInput.type = 'file';
-    photosInput.name = 'photos';
-    photosInput.multiple = true;
-    photosInput.accept = 'image/*';
-
-    var mapsInput = document.createElement('input');
-    mapsInput.type = 'file';
-    mapsInput.name = 'maps';
-    mapsInput.accept = 'image/*';
-
-    var saveButton = document.createElement('button');
-    saveButton.type = 'button';
-    saveButton.className = 'btn btn-success btn-sm';
-    saveButton.textContent = 'Save';
-    saveButton.onclick = function() {
-      saveProperty(index);
-    };
-
-    form.appendChild(propertyNameInput);
-    form.appendChild(propertyTypeInput);
-    form.appendChild(locationInput);
-    form.appendChild(descriptionInput);
-    form.appendChild(bedroomsInput);
-    form.appendChild(bathroomsInput);
-    form.appendChild(costInput);
-    form.appendChild(photosInput);
-    form.appendChild(mapsInput);
-    form.appendChild(saveButton);
-
-    document.body.appendChild(form);
-    form.submit();
-  }
-
-  // Render properties list
-  function renderPropertiesList() {
-    propertiesList.innerHTML = '';
-
-    properties.forEach(function(property, index) {
-      var li = document.createElement('li');
-      li.className = 'list-group-item';
-      li.innerHTML = `
-        <div>
-          <span><strong>Name:</strong> ${property.property_name}</span>
-          <br>
-          <span><strong>Type:</strong> ${property.property_type}</span>
-          <br>
-          <span><strong>Location:</strong> ${property.location}</span>
-          <br>
-          <span><strong>Description:</strong> ${property.description}</span>
-          <br>
-          <span><strong>Bedrooms:</strong> ${property.bedrooms}</span>
-          <br>
-          <span><strong>Bathrooms:</strong> ${property.bathrooms}</span>
-          <br>
-          <span><strong>Cost:</strong> ${property.cost}</span>
-        </div>
-        <div>
-          <button type="button" class="btn btn-primary btn-sm" onclick="editProperty(${index})">Edit</button>
-          <button type="button" class="btn btn-danger btn-sm" onclick="deleteProperty(${index})">Delete</button>
-          <button type="button" class="btn btn-success btn-sm" onclick="saveProperty(${index})">Save</button>
-        </div>
-      `;
-      propertiesList.appendChild(li);
-    });
-  }
-
-  // jQuery form validation
-  $(document).ready(function() {
-    $('#addPropertyForm').submit(function(event) {
-      event.preventDefault();
-
-      // Perform form validation
-      var property_name = $('#property_name').val();
-      var property_type = $('#property_type').val();
-      var location = $('#location').val();
-      var description = $('#description').val();
-      var bedrooms = $('#bedrooms').val();
-      var bathrooms = $('#bathrooms').val();
-      var cost = $('#cost').val();
-
-      // Check if any field is empty
-      if (
-        property_name === '' ||
-        property_type === '' ||
-        location === '' ||
-        description === '' ||
-        bedrooms === '' ||
-        bathrooms === '' ||
-        cost === ''
-      ) {
-        alert('Please fill in all the fields.');
-        return;
-      }
-
-      // Check if property type is selected
-      if (property_type === '') {
-        alert('Please select a property type.');
-        return;
-      }
-
-      // Check if bedrooms and bathrooms are positive numbers
-      if (bedrooms <= 0 || bathrooms <= 0) {
-        alert('Number of bedrooms and bathrooms should be greater than zero.');
-        return;
-      }
-
-      // Check if cost is a positive number
-      if (cost <= 0) {
-        alert('Cost should be a positive number.');
-        return;
-      }
-
-      // If all validations pass, submit the form
-      this.submit();
-    });
-  });
-</script>
-
   
+    // Edit property event listener
+    function editProperty(index) {
+      var property = properties[index];
+      var updatedName = prompt('Enter the updated name:', property.property_name);
+      var updatedType = prompt('Enter the updated type:', property.property_type);
+      var updatedLocation = prompt('Enter the updated location:', property.location);
+      var updatedDescription = prompt('Enter the updated description:', property.description);
+      var updatedBedrooms = prompt('Enter the updated number of bedrooms:', property.bedrooms);
+      var updatedBathrooms = prompt('Enter the updated number of bathrooms:', property.bathrooms);
+      var updatedCost = prompt('Enter the updated cost:', property.cost);
+  
+      if (updatedName && updatedType && updatedLocation && updatedDescription && updatedBedrooms && updatedBathrooms && updatedCost) {
+        property.property_name = updatedName;
+        property.property_type = updatedType;
+        property.location = updatedLocation;
+        property.description = updatedDescription;
+        property.bedrooms = updatedBedrooms;
+        property.bathrooms = updatedBathrooms;
+        property.cost = updatedCost;
+
+        var confirmMapsUpdate = confirm('Do you want to update the maps?');
+    if (confirmMapsUpdate) {
+      var updatedMaps = prompt('Enter the updated maps:', property.maps);
+      property.maps = updatedMaps;
+    }
+
+    var confirmPhotosUpdate = confirm('Do you want to update the photos?');
+    if (confirmPhotosUpdate) {
+      var updatedPhotos = prompt('Enter the updated photos:', property.photos);
+      property.photos = updatedPhotos;
+    }
+
+        renderPropertiesList();
+      }
+    }
+  
+    // Save property event listener
+    function saveProperty(index) {
+      var property = properties[index];
+  
+      var form = document.createElement('form');
+      form.action = '/api/property/register';
+      form.method = 'POST';
+      form.enctype = 'multipart/form-data';
+  
+      // Create input elements for property data
+      var propertyInputs = ['property_name', 'property_type', 'location', 'description', 'bedrooms', 'bathrooms', 'cost'];
+      propertyInputs.forEach(function(inputName) {
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = inputName;
+        input.value = property[inputName];
+        form.appendChild(input);
+      });
+  
+      // Append previous images
+      if (property.photos.length > 0) {
+        Array.from(property.photos).forEach(function(photo) {
+          var input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = 'photos';
+          input.value = photo.name;
+          form.appendChild(input);
+        });
+      }
+  
+      // Append previous maps
+      if (property.maps.length > 0) {
+        Array.from(property.maps).forEach(function(map) {
+          var input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = 'maps';
+          input.value = map.name;
+          form.appendChild(input);
+        });
+      }
+  
+      // Create input elements for new photos
+      var newPhotosInput = document.createElement('input');
+      newPhotosInput.type = 'file';
+      newPhotosInput.name = 'photos';
+      newPhotosInput.multiple = true;
+      newPhotosInput.accept = 'image/*';
+      form.appendChild(newPhotosInput);
+  
+      // Create input elements for new maps
+      var newMapsInput = document.createElement('input');
+      newMapsInput.type = 'file';
+      newMapsInput.name = 'maps';
+      newMapsInput.accept = 'image/*';
+      form.appendChild(newMapsInput);
+  
+      // Create save button
+      var saveButton = document.createElement('button');
+      saveButton.type = 'button';
+      saveButton.className = 'btn btn-success btn-sm';
+      saveButton.textContent = 'Save';
+      saveButton.onclick = function() {
+        saveProperty(index);
+      };
+      form.appendChild(saveButton);
+  
+      // Submit the form
+      document.body.appendChild(form);
+      form.submit();
+    }
+  
+    // Render properties list
+    function renderPropertiesList() {
+      propertiesList.innerHTML = '';
+  
+      properties.forEach(function(property, index) {
+        var li = document.createElement('li');
+        li.className = 'list-group-item';
+        var imagesHTML = '';
+  
+        // Append previous images
+        if (property.photos.length > 0) {
+          Array.from(property.photos).forEach(function(photo) {
+            imagesHTML += `<img src="${URL.createObjectURL(photo)}" alt="Property Image" style="width: 150px; height: 150px; object-fit: cover; margin-right: 10px;">`;
+          });
+        }
+  
+        // Append previous maps
+        if (property.maps.length > 0) {
+          Array.from(property.maps).forEach(function(map) {
+            imagesHTML += `<img src="${URL.createObjectURL(map)}" alt="Property Map" style="width: 150px; height: 150px; object-fit: cover; margin-right: 10px;">`;
+          });
+        }
+  
+        li.innerHTML = `
+          <div>
+            <span><strong>Name:</strong> ${property.property_name}</span>
+            <br>
+            <span><strong>Type:</strong> ${property.property_type}</span>
+            <br>
+            <span><strong>Location:</strong> ${property.location}</span>
+            <br>
+            <span><strong>Description:</strong> ${property.description}</span>
+            <br>
+            <span><strong>Bedrooms:</strong> ${property.bedrooms}</span>
+            <br>
+            <span><strong>Bathrooms:</strong> ${property.bathrooms}</span>
+            <br>
+            <span><strong>Cost:</strong> ${property.cost}</span>
+            <br>
+            <div>
+              ${imagesHTML}
+            </div>
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary btn-sm" onclick="editProperty(${index})">Edit</button>
+            <button type="button" class="btn btn-danger btn-sm" onclick="deleteProperty(${index})">Delete</button>
+            <button type="button" class="btn btn-success btn-sm" onclick="saveProperty(${index})">Save</button>
+          </div>
+        `;
+        propertiesList.appendChild(li);
+      });
+    }
+  */
+    // jQuery form validation
+    $(document).ready(function() {
+      $('#addPropertyForm').submit(function(event) {
+        event.preventDefault();
+  
+        // Perform form validation
+        var property_name = $('#property_name').val();
+        var property_type = $('#property_type').val();
+        var location = $('#location').val();
+        var description = $('#description').val();
+        var bedrooms = $('#bedrooms').val();
+        var bathrooms = $('#bathrooms').val();
+        var cost = $('#cost').val();
+  
+        // Check if any field is empty
+        if (
+          property_name === '' ||
+          property_type === '' ||
+          location === '' ||
+          description === '' ||
+          bedrooms === '' ||
+          bathrooms === '' ||
+          cost === ''
+        ) {
+          alert('Please fill in all the fields.');
+          return;
+        }
+  
+        // Check if property type is selected
+        if (property_type === '') {
+          alert('Please select a property type.');
+          return;
+        }
+  
+        // Check if bedrooms and bathrooms are positive numbers
+        if (bedrooms <= 0 || bathrooms <= 0) {
+          alert('Number of bedrooms and bathrooms should be greater than zero.');
+          return;
+        }
+  
+        // Check if cost is a positive number
+        if (cost <= 0) {
+          alert('Cost should be a positive number.');
+          return;
+        }
+  
+        // If all validations pass, submit the form
+        this.submit();
+      });
+    });
+  </script>
+    
     <script src="/js/bootstrap.bundle.min.js"></script>
   </body>
   </html>

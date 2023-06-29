@@ -18,7 +18,7 @@
             <h1> Registration Form</h1>
           </div>
           <div class="card-body">
-            <form class="register-form" action="/api/users/register" method="post">
+            <form class="register-form"  enctype="multipart/form-data"   action="/api/users/register" method="post">
               <div class="form-group">
                 <label for="role">Role</label>
                 <div class="input-group">
@@ -48,7 +48,10 @@
                 <label for="confirmPassword">Confirm Password</label>
                 <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" required>
               </div><br />
-              
+              <div class="mb-3">
+                <label for="photos" class="form-label">Photo:</label>
+                <input type="file" class="form-control" id="photo" name="photo"  accept="image/*" required>
+              </div>              
               <button type="submit" class="btn btn-primary btn-block">Register</button>
             </form>
           </div>

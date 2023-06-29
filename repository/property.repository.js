@@ -1,9 +1,9 @@
 const BaseRepository = require('./base.repository');
-const PropertyModel = require('../models/property.models');
+const Property = require('../models/property.models');
 
 class PropertyRepository extends BaseRepository {
   constructor() {
-    super(PropertyModel);
+    super(Property);
   }
 
   // Add any additional property-specific methods here

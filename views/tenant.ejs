@@ -145,7 +145,7 @@
                         <span class="material-icons">arrow_back_ios</span>
                     </button>
 					
-					<a class="navbar-brand" href="#"> Welcome To Rental Property Management System</a>
+					<a class="navbar-brand" href="#"> <%= message %></a>
 					
                     <button class="d-inline-block d-lg-none ml-auto more-button" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -249,15 +249,15 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card">
-                <img src="/images/aparts.jpg" class="card-img-top" alt="Image 2">
-                <div class="card-body">
-                    <h5 class="card-title">Charming and cozy cottage</h5>
+            <div class="card"> 
+                <img src="/images/aparts.jpg" class="card-img-top" alt="Image 1">                   
+                <div class="card-body">                        
+                    <h6 class="card-title">Charming and Cozy Cottage</h6>
                     <div class="card-text">
                         <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse2">View Details</button>
                         <div id="detailsCollapse2" class="collapse">
                             <p>
-                                Nestled in a serene countryside setting. This picturesque house offers a peaceful retreat with its lush garden, rustic interiors, and a cozy fireplace perfect for chilly evenings.
+                                nestled in the countryside, offering peace and tranquility amidst nature.
                             </p>
                         </div>
                     </div>
@@ -267,8 +267,9 @@
                         </svg>
                         <span class="like-count">0</span>
                     </div>
-                    <button class="btn btn-primary like-btn">Like</button>
-                    <button class="btn btn-danger">Dislike</button>
+                    <button class="btn btn-primary like-button" onclick="handleLike(1)">Like</button>
+                    <button class="btn btn-primary liked-button" style="display: none;" onclick="handleLike(1)">Liked</button>
+                    <button class="btn btn-danger" onclick="handleDislike(1)">Dislike</button>
                     <button class="btn btn-primary comment-btn">Comment</button>
                     <div class="comment-box">
                         <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
@@ -279,6 +280,8 @@
         </div>
         <div class="col-md-4">
             <div class="card">
+                
+
                 <img src="/images/bedroom3.jpg" class="card-img-top" alt="Image 3">
                 <div class="card-body">
                     <h6 class="card-title">Elegant and contemporary townhouse</h6>

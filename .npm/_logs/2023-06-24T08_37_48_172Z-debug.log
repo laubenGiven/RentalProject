@@ -1,0 +1,633 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'i', 'npm@latest' ]
+2 info using npm@6.14.15
+3 info using node@v12.22.6
+4 verbose npm-session 2272f5cbe0b27f9b
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 http fetch GET 304 https://registry.npmjs.org/npm 602ms (from cache)
+8 silly pacote tag manifest for npm@latest fetched in 740ms
+9 timing stage:loadCurrentTree Completed in 821ms
+10 silly install loadIdealTree
+11 silly install cloneCurrentTreeToIdealTree
+12 timing stage:loadIdealTree:cloneCurrentTree Completed in 1ms
+13 silly install loadShrinkwrap
+14 timing stage:loadIdealTree:loadShrinkwrap Completed in 2ms
+15 silly install loadAllDepsIntoIdealTree
+16 silly resolveWithNewModule npm@9.7.2 checking installable status
+17 silly tarball trying https://registry.npmjs.org/npm/-/npm-9.7.2.tgz by hash: sha512-LLoOudiSURxzRxfGj+vsD+hKKv2EfxyshDOznxruIkZMouvbaF5sFm4yAwHqxS8aVaOdRl03pRmGpcrFMqMt3g==
+18 silly extract https://registry.npmjs.org/npm/-/npm-9.7.2.tgz extracted to /tmp/npm-701-98b4deef/unpack-fe085619 (14117ms)
+19 silly addBundled read tarball
+20 silly cleanup remove extracted module
+21 timing stage:loadIdealTree:loadAllDepsIntoIdealTree Completed in 17582ms
+22 timing stage:loadIdealTree Completed in 17987ms
+23 silly currentTree bin
+24 silly idealTree bin
+24 silly idealTree └─┬ npm@9.7.2
+24 silly idealTree   ├── @colors/colors@1.5.0
+24 silly idealTree   ├─┬ @isaacs/cliui@8.0.2
+24 silly idealTree   │ ├── ansi-regex@6.0.1
+24 silly idealTree   │ ├── emoji-regex@9.2.2
+24 silly idealTree   │ ├── string-width@5.1.2
+24 silly idealTree   │ └── strip-ansi@7.1.0
+24 silly idealTree   ├── @isaacs/string-locale-compare@1.1.0
+24 silly idealTree   ├── @npmcli/arborist@6.2.10
+24 silly idealTree   ├── @npmcli/config@6.2.1
+24 silly idealTree   ├── @npmcli/disparity-colors@3.0.0
+24 silly idealTree   ├── @npmcli/fs@3.1.0
+24 silly idealTree   ├── @npmcli/git@4.1.0
+24 silly idealTree   ├── @npmcli/installed-package-contents@2.0.2
+24 silly idealTree   ├── @npmcli/map-workspaces@3.0.4
+24 silly idealTree   ├── @npmcli/metavuln-calculator@5.0.1
+24 silly idealTree   ├── @npmcli/name-from-folder@2.0.0
+24 silly idealTree   ├── @npmcli/node-gyp@3.0.0
+24 silly idealTree   ├── @npmcli/package-json@3.1.1
+24 silly idealTree   ├── @npmcli/promise-spawn@6.0.2
+24 silly idealTree   ├── @npmcli/query@3.0.0
+24 silly idealTree   ├── @npmcli/run-script@6.0.2
+24 silly idealTree   ├── @pkgjs/parseargs@0.11.0
+24 silly idealTree   ├── @sigstore/protobuf-specs@0.1.0
+24 silly idealTree   ├── @sigstore/tuf@1.0.0
+24 silly idealTree   ├── @tootallnate/once@2.0.0
+24 silly idealTree   ├── @tufjs/canonical-json@1.0.0
+24 silly idealTree   ├── @tufjs/models@1.0.4
+24 silly idealTree   ├── abbrev@2.0.0
+24 silly idealTree   ├── abort-controller@3.0.0
+24 silly idealTree   ├── agent-base@6.0.2
+24 silly idealTree   ├── agentkeepalive@4.3.0
+24 silly idealTree   ├── aggregate-error@3.1.0
+24 silly idealTree   ├── ansi-regex@5.0.1
+24 silly idealTree   ├── ansi-styles@4.3.0
+24 silly idealTree   ├── aproba@2.0.0
+24 silly idealTree   ├── archy@1.0.0
+24 silly idealTree   ├── are-we-there-yet@4.0.0
+24 silly idealTree   ├── balanced-match@1.0.2
+24 silly idealTree   ├── base64-js@1.5.1
+24 silly idealTree   ├── bin-links@4.0.1
+24 silly idealTree   ├── binary-extensions@2.2.0
+24 silly idealTree   ├── brace-expansion@2.0.1
+24 silly idealTree   ├── buffer@6.0.3
+24 silly idealTree   ├── builtins@5.0.1
+24 silly idealTree   ├── cacache@17.1.3
+24 silly idealTree   ├── chalk@5.2.0
+24 silly idealTree   ├── chownr@2.0.0
+24 silly idealTree   ├── ci-info@3.8.0
+24 silly idealTree   ├── cidr-regex@3.1.1
+24 silly idealTree   ├── clean-stack@2.2.0
+24 silly idealTree   ├── cli-columns@4.0.0
+24 silly idealTree   ├── cli-table3@0.6.3
+24 silly idealTree   ├── clone@1.0.4
+24 silly idealTree   ├── cmd-shim@6.0.1
+24 silly idealTree   ├── color-convert@2.0.1
+24 silly idealTree   ├── color-name@1.1.4
+24 silly idealTree   ├── color-support@1.1.3
+24 silly idealTree   ├── columnify@1.6.0
+24 silly idealTree   ├── common-ancestor-path@1.0.1
+24 silly idealTree   ├── concat-map@0.0.1
+24 silly idealTree   ├── console-control-strings@1.1.0
+24 silly idealTree   ├─┬ cross-spawn@7.0.3
+24 silly idealTree   │ └── which@2.0.2
+24 silly idealTree   ├── cssesc@3.0.0
+24 silly idealTree   ├─┬ debug@4.3.4
+24 silly idealTree   │ └── ms@2.1.2
+24 silly idealTree   ├── defaults@1.0.4
+24 silly idealTree   ├── delegates@1.0.0
+24 silly idealTree   ├── depd@2.0.0
+24 silly idealTree   ├── diff@5.1.0
+24 silly idealTree   ├── eastasianwidth@0.2.0
+24 silly idealTree   ├── emoji-regex@8.0.0
+24 silly idealTree   ├── encoding@0.1.13
+24 silly idealTree   ├── env-paths@2.2.1
+24 silly idealTree   ├── err-code@2.0.3
+24 silly idealTree   ├── event-target-shim@5.0.1
+24 silly idealTree   ├── events@3.3.0
+24 silly idealTree   ├── exponential-backoff@3.1.1
+24 silly idealTree   ├── fastest-levenshtein@1.0.16
+24 silly idealTree   ├── foreground-child@3.1.1
+24 silly idealTree   ├── fs-minipass@3.0.2
+24 silly idealTree   ├── fs.realpath@1.0.0
+24 silly idealTree   ├── function-bind@1.1.1
+24 silly idealTree   ├── gauge@5.0.1
+24 silly idealTree   ├── glob@10.2.7
+24 silly idealTree   ├── graceful-fs@4.2.11
+24 silly idealTree   ├── has-unicode@2.0.1
+24 silly idealTree   ├── has@1.0.3
+24 silly idealTree   ├── hosted-git-info@6.1.1
+24 silly idealTree   ├── http-cache-semantics@4.1.1
+24 silly idealTree   ├── http-proxy-agent@5.0.0
+24 silly idealTree   ├── https-proxy-agent@5.0.1
+24 silly idealTree   ├── humanize-ms@1.2.1
+24 silly idealTree   ├── iconv-lite@0.6.3
+24 silly idealTree   ├── ieee754@1.2.1
+24 silly idealTree   ├── ignore-walk@6.0.3
+24 silly idealTree   ├── imurmurhash@0.1.4
+24 silly idealTree   ├── indent-string@4.0.0
+24 silly idealTree   ├── inflight@1.0.6
+24 silly idealTree   ├── inherits@2.0.4
+24 silly idealTree   ├── ini@4.1.1
+24 silly idealTree   ├── init-package-json@5.0.0
+24 silly idealTree   ├── ip-regex@4.3.0
+24 silly idealTree   ├── ip@2.0.0
+24 silly idealTree   ├── is-cidr@4.0.2
+24 silly idealTree   ├── is-core-module@2.12.1
+24 silly idealTree   ├── is-fullwidth-code-point@3.0.0
+24 silly idealTree   ├── is-lambda@1.0.1
+24 silly idealTree   ├── isexe@2.0.0
+24 silly idealTree   ├── jackspeak@2.2.1
+24 silly idealTree   ├── json-parse-even-better-errors@3.0.0
+24 silly idealTree   ├── json-stringify-nice@1.1.4
+24 silly idealTree   ├── jsonparse@1.3.1
+24 silly idealTree   ├── just-diff-apply@5.5.0
+24 silly idealTree   ├── just-diff@6.0.2
+24 silly idealTree   ├── libnpmaccess@7.0.2
+24 silly idealTree   ├── libnpmdiff@5.0.18
+24 silly idealTree   ├── libnpmexec@6.0.1
+24 silly idealTree   ├── libnpmfund@4.0.18
+24 silly idealTree   ├── libnpmhook@9.0.3
+24 silly idealTree   ├── libnpmorg@5.0.4
+24 silly idealTree   ├── libnpmpack@5.0.18
+24 silly idealTree   ├── libnpmpublish@7.4.0
+24 silly idealTree   ├── libnpmsearch@6.0.2
+24 silly idealTree   ├── libnpmteam@5.0.3
+24 silly idealTree   ├── libnpmversion@4.0.2
+24 silly idealTree   ├── lru-cache@7.18.3
+24 silly idealTree   ├── make-fetch-happen@11.1.1
+24 silly idealTree   ├── minimatch@9.0.1
+24 silly idealTree   ├─┬ minipass-collect@1.0.2
+24 silly idealTree   │ └── minipass@3.3.6
+24 silly idealTree   ├── minipass-fetch@3.0.3
+24 silly idealTree   ├─┬ minipass-flush@1.0.5
+24 silly idealTree   │ └── minipass@3.3.6
+24 silly idealTree   ├─┬ minipass-json-stream@1.0.1
+24 silly idealTree   │ └── minipass@3.3.6
+24 silly idealTree   ├─┬ minipass-pipeline@1.2.4
+24 silly idealTree   │ └── minipass@3.3.6
+24 silly idealTree   ├─┬ minipass-sized@1.0.3
+24 silly idealTree   │ └── minipass@3.3.6
+24 silly idealTree   ├── minipass@5.0.0
+24 silly idealTree   ├─┬ minizlib@2.1.2
+24 silly idealTree   │ └── minipass@3.3.6
+24 silly idealTree   ├── mkdirp@1.0.4
+24 silly idealTree   ├── ms@2.1.3
+24 silly idealTree   ├── mute-stream@1.0.0
+24 silly idealTree   ├── negotiator@0.6.3
+24 silly idealTree   ├─┬ node-gyp@9.4.0
+24 silly idealTree   │ ├── abbrev@1.1.1
+24 silly idealTree   │ ├── are-we-there-yet@3.0.1
+24 silly idealTree   │ ├── brace-expansion@1.1.11
+24 silly idealTree   │ ├── gauge@4.0.4
+24 silly idealTree   │ ├── glob@7.2.3
+24 silly idealTree   │ ├── minimatch@3.1.2
+24 silly idealTree   │ ├── nopt@6.0.0
+24 silly idealTree   │ ├── npmlog@6.0.2
+24 silly idealTree   │ ├── readable-stream@3.6.2
+24 silly idealTree   │ ├── signal-exit@3.0.7
+24 silly idealTree   │ └── which@2.0.2
+24 silly idealTree   ├── nopt@7.2.0
+24 silly idealTree   ├── normalize-package-data@5.0.0
+24 silly idealTree   ├── npm-audit-report@5.0.0
+24 silly idealTree   ├── npm-bundled@3.0.0
+24 silly idealTree   ├── npm-install-checks@6.1.1
+24 silly idealTree   ├── npm-normalize-package-bin@3.0.1
+24 silly idealTree   ├── npm-package-arg@10.1.0
+24 silly idealTree   ├── npm-packlist@7.0.4
+24 silly idealTree   ├── npm-pick-manifest@8.0.1
+24 silly idealTree   ├── npm-profile@7.0.1
+24 silly idealTree   ├── npm-registry-fetch@14.0.5
+24 silly idealTree   ├── npm-user-validate@2.0.0
+24 silly idealTree   ├── npmlog@7.0.1
+24 silly idealTree   ├── once@1.4.0
+24 silly idealTree   ├── p-map@4.0.0
+24 silly idealTree   ├── pacote@15.2.0
+24 silly idealTree   ├── parse-conflict-json@3.0.1
+24 silly idealTree   ├── path-is-absolute@1.0.1
+24 silly idealTree   ├── path-key@3.1.1
+24 silly idealTree   ├─┬ path-scurry@1.9.2
+24 silly idealTree   │ └── lru-cache@9.1.1
+24 silly idealTree   ├── postcss-selector-parser@6.0.13
+24 silly idealTree   ├── proc-log@3.0.0
+24 silly idealTree   ├── process@0.11.10
+24 silly idealTree   ├── promise-all-reject-late@1.0.1
+24 silly idealTree   ├── promise-call-limit@1.0.2
+24 silly idealTree   ├── promise-inflight@1.0.1
+24 silly idealTree   ├── promise-retry@2.0.1
+24 silly idealTree   ├── promzard@1.0.0
+24 silly idealTree   ├── qrcode-terminal@0.12.0
+24 silly idealTree   ├── read-cmd-shim@4.0.0
+24 silly idealTree   ├── read-package-json-fast@3.0.2
+24 silly idealTree   ├── read-package-json@6.0.4
+24 silly idealTree   ├── read@2.1.0
+24 silly idealTree   ├── readable-stream@4.4.0
+24 silly idealTree   ├── retry@0.12.0
+24 silly idealTree   ├─┬ rimraf@3.0.2
+24 silly idealTree   │ ├── brace-expansion@1.1.11
+24 silly idealTree   │ ├── glob@7.2.3
+24 silly idealTree   │ └── minimatch@3.1.2
+24 silly idealTree   ├── safe-buffer@5.2.1
+24 silly idealTree   ├── safer-buffer@2.1.2
+24 silly idealTree   ├─┬ semver@7.5.2
+24 silly idealTree   │ └── lru-cache@6.0.0
+24 silly idealTree   ├── set-blocking@2.0.0
+24 silly idealTree   ├── shebang-command@2.0.0
+24 silly idealTree   ├── shebang-regex@3.0.0
+24 silly idealTree   ├── signal-exit@4.0.2
+24 silly idealTree   ├── sigstore@1.6.0
+24 silly idealTree   ├── smart-buffer@4.2.0
+24 silly idealTree   ├── socks-proxy-agent@7.0.0
+24 silly idealTree   ├── socks@2.7.1
+24 silly idealTree   ├── spdx-correct@3.2.0
+24 silly idealTree   ├── spdx-exceptions@2.3.0
+24 silly idealTree   ├── spdx-expression-parse@3.0.1
+24 silly idealTree   ├── spdx-license-ids@3.0.13
+24 silly idealTree   ├── ssri@10.0.4
+24 silly idealTree   ├── string_decoder@1.3.0
+24 silly idealTree   ├── string-width@4.2.3
+24 silly idealTree   ├── string-width@4.2.3
+24 silly idealTree   ├── strip-ansi@6.0.1
+24 silly idealTree   ├── strip-ansi@6.0.1
+24 silly idealTree   ├── supports-color@9.3.1
+24 silly idealTree   ├─┬ tar@6.1.15
+24 silly idealTree   │ └─┬ fs-minipass@2.1.0
+24 silly idealTree   │   └── minipass@3.3.6
+24 silly idealTree   ├── text-table@0.2.0
+24 silly idealTree   ├── tiny-relative-date@1.3.0
+24 silly idealTree   ├── treeverse@3.0.0
+24 silly idealTree   ├── tuf-js@1.1.7
+24 silly idealTree   ├── unique-filename@3.0.0
+24 silly idealTree   ├── unique-slug@4.0.0
+24 silly idealTree   ├── util-deprecate@1.0.2
+24 silly idealTree   ├── validate-npm-package-license@3.0.4
+24 silly idealTree   ├── validate-npm-package-name@5.0.0
+24 silly idealTree   ├── walk-up-path@3.0.1
+24 silly idealTree   ├── wcwidth@1.0.1
+24 silly idealTree   ├── which@3.0.1
+24 silly idealTree   ├── wide-align@1.1.5
+24 silly idealTree   ├── wrap-ansi@7.0.0
+24 silly idealTree   ├─┬ wrap-ansi@8.1.0
+24 silly idealTree   │ ├── ansi-regex@6.0.1
+24 silly idealTree   │ ├── ansi-styles@6.2.1
+24 silly idealTree   │ ├── emoji-regex@9.2.2
+24 silly idealTree   │ ├── string-width@5.1.2
+24 silly idealTree   │ └── strip-ansi@7.1.0
+24 silly idealTree   ├── wrappy@1.0.2
+24 silly idealTree   ├── write-file-atomic@5.0.1
+24 silly idealTree   └── yallist@4.0.0
+25 silly install generateActionsToTake
+26 warn checkPermissions Missing write access to /usr/local/bin
+27 timing stage:rollbackFailedOptional Completed in 3ms
+28 timing stage:runTopLevelLifecycles Completed in 18965ms
+29 silly saveTree bin
+29 silly saveTree └─┬ npm@9.7.2
+29 silly saveTree   ├── @isaacs/string-locale-compare@1.1.0
+29 silly saveTree   ├─┬ @npmcli/arborist@6.2.10
+29 silly saveTree   │ ├─┬ @npmcli/fs@3.1.0
+29 silly saveTree   │ │ └─┬ semver@7.5.2
+29 silly saveTree   │ │   └─┬ lru-cache@6.0.0
+29 silly saveTree   │ │     └── yallist@4.0.0
+29 silly saveTree   │ ├─┬ @npmcli/installed-package-contents@2.0.2
+29 silly saveTree   │ │ ├─┬ npm-bundled@3.0.0
+29 silly saveTree   │ │ │ └── npm-normalize-package-bin@3.0.1
+29 silly saveTree   │ │ └── npm-normalize-package-bin@3.0.1
+29 silly saveTree   │ ├─┬ @npmcli/map-workspaces@3.0.4
+29 silly saveTree   │ │ ├── @npmcli/name-from-folder@2.0.0
+29 silly saveTree   │ │ ├─┬ glob@10.2.7
+29 silly saveTree   │ │ │ ├─┬ foreground-child@3.1.1
+29 silly saveTree   │ │ │ │ ├─┬ cross-spawn@7.0.3
+29 silly saveTree   │ │ │ │ │ ├── path-key@3.1.1
+29 silly saveTree   │ │ │ │ │ ├─┬ shebang-command@2.0.0
+29 silly saveTree   │ │ │ │ │ │ └── shebang-regex@3.0.0
+29 silly saveTree   │ │ │ │ │ └─┬ which@2.0.2
+29 silly saveTree   │ │ │ │ │   └── isexe@2.0.0
+29 silly saveTree   │ │ │ │ └── signal-exit@4.0.2
+29 silly saveTree   │ │ │ ├─┬ jackspeak@2.2.1
+29 silly saveTree   │ │ │ │ ├─┬ @isaacs/cliui@8.0.2
+29 silly saveTree   │ │ │ │ │ ├─┬ string-width@4.2.3
+29 silly saveTree   │ │ │ │ │ │ ├── emoji-regex@8.0.0
+29 silly saveTree   │ │ │ │ │ │ ├── is-fullwidth-code-point@3.0.0
+29 silly saveTree   │ │ │ │ │ │ └─┬ strip-ansi@6.0.1
+29 silly saveTree   │ │ │ │ │ │   └── ansi-regex@5.0.1
+29 silly saveTree   │ │ │ │ │ ├─┬ string-width@5.1.2
+29 silly saveTree   │ │ │ │ │ │ ├── eastasianwidth@0.2.0
+29 silly saveTree   │ │ │ │ │ │ ├── emoji-regex@9.2.2
+29 silly saveTree   │ │ │ │ │ │ └─┬ strip-ansi@7.1.0
+29 silly saveTree   │ │ │ │ │ │   └── ansi-regex@6.0.1
+29 silly saveTree   │ │ │ │ │ ├── strip-ansi@6.0.1
+29 silly saveTree   │ │ │ │ │ ├── strip-ansi@7.1.0
+29 silly saveTree   │ │ │ │ │ ├─┬ wrap-ansi@7.0.0
+29 silly saveTree   │ │ │ │ │ │ ├─┬ ansi-styles@4.3.0
+29 silly saveTree   │ │ │ │ │ │ │ └─┬ color-convert@2.0.1
+29 silly saveTree   │ │ │ │ │ │ │   └── color-name@1.1.4
+29 silly saveTree   │ │ │ │ │ │ └── string-width@4.2.3
+29 silly saveTree   │ │ │ │ │ └─┬ wrap-ansi@8.1.0
+29 silly saveTree   │ │ │ │ │   ├── ansi-styles@6.2.1
+29 silly saveTree   │ │ │ │ │   ├─┬ string-width@5.1.2
+29 silly saveTree   │ │ │ │ │   │ ├── emoji-regex@9.2.2
+29 silly saveTree   │ │ │ │ │   │ └─┬ strip-ansi@7.1.0
+29 silly saveTree   │ │ │ │ │   │   └── ansi-regex@6.0.1
+29 silly saveTree   │ │ │ │ │   └── strip-ansi@7.1.0
+29 silly saveTree   │ │ │ │ └── @pkgjs/parseargs@0.11.0
+29 silly saveTree   │ │ │ ├─┬ minimatch@9.0.1
+29 silly saveTree   │ │ │ │ └─┬ brace-expansion@2.0.1
+29 silly saveTree   │ │ │ │   └── balanced-match@1.0.2
+29 silly saveTree   │ │ │ ├── minipass@5.0.0
+29 silly saveTree   │ │ │ └─┬ path-scurry@1.9.2
+29 silly saveTree   │ │ │   └── lru-cache@9.1.1
+29 silly saveTree   │ │ ├── minimatch@9.0.1
+29 silly saveTree   │ │ └─┬ read-package-json-fast@3.0.2
+29 silly saveTree   │ │   └── json-parse-even-better-errors@3.0.0
+29 silly saveTree   │ ├─┬ @npmcli/metavuln-calculator@5.0.1
+29 silly saveTree   │ │ ├─┬ cacache@17.1.3
+29 silly saveTree   │ │ │ ├── fs-minipass@3.0.2
+29 silly saveTree   │ │ │ ├── lru-cache@7.18.3
+29 silly saveTree   │ │ │ ├─┬ minipass-collect@1.0.2
+29 silly saveTree   │ │ │ │ └── minipass@3.3.6
+29 silly saveTree   │ │ │ ├─┬ minipass-flush@1.0.5
+29 silly saveTree   │ │ │ │ └── minipass@3.3.6
+29 silly saveTree   │ │ │ ├─┬ minipass-pipeline@1.2.4
+29 silly saveTree   │ │ │ │ └── minipass@3.3.6
+29 silly saveTree   │ │ │ ├─┬ p-map@4.0.0
+29 silly saveTree   │ │ │ │ └─┬ aggregate-error@3.1.0
+29 silly saveTree   │ │ │ │   ├── clean-stack@2.2.0
+29 silly saveTree   │ │ │ │   └── indent-string@4.0.0
+29 silly saveTree   │ │ │ ├── ssri@10.0.4
+29 silly saveTree   │ │ │ ├─┬ tar@6.1.15
+29 silly saveTree   │ │ │ │ ├── chownr@2.0.0
+29 silly saveTree   │ │ │ │ ├─┬ fs-minipass@2.1.0
+29 silly saveTree   │ │ │ │ │ └── minipass@3.3.6
+29 silly saveTree   │ │ │ │ ├─┬ minizlib@2.1.2
+29 silly saveTree   │ │ │ │ │ └── minipass@3.3.6
+29 silly saveTree   │ │ │ │ └── mkdirp@1.0.4
+29 silly saveTree   │ │ │ └─┬ unique-filename@3.0.0
+29 silly saveTree   │ │ │   └─┬ unique-slug@4.0.0
+29 silly saveTree   │ │ │     └── imurmurhash@0.1.4
+29 silly saveTree   │ │ └─┬ pacote@15.2.0
+29 silly saveTree   │ │   ├─┬ @npmcli/git@4.1.0
+29 silly saveTree   │ │   │ ├─┬ @npmcli/promise-spawn@6.0.2
+29 silly saveTree   │ │   │ │ └── which@3.0.1
+29 silly saveTree   │ │   │ ├─┬ npm-pick-manifest@8.0.1
+29 silly saveTree   │ │   │ │ ├── npm-install-checks@6.1.1
+29 silly saveTree   │ │   │ │ └─┬ npm-package-arg@10.1.0
+29 silly saveTree   │ │   │ │   ├── hosted-git-info@6.1.1
+29 silly saveTree   │ │   │ │   ├── proc-log@3.0.0
+29 silly saveTree   │ │   │ │   └─┬ validate-npm-package-name@5.0.0
+29 silly saveTree   │ │   │ │     └── builtins@5.0.1
+29 silly saveTree   │ │   │ ├── proc-log@3.0.0
+29 silly saveTree   │ │   │ ├── promise-inflight@1.0.1
+29 silly saveTree   │ │   │ ├─┬ promise-retry@2.0.1
+29 silly saveTree   │ │   │ │ ├── err-code@2.0.3
+29 silly saveTree   │ │   │ │ └── retry@0.12.0
+29 silly saveTree   │ │   │ └── which@3.0.1
+29 silly saveTree   │ │   ├── @npmcli/promise-spawn@6.0.2
+29 silly saveTree   │ │   ├─┬ @npmcli/run-script@6.0.2
+29 silly saveTree   │ │   │ ├── @npmcli/node-gyp@3.0.0
+29 silly saveTree   │ │   │ └─┬ node-gyp@9.4.0
+29 silly saveTree   │ │   │   ├── env-paths@2.2.1
+29 silly saveTree   │ │   │   ├── exponential-backoff@3.1.1
+29 silly saveTree   │ │   │   ├─┬ glob@7.2.3
+29 silly saveTree   │ │   │   │ ├── fs.realpath@1.0.0
+29 silly saveTree   │ │   │   │ ├─┬ inflight@1.0.6
+29 silly saveTree   │ │   │   │ │ ├─┬ once@1.4.0
+29 silly saveTree   │ │   │   │ │ │ └── wrappy@1.0.2
+29 silly saveTree   │ │   │   │ │ └── wrappy@1.0.2
+29 silly saveTree   │ │   │   │ ├── inherits@2.0.4
+29 silly saveTree   │ │   │   │ ├─┬ minimatch@3.1.2
+29 silly saveTree   │ │   │   │ │ └─┬ brace-expansion@1.1.11
+29 silly saveTree   │ │   │   │ │   └── concat-map@0.0.1
+29 silly saveTree   │ │   │   │ ├── once@1.4.0
+29 silly saveTree   │ │   │   │ └── path-is-absolute@1.0.1
+29 silly saveTree   │ │   │   ├── graceful-fs@4.2.11
+29 silly saveTree   │ │   │   ├─┬ make-fetch-happen@11.1.1
+29 silly saveTree   │ │   │   │ ├─┬ agentkeepalive@4.3.0
+29 silly saveTree   │ │   │   │ │ ├─┬ debug@4.3.4
+29 silly saveTree   │ │   │   │ │ │ └── ms@2.1.2
+29 silly saveTree   │ │   │   │ │ ├── depd@2.0.0
+29 silly saveTree   │ │   │   │ │ └─┬ humanize-ms@1.2.1
+29 silly saveTree   │ │   │   │ │   └── ms@2.1.3
+29 silly saveTree   │ │   │   │ ├── http-cache-semantics@4.1.1
+29 silly saveTree   │ │   │   │ ├─┬ http-proxy-agent@5.0.0
+29 silly saveTree   │ │   │   │ │ ├── @tootallnate/once@2.0.0
+29 silly saveTree   │ │   │   │ │ └── agent-base@6.0.2
+29 silly saveTree   │ │   │   │ ├── https-proxy-agent@5.0.1
+29 silly saveTree   │ │   │   │ ├── is-lambda@1.0.1
+29 silly saveTree   │ │   │   │ ├─┬ minipass-fetch@3.0.3
+29 silly saveTree   │ │   │   │ │ ├─┬ encoding@0.1.13
+29 silly saveTree   │ │   │   │ │ │ └─┬ iconv-lite@0.6.3
+29 silly saveTree   │ │   │   │ │ │   └── safer-buffer@2.1.2
+29 silly saveTree   │ │   │   │ │ └─┬ minipass-sized@1.0.3
+29 silly saveTree   │ │   │   │ │   └── minipass@3.3.6
+29 silly saveTree   │ │   │   │ ├── negotiator@0.6.3
+29 silly saveTree   │ │   │   │ └─┬ socks-proxy-agent@7.0.0
+29 silly saveTree   │ │   │   │   └─┬ socks@2.7.1
+29 silly saveTree   │ │   │   │     ├── ip@2.0.0
+29 silly saveTree   │ │   │   │     └── smart-buffer@4.2.0
+29 silly saveTree   │ │   │   ├─┬ nopt@6.0.0
+29 silly saveTree   │ │   │   │ └── abbrev@1.1.1
+29 silly saveTree   │ │   │   ├─┬ npmlog@6.0.2
+29 silly saveTree   │ │   │   │ ├─┬ are-we-there-yet@3.0.1
+29 silly saveTree   │ │   │   │ │ ├── delegates@1.0.0
+29 silly saveTree   │ │   │   │ │ └─┬ readable-stream@3.6.2
+29 silly saveTree   │ │   │   │ │   ├─┬ string_decoder@1.3.0
+29 silly saveTree   │ │   │   │ │   │ └── safe-buffer@5.2.1
+29 silly saveTree   │ │   │   │ │   └── util-deprecate@1.0.2
+29 silly saveTree   │ │   │   │ ├── console-control-strings@1.1.0
+29 silly saveTree   │ │   │   │ ├─┬ gauge@4.0.4
+29 silly saveTree   │ │   │   │ │ ├── aproba@2.0.0
+29 silly saveTree   │ │   │   │ │ ├── color-support@1.1.3
+29 silly saveTree   │ │   │   │ │ ├── has-unicode@2.0.1
+29 silly saveTree   │ │   │   │ │ ├── signal-exit@3.0.7
+29 silly saveTree   │ │   │   │ │ └── wide-align@1.1.5
+29 silly saveTree   │ │   │   │ └── set-blocking@2.0.0
+29 silly saveTree   │ │   │   ├─┬ rimraf@3.0.2
+29 silly saveTree   │ │   │   │ └─┬ glob@7.2.3
+29 silly saveTree   │ │   │   │   └─┬ minimatch@3.1.2
+29 silly saveTree   │ │   │   │     └── brace-expansion@1.1.11
+29 silly saveTree   │ │   │   └── which@2.0.2
+29 silly saveTree   │ │   ├── npm-package-arg@10.1.0
+29 silly saveTree   │ │   ├─┬ npm-packlist@7.0.4
+29 silly saveTree   │ │   │ └── ignore-walk@6.0.3
+29 silly saveTree   │ │   ├── npm-pick-manifest@8.0.1
+29 silly saveTree   │ │   ├─┬ npm-registry-fetch@14.0.5
+29 silly saveTree   │ │   │ └─┬ minipass-json-stream@1.0.1
+29 silly saveTree   │ │   │   ├── jsonparse@1.3.1
+29 silly saveTree   │ │   │   └── minipass@3.3.6
+29 silly saveTree   │ │   ├── proc-log@3.0.0
+29 silly saveTree   │ │   ├── promise-retry@2.0.1
+29 silly saveTree   │ │   ├─┬ read-package-json@6.0.4
+29 silly saveTree   │ │   │ └─┬ normalize-package-data@5.0.0
+29 silly saveTree   │ │   │   ├─┬ is-core-module@2.12.1
+29 silly saveTree   │ │   │   │ └─┬ has@1.0.3
+29 silly saveTree   │ │   │   │   └── function-bind@1.1.1
+29 silly saveTree   │ │   │   └─┬ validate-npm-package-license@3.0.4
+29 silly saveTree   │ │   │     ├─┬ spdx-correct@3.2.0
+29 silly saveTree   │ │   │     │ ├─┬ spdx-expression-parse@3.0.1
+29 silly saveTree   │ │   │     │ │ ├── spdx-exceptions@2.3.0
+29 silly saveTree   │ │   │     │ │ └── spdx-license-ids@3.0.13
+29 silly saveTree   │ │   │     │ └── spdx-license-ids@3.0.13
+29 silly saveTree   │ │   │     └── spdx-expression-parse@3.0.1
+29 silly saveTree   │ │   └─┬ sigstore@1.6.0
+29 silly saveTree   │ │     ├── @sigstore/protobuf-specs@0.1.0
+29 silly saveTree   │ │     ├─┬ @sigstore/tuf@1.0.0
+29 silly saveTree   │ │     │ └─┬ tuf-js@1.1.7
+29 silly saveTree   │ │     │   └─┬ @tufjs/models@1.0.4
+29 silly saveTree   │ │     │     └── @tufjs/canonical-json@1.0.0
+29 silly saveTree   │ │     └── tuf-js@1.1.7
+29 silly saveTree   │ ├── @npmcli/name-from-folder@2.0.0
+29 silly saveTree   │ ├── @npmcli/node-gyp@3.0.0
+29 silly saveTree   │ ├── @npmcli/package-json@3.1.1
+29 silly saveTree   │ ├─┬ @npmcli/query@3.0.0
+29 silly saveTree   │ │ └─┬ postcss-selector-parser@6.0.13
+29 silly saveTree   │ │   └── cssesc@3.0.0
+29 silly saveTree   │ ├── @npmcli/run-script@6.0.2
+29 silly saveTree   │ ├─┬ bin-links@4.0.1
+29 silly saveTree   │ │ ├── cmd-shim@6.0.1
+29 silly saveTree   │ │ ├── read-cmd-shim@4.0.0
+29 silly saveTree   │ │ └── write-file-atomic@5.0.1
+29 silly saveTree   │ ├── cacache@17.1.3
+29 silly saveTree   │ ├── common-ancestor-path@1.0.1
+29 silly saveTree   │ ├── hosted-git-info@6.1.1
+29 silly saveTree   │ ├── json-parse-even-better-errors@3.0.0
+29 silly saveTree   │ ├── json-stringify-nice@1.1.4
+29 silly saveTree   │ ├── minimatch@9.0.1
+29 silly saveTree   │ ├─┬ nopt@7.2.0
+29 silly saveTree   │ │ └── abbrev@2.0.0
+29 silly saveTree   │ ├── npm-install-checks@6.1.1
+29 silly saveTree   │ ├── npm-package-arg@10.1.0
+29 silly saveTree   │ ├── npm-pick-manifest@8.0.1
+29 silly saveTree   │ ├── npm-registry-fetch@14.0.5
+29 silly saveTree   │ ├─┬ npmlog@7.0.1
+29 silly saveTree   │ │ ├─┬ are-we-there-yet@4.0.0
+29 silly saveTree   │ │ │ └─┬ readable-stream@4.4.0
+29 silly saveTree   │ │ │   ├─┬ abort-controller@3.0.0
+29 silly saveTree   │ │ │   │ └── event-target-shim@5.0.1
+29 silly saveTree   │ │ │   ├─┬ buffer@6.0.3
+29 silly saveTree   │ │ │   │ ├── base64-js@1.5.1
+29 silly saveTree   │ │ │   │ └── ieee754@1.2.1
+29 silly saveTree   │ │ │   ├── events@3.3.0
+29 silly saveTree   │ │ │   └── process@0.11.10
+29 silly saveTree   │ │ └── gauge@5.0.1
+29 silly saveTree   │ ├── pacote@15.2.0
+29 silly saveTree   │ ├─┬ parse-conflict-json@3.0.1
+29 silly saveTree   │ │ ├── just-diff-apply@5.5.0
+29 silly saveTree   │ │ └── just-diff@6.0.2
+29 silly saveTree   │ ├── proc-log@3.0.0
+29 silly saveTree   │ ├── promise-all-reject-late@1.0.1
+29 silly saveTree   │ ├── promise-call-limit@1.0.2
+29 silly saveTree   │ ├── read-package-json-fast@3.0.2
+29 silly saveTree   │ ├── semver@7.5.2
+29 silly saveTree   │ ├── ssri@10.0.4
+29 silly saveTree   │ ├── treeverse@3.0.0
+29 silly saveTree   │ └── walk-up-path@3.0.1
+29 silly saveTree   ├─┬ @npmcli/config@6.2.1
+29 silly saveTree   │ ├── ci-info@3.8.0
+29 silly saveTree   │ └── ini@4.1.1
+29 silly saveTree   ├── @npmcli/map-workspaces@3.0.4
+29 silly saveTree   ├── @npmcli/package-json@3.1.1
+29 silly saveTree   ├── @npmcli/run-script@6.0.2
+29 silly saveTree   ├── abbrev@2.0.0
+29 silly saveTree   ├── archy@1.0.0
+29 silly saveTree   ├── cacache@17.1.3
+29 silly saveTree   ├── chalk@5.2.0
+29 silly saveTree   ├── ci-info@3.8.0
+29 silly saveTree   ├── cli-columns@4.0.0
+29 silly saveTree   ├─┬ cli-table3@0.6.3
+29 silly saveTree   │ └── @colors/colors@1.5.0
+29 silly saveTree   ├─┬ columnify@1.6.0
+29 silly saveTree   │ └─┬ wcwidth@1.0.1
+29 silly saveTree   │   └─┬ defaults@1.0.4
+29 silly saveTree   │     └── clone@1.0.4
+29 silly saveTree   ├── fastest-levenshtein@1.0.16
+29 silly saveTree   ├── fs-minipass@3.0.2
+29 silly saveTree   ├── glob@10.2.7
+29 silly saveTree   ├── graceful-fs@4.2.11
+29 silly saveTree   ├── hosted-git-info@6.1.1
+29 silly saveTree   ├── ini@4.1.1
+29 silly saveTree   ├─┬ init-package-json@5.0.0
+29 silly saveTree   │ ├─┬ promzard@1.0.0
+29 silly saveTree   │ │ └─┬ read@2.1.0
+29 silly saveTree   │ │   └── mute-stream@1.0.0
+29 silly saveTree   │ └── read@2.1.0
+29 silly saveTree   ├─┬ is-cidr@4.0.2
+29 silly saveTree   │ └─┬ cidr-regex@3.1.1
+29 silly saveTree   │   └── ip-regex@4.3.0
+29 silly saveTree   ├── json-parse-even-better-errors@3.0.0
+29 silly saveTree   ├── libnpmaccess@7.0.2
+29 silly saveTree   ├─┬ libnpmdiff@5.0.18
+29 silly saveTree   │ ├── @npmcli/disparity-colors@3.0.0
+29 silly saveTree   │ ├── binary-extensions@2.2.0
+29 silly saveTree   │ └── diff@5.1.0
+29 silly saveTree   ├── libnpmexec@6.0.1
+29 silly saveTree   ├── libnpmfund@4.0.18
+29 silly saveTree   ├── libnpmhook@9.0.3
+29 silly saveTree   ├── libnpmorg@5.0.4
+29 silly saveTree   ├── libnpmpack@5.0.18
+29 silly saveTree   ├── libnpmpublish@7.4.0
+29 silly saveTree   ├── libnpmsearch@6.0.2
+29 silly saveTree   ├── libnpmteam@5.0.3
+29 silly saveTree   ├── libnpmversion@4.0.2
+29 silly saveTree   ├── make-fetch-happen@11.1.1
+29 silly saveTree   ├── minimatch@9.0.1
+29 silly saveTree   ├── minipass-pipeline@1.2.4
+29 silly saveTree   ├── minipass@5.0.0
+29 silly saveTree   ├── ms@2.1.3
+29 silly saveTree   ├── node-gyp@9.4.0
+29 silly saveTree   ├── nopt@7.2.0
+29 silly saveTree   ├── npm-audit-report@5.0.0
+29 silly saveTree   ├── npm-install-checks@6.1.1
+29 silly saveTree   ├── npm-package-arg@10.1.0
+29 silly saveTree   ├── npm-pick-manifest@8.0.1
+29 silly saveTree   ├── npm-profile@7.0.1
+29 silly saveTree   ├── npm-registry-fetch@14.0.5
+29 silly saveTree   ├── npm-user-validate@2.0.0
+29 silly saveTree   ├── npmlog@7.0.1
+29 silly saveTree   ├── p-map@4.0.0
+29 silly saveTree   ├── pacote@15.2.0
+29 silly saveTree   ├── parse-conflict-json@3.0.1
+29 silly saveTree   ├── proc-log@3.0.0
+29 silly saveTree   ├── qrcode-terminal@0.12.0
+29 silly saveTree   ├── read@2.1.0
+29 silly saveTree   ├── semver@7.5.2
+29 silly saveTree   ├── sigstore@1.6.0
+29 silly saveTree   ├── ssri@10.0.4
+29 silly saveTree   ├── supports-color@9.3.1
+29 silly saveTree   ├── tar@6.1.15
+29 silly saveTree   ├── text-table@0.2.0
+29 silly saveTree   ├── tiny-relative-date@1.3.0
+29 silly saveTree   ├── treeverse@3.0.0
+29 silly saveTree   ├── validate-npm-package-name@5.0.0
+29 silly saveTree   ├── which@3.0.1
+29 silly saveTree   └── write-file-atomic@5.0.1
+30 warn notsup Unsupported engine for npm@9.7.2: wanted: {"node":"^14.17.0 || ^16.13.0 || >=18.0.0"} (current: {"node":"12.22.6","npm":"6.14.15"})
+31 warn notsup Not compatible with your version of node/npm: npm@9.7.2
+32 verbose notsup Not compatible with your version of node/npm: npm@9.7.2
+32 verbose notsup Required: {"node":"^14.17.0 || ^16.13.0 || >=18.0.0"}
+32 verbose notsup Actual:   {"npm":"6.14.15","node":"12.22.6"}
+33 warn enoent ENOENT: no such file or directory, open '/usr/local/bin/package.json'
+34 verbose enoent This is related to npm not being able to find a file.
+35 warn bin No description
+36 warn bin No repository field.
+37 warn bin No README data
+38 warn bin No license field.
+39 verbose stack Error: EACCES: permission denied, access '/usr/local/bin'
+40 verbose cwd /usr/local/bin
+41 verbose Linux 6.3.7-200.fc38.x86_64
+42 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "i" "npm@latest"
+43 verbose node v12.22.6
+44 verbose npm  v6.14.15
+45 error code EACCES
+46 error syscall access
+47 error path /usr/local/bin
+48 error errno -13
+49 error Error: EACCES: permission denied, access '/usr/local/bin'
+49 error  [Error: EACCES: permission denied, access '/usr/local/bin'] {
+49 error   errno: -13,
+49 error   code: 'EACCES',
+49 error   syscall: 'access',
+49 error   path: '/usr/local/bin'
+49 error }
+50 error The operation was rejected by your operating system.
+50 error It is likely you do not have the permissions to access this file as the current user
+50 error
+50 error If you believe this might be a permissions issue, please double-check the
+50 error permissions of the file and its containing directories, or try running
+50 error the command again as root/Administrator.
+51 verbose exit [ -13, true ]

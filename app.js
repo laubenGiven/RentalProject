@@ -4,7 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const session = require('express-session')
 app.use(express.json())
-
+const path = require('path');
 
 //load environment file
 require('dotenv').config();
@@ -12,11 +12,17 @@ require('dotenv').config();
 require('./config/db');
 const port = process.env.PORT || 7000  ;
 
-app.use(express.static('public'));
+app.use(express.static("public"));
+
+app.use(express.static("uploads"));
+app.use(express.static("Images"));
+
+
 app.set('view engine','ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // Parses the text as url encoded data
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
  
 // Parses the text as json
 app.use(bodyParser.json());

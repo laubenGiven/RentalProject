@@ -14,3 +14,8 @@ mongoose.connection.on('error', err => {
 mongoose.connection.on('connected', res => {
   console.log('Connected successfully!!');
 });
+const basePhotoUrl = `${process.env.MONGOURL}/uploads`;
+
+module.exports = {
+  basePhotoUrl,
+};

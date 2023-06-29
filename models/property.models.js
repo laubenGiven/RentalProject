@@ -8,25 +8,17 @@ const propertySchema = new mongoose.Schema({
   bedrooms: { type: Number, required: true },
   bathrooms: { type: Number, required: true },  
   cost: { type: Number, required: true },
-  photos: { data: Buffer,
-    contentType: String
-   },
-   maps: {data: Buffer,
-    contentType: String    
-  },
-  likes: { type: Number,
-     default: 0 },
-  dislikes: { type: Number, 
-    default: 0 },
-  approved: { type: Boolean, 
-    default: false },
-
-    date: {
-      type: Date,
-      default: Date.now
-    }
+  photos:  {  type:[String],
+    allowNull: true},
+   
+  maps: {  type:[String],
+    allowNull: true },
+  likes: { type: Number, default: 0 },
+  dislikes: { type: Number, default: 0 },
+  approved: { type: Boolean, default: false },
+  date: { type: Date, default: Date.now }
 });
 
-const PropertyModel = mongoose.model('Property', propertySchema);
+const Property = mongoose.model('rentalproperty', propertySchema);
 
-module.exports = PropertyModel;
+module.exports = Property;

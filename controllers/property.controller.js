@@ -2,27 +2,19 @@ const BaseController = require('./base.controller');
 const PropertyRepository = require('../repository/property.repository');
 const multer = require('multer');
 
-// Multer configuration
+const Property = require('../models/property.models');
+
+// Create a multer storage configuration
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'uploads/');
-  },
+  destination: './uploads/',
   filename: (req, file, cb) => {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
-    cb(null, file.fieldname + '-' + uniqueSuffix);
+    cb(null, file.fieldname + '_' + Date.now() + '_' + file.originalname);
   },
 });
-
+ 
+// Create a multer upload instance
 const upload = multer({
   storage: storage,
-  fileFilter: (req, file, cb) => {
-    // Accept only image files
-    if (file.mimetype.startsWith('image/')) {
-      cb(null, true);
-    } else {
-      cb(new Error('Only image files are allowed'));
-    }
-  },
 });
 
 class PropertyController extends BaseController {
@@ -32,18 +24,20 @@ class PropertyController extends BaseController {
     this.repo = propertyRepository;
   }
 
-  async add(req, res) {
+  async  add(req, res) {
     try {
-      await upload.fields([
+      upload.fields([
         { name: 'photos', maxCount: 1 },
         { name: 'maps', maxCount: 1 },
       ])(req, res, async (err) => {
-        if (err) {
-          // Handle Multer error
-          return res.status(400).json({ error: 'Failed to upload file' });
+        if (err instanceof multer.MulterError) {
+          // A Multer error occurred when uploading
+          return res.status(500).send('Failed to upload photo.');
+        } else if (err) {
+          // An unknown error occurred when uploading
+          return res.status(500).send('Failed to upload photo.');
         }
-  
-        // Extract other property data from the request body
+
         const {
           property_name,
           property_type,
@@ -53,13 +47,8 @@ class PropertyController extends BaseController {
           bathrooms,
           cost,
         } = req.body;
-  
-        // Get the uploaded file paths
-        const propertyImagePath = req.files['photos']?.[0]?.filename;
-        const mapsImagePath = req.files['maps']?.[0]?.filename;
-  
-        // Create a new property instance
-        const propertyData = {
+
+        const propertyData = new Property({
           property_name,
           property_type,
           location,
@@ -67,29 +56,39 @@ class PropertyController extends BaseController {
           bedrooms,
           bathrooms,
           cost,
-          photos: propertyImagePath || '',
-          maps: {
-            filename: mapsImagePath || '',
-            url: mapsImagePath ? `http://localhost:5000/uploads/${mapsImagePath}` : '',
-          },
-        };
-  
-        // Save the property to MongoDB
-        const doc = await this.repo.create(propertyData);
+        });
+
+        if (req.files) {
+          // Save the uploaded file names as the photo and maps properties
+          console.log('files uploaded');
+          console.log(req.files);
+          propertyData.photos = req.files['photos'][0].filename;
+          propertyData.maps = req.files['maps'][0].filename;
+        }
+
+        await propertyData.save();
         res.status(201).send(`
-  <script>
-    alert('Property saved successfully');
-    window.location.href = '/api/property/register';
-  </script>
-`);
+          <script>
+            alert('Property saved successfully');
+            window.location.href = '/api/property/register';
+          </script>
+        `);
       });
     } catch (err) {
       this.sendErrorResponse(res, 'Failed to add property');
     }
   }
-  
 
   // Implement other controller methods as needed
+
+  async getAllProperties(req, res) {
+    try {
+      const properties = await this.repo.findAll();
+      res.render('propertyview', { properties });
+    } catch (err) {
+      res.status(500).json({ success: false, message: 'Failed to retrieve data' });
+    }
+  }
 }
 
 module.exports = PropertyController;

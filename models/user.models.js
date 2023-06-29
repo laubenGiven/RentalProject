@@ -32,12 +32,17 @@ const userSchema = new mongoose.Schema({
     minlength: 8,
   },
   
+    photo: {
+      type:String,
+      allowNull: true,
+    },  
+  
     date: {
       type: Date,
       default: Date.now
     }
 });
 
-const User = mongoose.model('Users', userSchema);
+const User = mongoose.model('Userdb', userSchema);
 
 module.exports = User;

@@ -2,8 +2,22 @@ const bcrypt = require('bcrypt');
 const BaseController = require('./base.controller');
 const UserRepository = require('../repository/user.repository');
 const User = require('../models/user.models');
-const flash = require('connect-flash');
 const session = require('express-session');
+const multer = require('multer');
+
+// Create a multer storage configuration
+const storage = multer.diskStorage({
+  destination: 'public/uploads/',
+  
+  filename: (req, file, cb) => {
+    cb(null, file.fieldname + '_' + Date.now() + '_' + file.originalname);
+  },
+});
+
+// Create a multer upload instance
+const upload = multer({
+  storage: storage,
+}).single('photo');
 
 class UserController extends BaseController {
   constructor() {
@@ -12,47 +26,57 @@ class UserController extends BaseController {
   }
 
   async add(req, res) {
+    //photo upload code
     try {
-      const { role, username, email, password, passwordConfirm } = req.body;
+      upload(req, res, async (err) => {
+        if (err instanceof multer.MulterError) {
+          // A Multer error occurred when uploading
+          return res.status(500).send('Failed to upload photo.');
+        } else if (err) {
+          // An unknown error occurred when uploading
+          return res.status(500).send('Failed to upload photo.');
+        }
 
-      if (!role || !username || !email || !password || !passwordConfirm) {
-        return res.status(400).send('All fields are required.');
-      }
+        const { role, username, email, password, passwordConfirm } = req.body;
 
-      if (password !== passwordConfirm) {
-        return res.status(400).send('Passwords do not match.');
-      }
+        if (!role || !username || !email || !password || !passwordConfirm) {
+          return res.status(400).send('All fields are required.');
+        }
 
-      // Check if username or email already exists
-      const existingUser = await User.findOne({ $or: [{ username }, { email }] });
-      if (existingUser) {
-        // Redirect back to the registration page with a pop-up message
-        return res.send(
-          `<script>alert("Username or email already exists."); window.location.href = "/api/users/register";</script>`
-        );
-      }
+        if (password !== passwordConfirm) {
+          return res.status(400).send('Passwords do not match.');
+        }
 
-      const hashedPassword = await bcrypt.hash(password, 10);
+        const existingUser = await User.findOne({ $or: [{ username }, { email }] });
+        if (existingUser) {
+          return res.send(
+            `<script>alert("Username or email already exists."); window.location.href = "/api/users/register";</script>`
+          );
+        }
 
-      const newUser = new User({
-        role,
-        username,
-        email,
-        password: hashedPassword,
+        const newUser = new User({
+          role,
+          username,
+          email,
+          password: await bcrypt.hash(password, 10),
+        });
+
+        if (req.file) {
+          // Save the uploaded file name as the photo property
+          console.log(req.file);
+          newUser.photo = req.file.filename;
+        }
+
+        await newUser.save();
+
+        res.send(`<script>alert("Account created successfully!!"); window.location.href = "/api/users/login";</script>`);
       });
-
-      await newUser.save();
-
-      //res.status(201).send('User registered successfully!');
-      // Redirect to the login page with a success message
-      res.send( `<script>alert("Account created successfully!!"); window.location.href = "/api/users/login";</script>`)
-  
-
     } catch (error) {
       console.error(error);
       res.status(500).send('Failed to create user.');
     }
   }
+  
 
   async getUserById(req, res) {
     try {
@@ -60,8 +84,10 @@ class UserController extends BaseController {
       const user = await User.findById(userId);
       if (!user) {
         return this.sendErrorResponse(res, 'User not found', 404);
+
       }
-      this.sendSuccessResponse(res, 'User found', user);
+      const photoUrl = basePhotoUrl.basePhotoUrl + '/' + user.photo;
+      this.sendSuccessResponse(res, 'User found', user,{photoUrl});
     } catch (error) {
       console.error(error);
       this.sendErrorResponse(res, 'Failed to retrieve user', 500);
@@ -72,43 +98,38 @@ class UserController extends BaseController {
     const { email, newPassword, confirmPassword } = req.body;
 
     try {
-      // Check if the user with the provided email exists
       const user = await User.findOne({ email });
       if (!user) {
         return res.status(404).json({ error: 'User not found' });
       }
 
-      // Check if the new password and confirm password match
       if (newPassword !== confirmPassword) {
         return res.status(400).json({ error: 'Passwords do not match' });
       }
 
-      // Encrypt the new password
       const hashedPassword = await bcrypt.hash(newPassword, 10);
 
-      // Update the user's password
       user.password = hashedPassword;
       await user.save();
 
-      // Display a successful message as a pop-up window
-      const message = 'Password reset successfully!';
-      const script = `
-        <script>
-          const popUpWindow = window.open('', 'Pop-up Window', 'width=400,height=200');
-          popUpWindow.document.write('<h1>${message}</h1>');
-          setTimeout(() => {
-            popUpWindow.close();
-            window.location.href = '/api/users/login'; // Redirect user to the login page
-          }, 3000);
-        </script>
-      `;
-
-     //res.send(script);
-     res.send( `<script>alert("Password resetted  successfully!"); window.location.href = "/api/users/login";</script>`)
+      res.send(`<script>alert("Password resetted successfully!"); window.location.href = "/api/users/login";</script>`);
 
     } catch (error) {
       console.error('Error resetting password:', error);
       res.status(500).send({ error: 'Failed to reset password! Try again!!' });
+    }
+  }
+
+  async getAll(req, res) {
+    try {
+      const user = await User.find({}, 'username email role photo');
+
+      //res.send("<h1>hello world!</h1>");
+      const photoUrl = basePhotoUrl.basePhotoUrl + '/' + user.photo;
+      res.render('userview', { Users:user,photoUrl});
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Failed to retrieve users.');
     }
   }
 }

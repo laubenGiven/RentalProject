@@ -7,6 +7,9 @@
             "@show": true
         }
     },
+    "clipboard": {
+        "@dontshow": true
+    },
     "language": {
         "@continuousCompletion": false,
         "@enterCompletion": false

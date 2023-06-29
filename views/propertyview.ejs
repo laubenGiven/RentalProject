@@ -1,0 +1,154 @@
+<!-- property.ejs -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Property List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+    .card {
+      width: 18rem;
+      margin-bottom: 20px;
+      margin-top: 2rem;
+    }
+
+    .property-details {
+      display: none;
+    }
+
+    .likes {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .card-img-top{
+        border-radius: 3%;
+      height: 200px;
+      width: 100%;
+      align-content: center;
+      align-self: center;
+      border-top: 1rem;
+      margin-top:0rem;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="sidebar" class="sidebar">
+      <!-- Sidebar content here -->
+    </div>
+    <div id="content" class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card-columns" id="propertyList">
+            <% properties.forEach(function(property) { %>
+              <div class="card">
+                <% if (property.photos && property.photos.length > 0) { %>
+                    <img src="/<%= property.photos %>" class="card-img-top"  alt="Property Photo">
+                <% } else { %>
+                  <div class="no-image-placeholder">
+                    No Image Available
+                  </div>
+                <% } %>
+                <div class="card-body">
+                  <h5 class="card-title"><%= property.property_name %></h5>
+                  <p class="card-text">Type: <%= property.property_type %></p>
+                  <button class="btn btn-primary view-more-button" data-target="<%= property._id %>">View More</button>
+                  <div class="property-details" id="<%= property._id %>">
+                    <p><strong>Location:</strong> <%= property.location %></p>
+                    <p><strong>Description:</strong> <%= property.description %></p>
+                    <p><strong>Bedrooms:</strong> <%= property.bedrooms %></p>
+                    <p><strong>Bathrooms:</strong> <%= property.bathrooms %></p>
+                    <p><strong>Cost:</strong> <%= property.cost %></p>
+                  </div>
+                  <div class="likes">
+                    <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z" />
+                    </svg>
+                    <span class="like-count"><%= property.likes %></span>
+                  </div>
+                  <button class="btn btn-primary like-button"
+                    onclick="handleLike('<%= property._id %>')">Like</button>
+                  <button class="btn btn-primary liked-button" style="display: none;"
+                    onclick="handleLike('<%= property._id %>')">Liked</button>
+                  <button class="btn btn-danger"
+                    onclick="handleDislike('<%= property._id %>')">Dislike</button>
+                  <button class="btn btn-primary comment-btn">Comment</button>
+                  <div class="comment-box">
+                    <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                    <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                  </div>
+                </div>
+              </div>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Handle view more button click
+    $(document).on('click', '.view-more-button', function () {
+      var targetId = $(this).data('target');
+      $('#' + targetId).slideToggle();
+    });
+
+    // Handle like button click
+    function handleLike(propertyId) {
+      // Perform logic to handle like button click
+      // ...
+
+      var likeCount = $('#' + propertyId).find('.like-count');
+      var likes = parseInt(likeCount.text());
+      likes++;
+      likeCount.text(likes);
+
+      $('#' + propertyId).find('.like-button').hide();
+      $('#' + propertyId).find('.liked-button').show();
+    }
+
+    // Handle dislike button click
+    function handleDislike(propertyId) {
+      // Perform logic to handle dislike button click
+      // ...
+
+      var likeCount = $('#' + propertyId).find('.like-count');
+      var likes = parseInt(likeCount.text());
+      likes--;
+      likeCount.text(likes);
+
+      $('#' + propertyId).find('.liked-button').hide();
+      $('#' + propertyId).find('.like-button').show();
+    }
+
+    // Handle comment button click
+    $(document).on('click', '.comment-btn', function () {
+      var commentBox = $(this).siblings('.comment-box');
+      commentBox.toggle();
+    });
+
+    // Handle post comment button click
+    $(document).on('click', '.post-comment-btn', function () {
+      var comment = $(this).siblings('textarea').val();
+      // Perform the logic to post the comment to the server
+      // ...
+      // Display a success message or handle the response accordingly
+    });
+  </script>
+   <script src="/js/jquery-3.3.1.slim.min.js"></script>
+   <script src="/js/popper.min.js"></script>
+   <script src="/js/bootstrap.min.js"></script>
+   <script src="/js/jquery-3.3.1.min.js"></script>
+   <script src="/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+
+</html>

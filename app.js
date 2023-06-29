@@ -36,8 +36,8 @@ app.use(
   })
 );
 // import api routes
+app.use('/',apiroutes)
 app.use('/api',apiroutes)
-
 
 app.listen(port, () => {
     console.log(`Server started @ http://localhost:${port}`);

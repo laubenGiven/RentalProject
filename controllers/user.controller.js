@@ -50,7 +50,7 @@ class UserController extends BaseController {
         const existingUser = await User.findOne({ $or: [{ username }, { email }] });
         if (existingUser) {
           return res.send(
-            `<script>alert("Username or email already exists."); window.location.href = "/api/users/register";</script>`
+            `<script>alert("Username or email already exists."); window.location.href = "/register";</script>`
           );
         }
 
@@ -69,7 +69,7 @@ class UserController extends BaseController {
 
         await newUser.save();
 
-        res.send(`<script>alert("Account created successfully!!"); window.location.href = "/api/users/login";</script>`);
+        res.send(`<script>alert("Account created successfully!!"); window.location.href = "/";</script>`);
       });
     } catch (error) {
       console.error(error);
@@ -112,7 +112,7 @@ class UserController extends BaseController {
       user.password = hashedPassword;
       await user.save();
 
-      res.send(`<script>alert("Password resetted successfully!"); window.location.href = "/api/users/login";</script>`);
+      res.send(`<script>alert("Password resetted successfully!"); window.location.href = "/login";</script>`);
 
     } catch (error) {
       console.error('Error resetting password:', error);

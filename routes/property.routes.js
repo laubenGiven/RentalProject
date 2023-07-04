@@ -2,7 +2,6 @@ const express = require('express');
 const PropertyController = require('../controllers/property.controller');
 const router = express.Router();
 const propertyController = new PropertyController();
-
 // GET route for property registration page
 router.get('/register', (req, res) => {
   res.render('newproperty');

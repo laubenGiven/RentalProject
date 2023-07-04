@@ -89,6 +89,22 @@ class PropertyController extends BaseController {
       res.status(500).json({ success: false, message: 'Failed to retrieve data' });
     }
   }
+
+  async getUnapprovedProperties() {
+    try {
+      const properties = await this.repo.findAll({ approved: false });
+      return properties;
+    } catch (err) {
+      throw new Error('Failed to retrieve unapproved properties');
+    }
+  }
+
+
+ 
 }
+
+
+
+
 
 module.exports = PropertyController;

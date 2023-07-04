@@ -23,6 +23,7 @@
 	
 	
 	<!--google material icon-->
+    
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet">
   </head>
@@ -228,7 +229,7 @@
 		
 		<div class="top-navbar">
             <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
+                <div class="container">
 
                     <button type="button" id="sidebarCollapse" class="d-xl-block d-lg-block d-md-mone d-none">
                         <span class="material-icons">arrow_back_ios</span>
@@ -242,7 +243,7 @@
                     </button>
 
                     <div class="collapse navbar-collapse d-lg-block d-xl-block d-sm-none d-md-none d-none" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto"> 
+                        <ul class="nav navbar-nav ml-auto justify-content-between" > 
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
                                   <span class="material-icons">person</span>
@@ -250,7 +251,7 @@
                                 </a>
                               </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/api/users/logout">Logout</a>
+                                <a class="nav-link" href="/logout">Logout</a>
                               </li>  
                             <li class="dropdown nav-item active">
                                 <a href="#" class="nav-link" data-toggle="dropdown">
@@ -391,32 +392,113 @@ follow_the_signs
 					
 					
 					<div class="row ">
-                        <div class="col-lg-7 col-md-12">
+                        <div class="col-lg-8 col-md-12">
                             <div class="card" style="min-height: 485px">
                                 <div class="card-header card-header-text">
                                     <h4 class="card-title">Available Properties</h4>
                                     <p class="category">List of available properties today may, 2023</p>
                                 </div>
                                 <div class="table-responsive">
-                                    <table class="table table-striped  text-center">
-                                        <thead class="text-primary">
-                                            <tr class="table-dark"><th>Property_ID</th>
-                                            <th>Property_Name</th>
-                                            <th>Type</th>
-                                            <th>Location</th>
-                                            <th>Description</th>
-                                            <th>BedRooms</th>
-                                            <th>Bathrooms</th>
-                                            <th>maps</th>
-                                            <th>photo</th>
-                                            <th>Cost</th>
-                                        </tr></thead>
-                                        <tbody>
-                                            
-                                        </tbody>
+                                    <table class="table table-striped text-center">
+                                      <thead class="text-primary">
+                                        <tr class="table-dark">
+                                          <th scope="col">Property_ID</th>
+                                          <th scope="col">Property_Name</th>
+                                          <th scope="col">Type</th>
+                                          <th scope="col">Location</th>
+                                          <th scope="col">Description</th>
+                                          <th scope="col">BedRooms</th>
+                                          <th scope="col">Bathrooms</th>
+                                          <th  scope="col">Cost</th>
+                                          <th scope="col">maps</th>
+                                          <th  scope="col">photo</th>
+                                          <th scope="col">Actions</th>
+                                         
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <% if (Property.length === 0) { %>
+                                          <tr>
+                                            <td colspan="10">No properties found.</td>
+                                          </tr>
+                                        <% } else { %>
+                                          <% Property.forEach(function(property) { %>
+                                            <tr>
+                                              <td><%= property._id %></td>
+                                              <td><%= property.property_name %></td>
+                                              <td><%= property.property_type %></td>
+                                              <td><%= property.location %></td>
+                                              <td><%= property.description %></td>
+                                              <td><%= property.bedrooms %></td>
+                                              <td><%= property.bathrooms %></td>                                              
+                                              <td><%= property.cost %></td>
+                                              <td>
+                                                <% if (property.maps) { %>
+                                                    <img src="/<%= property.maps  %>" width="50" class="img-thumbnail" height="auto" alt="">
+                                                  <% } else { %>
+                                                    No map available
+                                                  <% } %>
+                                            </td>
+                                              <td>
+                                                <% if (property.photos) { %>
+                                                    <img src="/<%= property.photos %>" width="50" class="img-thumbnail" height="auto" alt="">
+                                                  <% } else { %>
+                                                    No photo available
+                                                  <% } %>
+                                              </td>
+                                              <td>
+                                                <a href="/edit/<%= property._id %>" class="text-success" title="Edit"><i class="material-icons">edit</i></a>
+                                                <a href="/delete/<%= property._id %>" class="text-danger" title="Delete"><i class="material-icons">delete</i></a>
+                                              </td>    
+                                            </tr>
+                                          <% }); %>
+                                        <% } %>
+                                      </tbody>
                                     </table>
-                                </div>
+                                  </div>
+                                  
                             </div>
+                            <div class="container mt-5 ">
+                                <h1>User List</h1>
+                                
+                                <% if (userlist.length === 0) { %>
+                                  <p>No users found.</p>
+                                <% } else { %>
+                                  <div class="table-responsive">
+                                  <table class="table table-striped  text-center">
+                                    <thead>
+                                      <tr class="table-dark">
+                                        <th scope="col">Username</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Role</th>
+                                        <th scope="col">Photo</th>
+                                        <th scope="col">Actions</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <% userlist.forEach((user,index) => { %>
+                                        <tr class="align-middle">
+                                          <td><%= user.username %></td>
+                                          <td><%= user.email %></td>
+                                          <td><%= user.role %></td>
+                                          <td>
+                                            <% if (user.photo) { %>
+                                              <img src="/uploads/<%=  user.photo %>" width="50" class="img-thumbnail" height="auto" alt="">
+                                            <% } else { %>
+                                              No photo available
+                                            <% } %>
+                                          </td>
+                                          <td>
+                                            <a href="/edit/<%= user._id %>" class="text-success" title="Edit"><i class="material-icons">edit</i></a>
+                                            <a href="/delete/<%= user._id %>" class="text-danger" title="Delete"><i class="material-icons">delete</i></a>
+                                          </td>                                          
+                                        </tr>
+                                      <% }); %>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <% } %>
+                              </div>
                         </div>
                       
                         <div >

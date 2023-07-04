@@ -2,20 +2,19 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const User = require('../models/user.models');
 const UserController = require('../controllers/user.controller');
-const app = express();
-const bodyParser = require('body-parser');
-const multer = require('multer');
-const LeaseRequestController =  require('../controllers/leaserequest.controller')
-const CommentController = require('../controllers/comment.controller')
-// Create instances of the controllers
+const PropertyController = require('../controllers/property.controller');
+const LeaseRequestController = require('../controllers/leaserequest.controller');
+const CommentController = require('../controllers/comment.controller');
+
+const propertyController = new PropertyController();
 const leaseRequestController = new LeaseRequestController();
 const commentController = new CommentController();
 const userController = new UserController();
 
 const router = express.Router();
+const bodyParser = require('body-parser');
 
-// Parses the text as url encoded data
-app.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.urlencoded({ extended: false }));
 
 // Lease Requests Routes
 router.get('/leaserequests', leaseRequestController.getAll);
@@ -31,26 +30,10 @@ router.post('/comments', commentController.add);
 router.put('/comments/:id', commentController.update);
 router.delete('/comments/:id', commentController.deleteById);
 
-// image upload
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, './uploads');
-  },
-  filename: (req, file, cb) => {
-    cb(null, file.fieldname + '_' + Date.now() + '_' + file.originalname);
-  },
-});
-
-const upload = multer({
-  storage: storage,
-}).single('photo');
-
-// GET route for login page
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
   res.render('login');
 });
 
-// GET route for user registration page
 router.get('/register', (req, res, next) => {
   res.render('userRegister');
 });
@@ -67,12 +50,22 @@ router.get('/tenant', (req, res, next) => {
   res.render('tenant');
 });
 
-router.get('/ladlord', (req, res, next) => {
+router.get('/landlord', (req, res, next) => {
   res.render('landlord');
 });
 
-router.get('/admin', (req, res, next) => {
-  res.render('index');
+router.get('/admin', async (req, res, next) => {
+  try {
+    const properties = await propertyController.getUnapprovedProperties();
+    res.render('index', {
+      Property: properties,
+      username,
+      image: user.photo,
+      message: 'Welcome to the Admin Dashboard.',
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Failed to retrieve data' });
+  }
 });
 
 router.get('/user', (req, res, next) => {
@@ -87,7 +80,6 @@ router.delete('/:id', userController.deleteById);
 router.get('/:id', userController.getUserById);
 router.post('/resetpassword', userController.resetPassword);
 
-// Login route
 router.post('/auth', async (request, response) => {
   try {
     const { username, password } = request.body;
@@ -105,15 +97,22 @@ router.post('/auth', async (request, response) => {
         request.session.loggedin = true;
         request.session.username = username;
 
-        // Render different views based on the user's role
         if (user.role === 'tenant') {
           response.render('tenant', { username, message: 'Welcome to the Tenant Dashboard.' });
         } else if (user.role === 'landlord') {
           response.render('landlord', { username, message: 'Welcome to the Landlord Dashboard.' });
         } else if (user.role === 'user') {
-          response.render('tenant', { username,image: user.photo, message: 'Welcome to the User Dashboard.' });
+          response.render('tenant', { username, image: user.photo, message: 'Welcome to the User Dashboard.' });
         } else if (user.role === 'admin') {
-          response.render('index', { username, image: user.photo, message: 'Welcome to the Admin Dashboard.' });
+          const properties = await propertyController.getUnapprovedProperties();
+          const userlist = await userController.getAllUsers();
+          response.render('index', {
+            Property: properties,
+            userlist,
+            username,
+            image: user.photo,
+            message: 'Welcome to the Admin Dashboard.',
+          });
         } else {
           response.send('Invalid role!');
         }

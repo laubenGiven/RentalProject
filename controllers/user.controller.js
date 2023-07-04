@@ -120,16 +120,13 @@ class UserController extends BaseController {
     }
   }
 
-  async getAll(req, res) {
+  async getAllUsers() {
     try {
-      const user = await User.find({}, 'username email role photo');
-
-      //res.send("<h1>hello world!</h1>");
-      const photoUrl = basePhotoUrl.basePhotoUrl + '/' + user.photo;
-      res.render('userview', { Users:user,photoUrl});
+      const userlist = await User.find({}, 'username email role photo');
+      return userlist;
+      
     } catch (error) {
-      console.error(error);
-      res.status(500).send('Failed to retrieve users.');
+      throw new Error('Failed to retrieve  userslist');
     }
   }
 }

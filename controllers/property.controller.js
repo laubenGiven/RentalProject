@@ -100,6 +100,46 @@ class PropertyController extends BaseController {
   }
 
 
+  async approveProperty(_id) {
+    try {
+      // Retrieve the property from the database using the propertyId
+      const property = await this.repo.findById(_id);
+
+      if (!property) {
+        throw new Error('Property not found');
+      }
+
+      // Update the approval status of the property
+      property.approved = true;
+
+      // Save the changes to the property
+      await property.save();
+    } catch (error) {
+      throw new Error('Failed to approve property');
+    }
+  }
+
+
+  async disapproveProperty(_id) {
+    try {
+      // Retrieve the property from the database using the propertyId
+      const property = await this.repo.findById(_id);
+
+      if (!property) {
+        throw new Error('Property not found');
+      }
+
+      // Update the approval status of the property
+      property.approved = false;
+
+      // Save the changes to the property
+      await property.save();
+    } catch (error) {
+      throw new Error('Failed to disapprove property');
+    }
+  }
+
+
  
 }
 

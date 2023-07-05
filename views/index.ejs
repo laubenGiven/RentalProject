@@ -393,7 +393,7 @@ follow_the_signs
 					
 					<div class="row ">
                         <div class="col-lg-8 col-md-12">
-                            <div class="card" style="min-height: 485px">
+                            <div class="card" style="min-height: 335px">
                                 <div class="card-header card-header-text">
                                     <h4 class="card-title">Available Properties</h4>
                                     <p class="category">List of available properties today may, 2023</p>
@@ -412,7 +412,9 @@ follow_the_signs
                                           <th  scope="col">Cost</th>
                                           <th scope="col">maps</th>
                                           <th  scope="col">photo</th>
+                                          <th scope="col">Approve_Status</th>
                                           <th scope="col">Actions</th>
+                                          
                                          
                                         </tr>
                                       </thead>
@@ -430,8 +432,10 @@ follow_the_signs
                                               <td><%= property.location %></td>
                                               <td><%= property.description %></td>
                                               <td><%= property.bedrooms %></td>
-                                              <td><%= property.bathrooms %></td>                                              
+                                              <td><%= property.bathrooms %></td> 
+
                                               <td><%= property.cost %></td>
+                                              
                                               <td>
                                                 <% if (property.maps) { %>
                                                     <img src="/<%= property.maps  %>" width="50" class="img-thumbnail" height="auto" alt="">
@@ -446,6 +450,28 @@ follow_the_signs
                                                     No photo available
                                                   <% } %>
                                               </td>
+                                             <!-- Replace the existing <td> block with the following code -->
+  <!-- Replace the existing <td> block with the following code -->
+    <td>
+        <% if (property.approved === true) { %>
+            <form action="/api/property/disapprove/<%= property._id %>" method="POST" style="display: inline;">
+          <button type="submit"  title="approved" class=" btn-link text-success">
+            <i class="material-icons">check_circle</i> 
+          </button>
+        </form>
+        <% } else { %>
+          <form action="/api/property/approve/<%= property._id %>" method="POST" style="display: inline;">
+            <button type="submit" class="btn-link text-warning" title="Not yet approved!">
+              <i class="material-icons">cancel</i>
+            </button>
+          </form>
+        <% } %>
+      </td>
+      
+
+ 
+                                          
+                                              
                                               <td>
                                                 <a href="/edit/<%= property._id %>" class="text-success" title="Edit"><i class="material-icons">edit</i></a>
                                                 <a href="/delete/<%= property._id %>" class="text-danger" title="Delete"><i class="material-icons">delete</i></a>
@@ -654,6 +680,52 @@ const posts = [
 
 
      */
+
+
+ 
+     function approveProperty(_Id) {
+    // Perform an AJAX request to the /approve/:id route
+    fetch('/approve/' + _Id, { method: 'POST' })
+      .then(response => {
+        if (response.ok) {
+          // Property approved successfully
+          // Reload the page to reflect the updated status
+          window.location.reload();
+        } else {
+          // Failed to approve property
+          console.error('Failed to approve property.');
+        }
+      })
+      .catch(error => {
+        console.error('An error occurred:', error);
+      });
+  }
+
+  function disapproveProperty(_Id) {
+    // Perform an AJAX request to the /disapprove/:id route
+    fetch('/disapprove/' + _Id, { method: 'POST' })
+      .then(response => {
+        if (response.ok) {
+          // Property disapproved successfully
+          // Reload the page to reflect the updated status
+          window.location.reload();
+        } else {
+          // Failed to disapprove property
+          console.error('Failed to disapprove property.');
+        }
+      })
+      .catch(error => {
+        console.error('An error occurred:', error);
+      });
+  }
+
+
+
+
+
+      
+  
+
            
        
 </script>

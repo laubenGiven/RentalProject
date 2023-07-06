@@ -2,11 +2,21 @@ const express = require('express');
 const PropertyController = require('../controllers/property.controller');
 const router = express.Router();
 const propertyController = new PropertyController();
+const session = require('express-session');
+const flash = require('express-flash');
 
 const User = require('../models/user.models');
 const UserController = require('../controllers/user.controller');
 
 const userController = new UserController();
+
+// Add express-flash middleware to handle flash messages
+router.use(session({
+  secret: 'lee123.com',
+  resave: false,
+  saveUninitialized: true
+}));
+router.use(flash());
 
 // GET route for property registration page
 router.get('/register', (req, res) => {
@@ -16,22 +26,27 @@ router.get('/register', (req, res) => {
 router.get('/admin', async (req, res) => {
   try {
     const { username } = req.session;
-    const user = await User.findOne({ username });
+    const users = await User.findOne({ username });
+    const Userlist = await userController.getAllUsers();
+    const successMessage = req.flash('successMessage')[0]; // Get the success message from the flash messages
+
     req.session.loggedin = true;
     req.session.username = username;
-    const properties = await propertyController.getAllProperties.bind(propertyController);
+    const properties = await propertyController.getAllProperties();
     res.render('index', {
-      Property: properties,
+      Userlist,
       username,
-      image: user.photo,
+      Property: properties,
+      username,     
       message: 'Welcome to the Admin Dashboard.',
+      successMessage, // Pass the success message to the template;
     });
   } catch (err) {
-    res.status(500).json({ success: false, message: 'Failed to retrieve data' });
+    res.status(500).json({ success: false, message: 'Failed to display admin page data' });
   }
 });
 
-router.get('/propertylist', propertyController.getAllProperties.bind(propertyController));
+router.get('/propertylist', propertyController.getAllProperty.bind(propertyController));
 
 // Define property routes
 router.get('/getAll', propertyController.getAll.bind(propertyController));
@@ -44,8 +59,9 @@ router.delete('/:id', propertyController.deleteById.bind(propertyController));
 router.post('/approve/:id', async (req, res, next) => {
   try {
     const propertyId = req.params.id;
-    await propertyController.approveProperty(propertyId);    
-    res.render('index', { Property: updatedProperty, username,successMessage: 'Property approved successfully.' });
+    await propertyController.approveProperty(propertyId);
+    req.flash('successMessage', 'Property approved successfully!');
+    res.redirect('/api/property/admin');
   } catch (error) {
     console.error(error);
     res.status(500).send('Failed to approve property.');
@@ -57,11 +73,14 @@ router.post('/disapprove/:id', async (req, res, next) => {
   try {
     const propertyId = req.params.id;
     await propertyController.disapproveProperty(propertyId);
-    res.status(200).send(`<script>alert("property disapproved  successfully!"); window.location.href = "/api/property/admin";</script>`);
+    req.flash('successMessage', 'Property disapproved successfully!');
+    res.redirect('/api/property/admin');
   } catch (error) {
     console.error(error);
     res.status(500).send('Failed to disapprove property.');
   }
+
+  
 });
 
 module.exports = router;

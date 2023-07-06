@@ -81,15 +81,25 @@ class PropertyController extends BaseController {
 
   // Implement other controller methods as needed
 
-  async getAllProperties(req, res) {
+
+  async getAllProperty(req, res) {
     try {
       const properties = await this.repo.findAll();
-      res.render('propertyview', { properties });
+      res.render('propertyview',{properties});
     } catch (err) {
-      res.status(500).json({ success: false, message: 'Failed to retrieve data' });
+      throw new Error('Failed to retrieve property data');
     }
   }
 
+  async getAllProperties() {
+    try {
+      const properties = await this.repo.findAll({approved:true});
+      return properties;
+    } catch (err) {
+      throw new Error('Failed to retrieve property data');
+    }
+  }
+  
   async getUnapprovedProperties() {
     try {
       const properties = await this.repo.findAll({ approved: false });

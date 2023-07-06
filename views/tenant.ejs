@@ -20,7 +20,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
 	
-	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="src/styles.css" rel="stylesheet">
 	
 	<!--google material icon-->
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
@@ -29,24 +31,42 @@
 
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
       <style>
-          .comment-box {
-              display: none;
-          }
-  
-          .container .row {
-    margin-bottom: 20px; /* Adjust the value as per your desired spacing */
-  }
-  .card-img-top{
+.comment-box {
+  display: none;
+}
+
+.card {
+      width: 18rem;
+      margin-bottom: 20px;
+      margin-top: 2rem;
+    }
+
+    .property-details {
+      display: none;
+    }
+
+    .likes-dislikes-container {
+      display: flex;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .likes {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card-img-top {
       border-radius: 3%;
       height: 200px;
       width: 100%;
       align-content: center;
       align-self: center;
       border-top: 1rem;
-      margin-top:0rem;
-  }
+      margin-top: 0rem;
+    }
 
-  .custom-blockquote {
+    .custom-blockquote {
       border-left: 5px solid #007bff;
       padding-left: 20px;
       margin: 20px 0;
@@ -55,8 +75,17 @@
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-weight: bold;
       font-style: italic;
-  }
-      </style>
+    }
+
+   
+    .container-fluid{
+        width:100%;
+	z-index:9;
+	position:relative;
+      
+    }
+</style>
+
   </head>
   <body>
   
@@ -205,8 +234,10 @@
 
 
 <!-- main content-->
-<div class="container">
-    <blockquote class="custom-blockquote">
+<div class="container-fluid">    
+   
+    <div id="" class="">
+      <blockquote class="custom-blockquote">
         <p>
           Our platform is designed to streamline the rental process
           and provide you with a seamless experience.
@@ -216,372 +247,71 @@
           Thank you for choosing our Rental Property Management System,
           and we hope you have a fantastic experience managing your rentals!
         </p>
-      </blockquote>
       <div class="row">
-        <div class="col-md-4">
-            <div class="card"> 
-                <img src="/images/apartments.jpg" class="card-img-top" alt="Image 1">                   
-                <div class="card-body">                        
-                    <h6 class="card-title">Modern and spacious apartment</h6>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse1">View Details</button>
-                        <div id="detailsCollapse1" class="collapse">
-                            <p>
-                                This luxurious property features high-end finishes, an open-concept layout, and floor-to-ceiling windows that flood the space with natural light.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
-                        </svg>
-                        <span class="like-count">0</span>
-                    </div>
-                    <button class="btn btn-primary like-button">Like</button>
-                    <button class="btn btn-primary liked-button" style="display: none;">Liked</button>
-                    <button class="btn btn-danger">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card"> 
-                <img src="/images/aparts.jpg" class="card-img-top" alt="Image 1">                   
-                <div class="card-body">                        
-                    <h6 class="card-title">Charming and Cozy Cottage</h6>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse2">View Details</button>
-                        <div id="detailsCollapse2" class="collapse">
-                            <p>
-                                nestled in the countryside, offering peace and tranquility amidst nature.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
-                        </svg>
-                        <span class="like-count">0</span>
-                    </div>
-                    <button class="btn btn-primary like-button" onclick="handleLike(1)">Like</button>
-                    <button class="btn btn-primary liked-button" style="display: none;" onclick="handleLike(1)">Liked</button>
-                    <button class="btn btn-danger" onclick="handleDislike(1)">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                
-
-                <img src="/images/bedroom3.jpg" class="card-img-top" alt="Image 3">
+        <div class="col-md-12">
+          <div class="card-columns" id="propertyList">
+            <% Properties.forEach(function(property) { %>
+              <div class="card">
+                <% if (property.photos && property.photos.length > 0) { %>
+                    <img src="/<%= property.photos %>" class="card-img-top" alt="Property Photo">
+                <% } else { %>
+                  <div class="no-image-placeholder">
+                    No Image Available
+                  </div>
+                <% } %>
                 <div class="card-body">
-                    <h6 class="card-title">Elegant and contemporary townhouse</h6>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse3">View Details</button>
-                        <div id="detailsCollapse3" class="collapse">
-                            <p>
-                                With a stylish design. This sophisticated property boasts a sleek kitchen, a private rooftop terrace for entertaining, and state-of-the-art amenities for a luxurious urban lifestyle.
-                            </p>
-                        </div>
-                    </div>
+                  <h5 class="card-title"><%= property.property_name %></h5>
+                  <p class="card-text">Type: <%= property.property_type %></p>
+                  <button class="btn btn-primary view-more-button" data-target="<%= property._id %>">View More</button>
+                  <div class="property-details" id="<%= property._id %>">
+                    <p><strong>Location:</strong> <%= property.location %></p>
+                    <p><strong>Description:</strong> <%= property.description %></p>
+                    <p><strong>Bedrooms:</strong> <%= property.bedrooms %></p>
+                    <p><strong>Bathrooms:</strong> <%= property.bathrooms %></p>
+                    <p><strong>Cost:</strong> <%= property.cost %></p>
+                  </div>
+                  <div class="likes-dislikes-container">
                     <div class="likes">
+                      <div class="icon-container">
                         <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
+                          <path fill-rule="evenodd"
+                            d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z" />
                         </svg>
-                        <span class="like-count">0</span>
+                        <span class="like-count"><%= property.likes %></span>
+                      </div>
                     </div>
-                    <button class="btn btn-primary like-btn">Like</button>
-                    <button class="btn btn-danger">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                    <div class="dislikes">
+                      <div class="icon-container">
+                        <svg class="bi bi-thumbs-down" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                          <path
+                            d="M1 11.268c0 .427.256.74.608.74.14 0 .28-.036.424-.11l10.032-4.972c.107-.048.203-.117.287-.204a1.135 1.135 0 0 0 .377-.857V5.13c0-.427-.256-.74-.608-.74a.994.994 0 0 0-.424.11l-3.135 1.555L7.06 2.01a1.03 1.03 0 0 0-1.47-.032L1.033 5.888A.994.994 0 0 0 .61 6.628c-.352 0-.608-.313-.608-.74V2.33c0-.427-.256-.74-.608-.74C0 1.59 0 1.57 0 1.57v8.756s0 .02 0 .074zm2.4-8.648a.964.964 0 0 1 .294-.036c.273 0 .467.234.467.56v5.4c0 .427.256.74.608.74.14 0 .28-.036.424-.11l3.135-1.555 2.474 2.44a.98.98 0 0 0 1.43.036l3.468-3.52a.964.964 0 0 1 .294-.036c.273 0 .467.234.467.56v2.457c0 .427.256.74.608.74.14 0 .28-.036.424-.11L16 6.383v2.39c0 .427.256.74.608.74.14 0 .28-.036.424-.11l2-1c.218-.109.368-.34.368-.6V2.3a.6.6 0 0 0-.6-.6.6.6 0 0 0-.6.6v2.472c0 .193-.117.373-.294.427a.67.67 0 0 1-.706-.166L13 2.965v2.39c0 .427.256.74.608.74.14 0 .28-.036.424-.11l2-1c.218-.109.368-.34.368-.6V1.57c0-.02-.005-.04-.013-.056a.539.539 0 0 0-.152-.23L10.066.051A1.13 1.13 0 0 0 9.78 0c-.3 0-.546.313-.546.74v3.9c0 .427.256.74.608.74.14 0 .28-.036.424-.11L12 3.656l2.474 2.44a.98.98 0 0 0 1.43.036l3.468-3.52a.964.964 0 0 1 .294-.036c.273 0 .467.234.467.56v2.457c0 .427.256.74.608.74.14 0 .28-.036.424-.11l2-1c.218-.109.368-.34.368-.6V1.57c0-.02-.005-.04-.013-.056a.539.539 0 0 0-.152-.23L14.066.051A1.13 1.13 0 0 0 13.78 0c-.3 0-.546.313-.546.74v1.2l-10.6 5.247v-5.92z" />
+                        </svg>
+                        <span class="dislike-count"><%= property.dislikes %></span>
+                      </div>
                     </div>
+                  </div>
+                  <button class="btn btn-primary like-button"
+                    onclick="handleLike('<%= property._id %>')">Like</button>
+                  <button class="btn btn-primary liked-button" style="display: none;"
+                    onclick="handleLike('<%= property._id %>')">Liked</button>
+                  <button class="btn btn-danger"
+                    onclick="handleDislike('<%= property._id %>')">Dislike</button>
+                  <button class="btn btn-primary comment-btn">Comment</button>
+                  <div class="comment-box" id="commentBox_<%= property._id %>">
+                    <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
+                    <button class="btn btn-primary post-comment-btn" onclick="postComment('<%= property._id %>')">Post Comment</button>
+                  </div>
                 </div>
-            </div>
+              </div>
+            <% }) %>
+          </div>
         </div>
+      </div>
     </div>
-    
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card"> 
-                <img src="/images/executive.avif" class="card-img-top" alt="Image 1">                   
-                <div class="card-body">                       
-                    <h6 class="card-title">Quaint and historic Victorian home</h6>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse4">View Details</button>
-                        <div id="detailsCollapse4" class="collapse">
-                            <p>
-                                with timeless charm. Step back in time as you explore the intricate details, stained glass windows, and a wrap-around porch that exude old-world charm and character
-                            </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
-                        </svg>
-                        <span class="like-count">0</span>
-                      </div>
-                    <button class="btn btn-primary like-btn">Like</button>
-                    <button class="btn btn-danger">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/images/countryside.avif" class="card-img-top" alt="Image 2">
-                <div class="card-body">
-                    <h5 class="card-title"> Spacious family home </h5>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse5">View Details</button>
-                        <div id="detailsCollapse5" class="collapse">
-                            <p>
-                                with a large backyard and a pool. Ideal for entertaining, this well-appointed house features multiple living areas, a gourmet kitchen, and an outdoor oasis perfect for summer gatherings
-                            </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
-                        </svg>
-                        <span class="like-count">0</span>
-                      </div>
-                    <button class="btn btn-primary like-btn">Like</button>
-                    <button class="btn btn-danger">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/images/coparts.jpg" class="card-img-top" alt="Image 3">
-                <div class="card-body">
-                    <h5 class="card-title">Luxury beachfront villa </h5>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse6">View Details</button>
-                        <div id="detailsCollapse6" class="collapse">
-                            <p>
-                                with breathtaking ocean views. Enjoy the ultimate coastal living experience with private beach access, a sun-drenched patio, and luxurious amenities, including a spa and a home theater.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
-                        </svg>
-                        <span class="like-count">0</span>
-                      </div>
-                    <button class="btn btn-primary like-btn">Like</button>
-                    <button class="btn btn-danger">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card"> 
-                <img src="/images/strolls.jpg" class="card-img-top" alt="Image 1">                   
-                <div class="card-body">                        
-                    <h5 class="card-title">Contemporary loft </h5>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse7">View Details</button>
-                        <div id="detailsCollapse7" class="collapse">
-                            <p>
-                                with an industrial chic aesthetic. This trendy urban space offers an open floor plan, exposed brick walls, high ceilings, and an abundance of natural light, creating a stylish and unique living environment.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
-                        </svg>
-                        <span class="like-count">0</span>
-                      </div>
-                    <button class="btn btn-primary like-btn">Like</button>
-                    <button class="btn btn-danger">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/images/living2.jpg" class="card-img-top" alt="Image 2">
-                <div class="card-body">
-                    <h5 class="card-title">Rustic mountain retreat</h5>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse8">View Details</button>
-                        <div id="detailsCollapse8" class="collapse">
-                            <p>
-                                surrounded by scenic beauty. Escape to this charming cabin nestled in the woods, featuring a cozy fireplace, panoramic mountain views, and access to hiking trails for outdoor enthusiasts.
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
-                        </svg>
-                        <span class="like-count">0</span>
-                      </div>
-                    <button class="btn btn-primary like-btn">Like</button>
-                    <button class="btn btn-danger">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/images/congested.avif" class="card-img-top" alt="Image 3">
-                <div class="card-body">
-                    <h5 class="card-title">Sleek and modern penthouse</h5>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse9">View Details</button>
-                        <div id="detailsCollapse9" class="collapse">
-                            <p>
-                                with panoramic city skyline views. This luxurious penthouse boasts a spacious rooftop terrace, high-end appliances, and elegant finishes, providing a sophisticated and exclusive living experience.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
-                        </svg>
-                        <span class="like-count">0</span>
-                      </div>
-                    <button class="btn btn-primary like-btn">Like</button>
-                    <button class="btn btn-danger">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">  
-                <img src="/images/spartial.avif" class="card-img-top" alt="Image 1">                  
-                <div class="card-body">                       
-                    <h5 class="card-title">Traditional family house</h5>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse10">View Details</button>
-                        <div id="detailsCollapse10" class="collapse">
-                            <p>
-                                with a welcoming atmosphere. This comfortable home offers a warm and inviting ambiance, spacious bedrooms, a well-manicured backyard, and a charming front porch, perfect for creating lasting memories
-                            </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
-                        </svg>
-                        <span class="like-count">0</span>
-                      </div>
-                    <button class="btn btn-primary like-btn">Like</button>
-                    <button class="btn btn-danger">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/images/family2.jpg" class="card-img-top" alt="Image 2">
-                <div class="card-body">
-                    <h5 class="card-title">A charming bungalow</h5>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse11">View Details</button>
-                        <div id="detailsCollapse11" class="collapse">
-                            <p>
-                                nestled in a serene neighborhood, perfect for small families or couples seeking a cozy retreat. This property features a beautifully landscaped garden and a spacious patio area for outdoor gatherings
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
-                        </svg>
-                        <span class="like-count">0</span>
-                      </div>
-                    <button class="btn btn-primary like-btn">Like</button>
-                    <button class="btn btn-danger">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <img src="/images/livingroom.jpg" class="card-img-top" alt="Image 3">
-                <div class="card-body">
-                    <h6 class="card-title">An elegant and modern apartment</h6>
-                    <div class="card-text">
-                        <button class="btn btn-primary view-details-btn" data-toggle="collapse" data-target="#detailsCollapse12">View Details</button>
-                        <div id="detailsCollapse12" class="collapse">
-                            <p>
-                                in the heart of the city, offering breathtaking views of the skyline. With its open-concept layout, luxurious amenities, and proximity to popular restaurants and shops, this property is ideal for urban professionals seeking a sophisticated living experience.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="likes">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z"/>
-                        </svg>
-                        <span class="like-count">0</span>
-                      </div>
-                    <button class="btn btn-primary like-btn">Like</button>
-                    <button class="btn btn-danger">Dislike</button>
-                    <button class="btn btn-primary comment-btn">Comment</button>
-                    <div class="comment-box">
-                        <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                        <button class="btn btn-primary post-comment-btn">Post Comment</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</div>
-
+  
+<br />
+  
+  <br />
 	
 <footer class="footer">
     <div class="container-fluid">
@@ -645,77 +375,88 @@
 
 
 <script type="text/javascript">
-$(document).ready(function () {
-  $('#sidebarCollapse').on('click', function () {
-    $('#sidebar').toggleClass('active');
-    $('#content').toggleClass('active');
-  });
+ // Handle view more button click
+ $(document).on('click', '.view-more-button', function () {
+      var targetId = $(this).data('target');
+      $('#' + targetId).slideToggle();
+    });
 
-  $('.more-button, .body-overlay').on('click', function () {
-    $('#sidebar, .body-overlay').toggleClass('show-nav');
-  });
+    // Handle like button click
+    function handleLike(propertyId) {
+      // Perform logic to handle like button click
+      // ...
 
-  // Add event listeners for comment buttons
-  $('.comment-btn').click(function () {
-    var commentBox = $(this).siblings('.comment-box');
-    commentBox.toggle();
-
-    // Hide comment box if double-clicked
-    var timeout = 300; // Set a timeout value (in milliseconds)
-    var clicks = $(this).data('clicks');
-
-    if (!clicks) {
-      // First click
-      $(this).data('clicks', true);
-      setTimeout(function () {
-        if ($(this).data('clicks')) {
-          // If still a single click after the timeout, reset the data attribute
-          $(this).data('clicks', false);
-        }
-      }, timeout);
-    } else {
-      // Double-click
-      commentBox.hide();
-      $(this).data('clicks', false);
-    }
-  });
-
-  const likeButton = document.querySelector('.like-button');
-  const likedButton = document.querySelector('.liked-button');
-  const likeCount = document.querySelector('.like-count');
-
-  let likes = 0;
-  let isLiked = false;
-
-  likeButton.addEventListener('click', () => {
-    if (!isLiked) {
+      var likeCount = $('#' + propertyId).find('.like-count');
+      var likes = parseInt(likeCount.text());
       likes++;
-      likeCount.textContent = likes;
-      likeButton.style.display = 'none';
-      likedButton.style.display = 'inline-block';
-      isLiked = true;
-    }
-  });
+      likeCount.text(likes);
 
-  likedButton.addEventListener('click', () => {
-    if (isLiked) {
+      $('#' + propertyId).find('.like-button').hide();
+      $('#' + propertyId).find('.liked-button').show();
+    }
+
+    // Handle dislike button click
+    function handleDislike(propertyId) {
+      // Perform logic to handle dislike button click
+      // ...
+
+      var likeCount = $('#' + propertyId).find('.like-count');
+      var likes = parseInt(likeCount.text());
       likes--;
-      likeCount.textContent = likes;
-      likedButton.style.display = 'none';
-      likeButton.style.display = 'inline-block';
-      isLiked = false;
-    }
-  });
+      likeCount.text(likes);
 
-  $(document).ready(function () {
-    $('.post-comment-btn').click(function () {
+      $('#' + propertyId).find('.liked-button').hide();
+      $('#' + propertyId).find('.like-button').show();
+    }
+
+    // Handle comment button click
+    $(document).on('click', '.comment-btn', function () {
+      var commentBox = $(this).siblings('.comment-box');
+      commentBox.toggle();
+    });
+
+    // Handle post comment button click
+    $(document).on('click', '.post-comment-btn', function () {
       var comment = $(this).siblings('textarea').val();
       // Perform the logic to post the comment to the server
       // ...
       // Display a success message or handle the response accordingly
     });
-  });
-});
+
+    // Function to post a comment
+function postComment(propertyId) {
+  const commentBox = document.querySelector(`#commentBox_${propertyId}`);
+  const commentInput = commentBox.querySelector('textarea');
+  const comment = commentInput.value.trim();
+
+  if (comment !== '') {
+    // Make an API request to post the comment for the given propertyId
+    // You can use AJAX, fetch, or any other method to make the API request
+
+    // Example using fetch:
+    fetch('/api/properties/' + propertyId + '/comments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ userId: 'yourUserId', comment: comment }) // Replace 'yourUserId' with the actual user ID
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Clear the comment input
+      commentInput.value = '';
+
+      // Update the UI to display the newly posted comment
+      const commentList = commentBox.parentNode.querySelector('.comment-list');
+      const newCommentElement = document.createElement('li');
+      newCommentElement.textContent = data.comment;
+      commentList.appendChild(newCommentElement);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  }
+}
 
 
 </script>

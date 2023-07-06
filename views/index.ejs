@@ -392,13 +392,23 @@ follow_the_signs
 					
 					
 					<div class="row ">
+                        <% if (successMessage) { %>
+                            <div class="col-md-12">
+                              <div class="alert alert-success alert-dismissible" role="alert">
+                                <%= successMessage %>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                            </div>
+                          <% } %>
                         <div class="col-lg-8 col-md-12">
                             <div class="card" style="min-height: 335px">
                                 <div class="card-header card-header-text">
                                     <h4 class="card-title">Available Properties</h4>
                                     <p class="category">List of available properties today may, 2023</p>
                                 </div>
-                                <div class="table-responsive">
+                                <div class="table-responsive">                                    
                                     <table class="table table-striped text-center">
                                       <thead class="text-primary">
                                         <tr class="table-dark">
@@ -484,10 +494,11 @@ follow_the_signs
                                   </div>
                                   
                             </div>
+                            
                             <div class="container mt-5 ">
                                 <h1>User List</h1>
                                 
-                                <% if (userlist.length === 0) { %>
+                                <% if (Userlist.length === 0) { %>
                                   <p>No users found.</p>
                                 <% } else { %>
                                   <div class="table-responsive">
@@ -502,7 +513,7 @@ follow_the_signs
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      <% userlist.forEach((user,index) => { %>
+                                      <% Userlist.forEach((user,index) => { %>
                                         <tr class="align-middle">
                                           <td><%= user.username %></td>
                                           <td><%= user.email %></td>

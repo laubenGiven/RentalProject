@@ -6,15 +6,17 @@ const PropertyController = require('../controllers/property.controller');
 const LeaseRequestController = require('../controllers/leaserequest.controller');
 const CommentController = require('../controllers/comment.controller');
 
+const router = express.Router();
+const bodyParser = require('body-parser');
+
 const propertyController = new PropertyController();
 const leaseRequestController = new LeaseRequestController();
 const commentController = new CommentController();
 const userController = new UserController();
 
-const router = express.Router();
-const bodyParser = require('body-parser');
-
 router.use(bodyParser.urlencoded({ extended: false }));
+
+
 
 // Lease Requests Routes
 router.get('/leaserequests', leaseRequestController.getAll);
@@ -90,37 +92,43 @@ router.post('/auth', async (request, response) => {
 
     const user = await User.findOne({ username });
 
-    if (user) {
-      const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!user) {
+      return response.send('Incorrect Username and/or Password!');
+    }
 
-      if (isPasswordValid) {
-        request.session.loggedin = true;
-        request.session.username = username;
+    const isPasswordValid = await bcrypt.compare(password, user.password);
 
-        if (user.role === 'tenant') {
-          response.render('tenant', { username, message: 'Welcome to the Tenant Dashboard.' });
-        } else if (user.role === 'landlord') {
-          response.render('landlord', { username, message: 'Welcome to the Landlord Dashboard.' });
-        } else if (user.role === 'user') {
-          response.render('tenant', { username, image: user.photo, message: 'Welcome to the User Dashboard.' });
-        } else if (user.role === 'admin') {
-          const properties = await propertyController.getUnapprovedProperties();
-          const userlist = await userController.getAllUsers();
-          response.render('index', {
-            Property: properties,
-            userlist,
-            username,
-            image: user.photo,
-            message: 'Welcome to the Admin Dashboard.',
-          });
-        } else {
-          response.send('Invalid role!');
-        }
-      } else {
-        response.send('Incorrect Username and/or Password!');
-      }
+    if (!isPasswordValid) {
+      return response.send('Incorrect Username and/or Password!');
+    }
+
+    request.session.loggedin = true;
+    request.session.username = username;
+
+    if (user.role === 'tenant') {
+      const Properties = await propertyController.getAllProperties();
+      req.flash('successMessage', 'Login  successfully!');
+      response.render('tenant', { username,Properties, message: 'Welcome to the Tenant Dashboard.' });
+    } else if (user.role === 'landlord') {
+      response.render('landlord', { username, message: 'Welcome to the Landlord Dashboard.' });
+    } else if (user.role === 'user') {
+      response.render('tenant', { username, image: user.photo, message: 'Welcome to the User Dashboard.' });
+    } else if (user.role === 'admin') {
+      // Define the successMessage variable
+const successMessage = "  Login Successful!";
+
+      const properties = await propertyController.getUnapprovedProperties();
+      const Userlist = await userController.getAllUsers();
+      response.render('index', {
+        Property: properties,
+        Userlist: Userlist,
+        username,
+        successMessage,
+        image: user.photo,
+        message: 'Welcome to the Admin Dashboard.',
+      });
     } else {
-      response.send('Incorrect Username and/or Password!');
+      response.send('Invalid role!');
     }
   } catch (error) {
     console.error(error);

@@ -420,6 +420,16 @@
                 <h1 class="text-center">LAND LORD'S LANDING PAGE</h1>
                 <h2 class="text-center">Property Registration</h2>
                 <div class="row">
+                    <% if (successMessage) { %>
+                        <div class="col-md-12">
+                          <div class="alert alert-success alert-dismissible" role="alert">
+                            <%= successMessage %>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                        </div>
+                      <% } %>
                   <div class="form-container col-md-6">
                     <form id="addPropertyForm" action="/api/property/register" enctype="multipart/form-data" method="post">
                       <div class="mb-3">

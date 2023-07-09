@@ -5,7 +5,12 @@ require('dotenv').config();
 
 const mongourl = process.env.MongodbConn;
 
-mongoose.connect(mongourl, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongourl, 
+  { 
+  useNewUrlParser: true,   
+  useUnifiedTopology: true,
+  
+});
 
 mongoose.connection.on('error', err => {
   console.log(err);
@@ -14,8 +19,4 @@ mongoose.connection.on('error', err => {
 mongoose.connection.on('connected', res => {
   console.log('Connected successfully!!');
 });
-const basePhotoUrl = `${process.env.MONGOURL}/uploads`;
 
-module.exports = {
-  basePhotoUrl,
-};

@@ -15,10 +15,16 @@ const propertySchema = new mongoose.Schema({
     allowNull: true },
   likes: { type: Number, default: 0 },
   dislikes: { type: Number, default: 0 },
+  comments:[
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Comment',
+    },
+  ],
   approved: { type: Boolean, default: false },
   date: { type: Date, default: Date.now }
 });
 
-const Property = mongoose.model('rentalproperty', propertySchema);
+const Property = mongoose.model('Property', propertySchema);
 
 module.exports = Property;

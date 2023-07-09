@@ -247,65 +247,66 @@
           Thank you for choosing our Rental Property Management System,
           and we hope you have a fantastic experience managing your rentals!
         </p>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card-columns" id="propertyList">
-            <% Properties.forEach(function(property) { %>
-              <div class="card">
-                <% if (property.photos && property.photos.length > 0) { %>
-                    <img src="/<%= property.photos %>" class="card-img-top" alt="Property Photo">
-                <% } else { %>
-                  <div class="no-image-placeholder">
-                    No Image Available
-                  </div>
-                <% } %>
-                <div class="card-body">
-                  <h5 class="card-title"><%= property.property_name %></h5>
-                  <p class="card-text">Type: <%= property.property_type %></p>
-                  <button class="btn btn-primary view-more-button" data-target="<%= property._id %>">View More</button>
-                  <div class="property-details" id="<%= property._id %>">
-                    <p><strong>Location:</strong> <%= property.location %></p>
-                    <p><strong>Description:</strong> <%= property.description %></p>
-                    <p><strong>Bedrooms:</strong> <%= property.bedrooms %></p>
-                    <p><strong>Bathrooms:</strong> <%= property.bathrooms %></p>
-                    <p><strong>Cost:</strong> <%= property.cost %></p>
-                  </div>
-                  <div class="likes-dislikes-container">
-                    <div class="likes">
-                      <div class="icon-container">
-                        <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd"
-                            d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z" />
-                        </svg>
-                        <span class="like-count"><%= property.likes %></span>
+        <div class="row">
+            <div class="col-md-12">
+              <div class="card-columns" id="propertyList">
+                <% Properties.forEach(function(property) { %>
+                  <div class="card">
+                    <% if (property.photos && property.photos.length > 0) { %>
+                      <img src="/<%= property.photos %>" class="card-img-top" alt="Property Photo">
+                    <% } else { %>
+                      <div class="no-image-placeholder">
+                        No Image Available
                       </div>
-                    </div>
-                    <div class="dislikes">
-                      <div class="icon-container">
-                        <svg class="bi bi-thumbs-down" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                          <path
-                            d="M1 11.268c0 .427.256.74.608.74.14 0 .28-.036.424-.11l10.032-4.972c.107-.048.203-.117.287-.204a1.135 1.135 0 0 0 .377-.857V5.13c0-.427-.256-.74-.608-.74a.994.994 0 0 0-.424.11l-3.135 1.555L7.06 2.01a1.03 1.03 0 0 0-1.47-.032L1.033 5.888A.994.994 0 0 0 .61 6.628c-.352 0-.608-.313-.608-.74V2.33c0-.427-.256-.74-.608-.74C0 1.59 0 1.57 0 1.57v8.756s0 .02 0 .074zm2.4-8.648a.964.964 0 0 1 .294-.036c.273 0 .467.234.467.56v5.4c0 .427.256.74.608.74.14 0 .28-.036.424-.11l3.135-1.555 2.474 2.44a.98.98 0 0 0 1.43.036l3.468-3.52a.964.964 0 0 1 .294-.036c.273 0 .467.234.467.56v2.457c0 .427.256.74.608.74.14 0 .28-.036.424-.11L16 6.383v2.39c0 .427.256.74.608.74.14 0 .28-.036.424-.11l2-1c.218-.109.368-.34.368-.6V2.3a.6.6 0 0 0-.6-.6.6.6 0 0 0-.6.6v2.472c0 .193-.117.373-.294.427a.67.67 0 0 1-.706-.166L13 2.965v2.39c0 .427.256.74.608.74.14 0 .28-.036.424-.11l2-1c.218-.109.368-.34.368-.6V1.57c0-.02-.005-.04-.013-.056a.539.539 0 0 0-.152-.23L10.066.051A1.13 1.13 0 0 0 9.78 0c-.3 0-.546.313-.546.74v3.9c0 .427.256.74.608.74.14 0 .28-.036.424-.11L12 3.656l2.474 2.44a.98.98 0 0 0 1.43.036l3.468-3.52a.964.964 0 0 1 .294-.036c.273 0 .467.234.467.56v2.457c0 .427.256.74.608.74.14 0 .28-.036.424-.11l2-1c.218-.109.368-.34.368-.6V1.57c0-.02-.005-.04-.013-.056a.539.539 0 0 0-.152-.23L14.066.051A1.13 1.13 0 0 0 13.78 0c-.3 0-.546.313-.546.74v1.2l-10.6 5.247v-5.92z" />
-                        </svg>
-                        <span class="dislike-count"><%= property.dislikes %></span>
+                    <% } %>
+                    <div class="card-body">
+                      <h5 class="card-title"><%= property.property_name %></h5>
+                      <span> Location:<p class="card-subtitle"> <%= property.location %></p></span>
+                      <span> Cost:<p class="card-text"><%= property.cost %></p> </span>                     
+                      <button class="btn btn-primary view-more-button" data-target="<%= property._id %>">View More</button>
+                      <div class="property-details" id="<%= property._id %>">                       
+                        <p><strong>Location:</strong> <%= property.property_type %></p>
+                        <p><strong>Description:</strong><%= property.description %></p>
+                        <p><strong>Bedrooms:</strong> <%= property.bedrooms %></p>
+                        <p><strong>Bathrooms:</strong> <%= property.bathrooms %></p>                       
                       </div>
+                      <div class="likes-dislikes-container">
+                        <div class="likes">
+                          <div class="icon-container">
+                            <svg class="bi bi-heart" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd"
+                                d="M8 14.418l-.677-.646C3.356 10.77 1 8.3 1 5.4 1 2.42 3.239 0 6 0c1.582 0 3.055.823 4 2 .945-1.177 2.418-2 4-2 2.761 0 5 2.42 5 5.4 0 2.9-2.356 5.37-6.323 8.372L8 14.418z" />
+                            </svg>
+                            <span class="like-count"><%= property.likes %></span>
+                          </div>
+                        </div>
+                        <div class="dislikes">
+                          <div class="icon-container">
+                            <svg class="bi bi-thumbs-down" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                              <path
+                                d="M1 11.268c0 .427.256.74.608.74.14 0 .28-.036.424-.11l10.032-4.972c.107-.048.203-.117.287-.204a1.135 1.135 0 0 0 .377-.857V5.13c0-.427-.256-.74-.608-.74a.994.994 0 0 0-.424.11l-3.135 1.555L7.06 2.01a1.03 1.03 0 0 0-1.47-.032L1.033 5.888A.994.994 0 0 0 .61 6.628c-.352 0-.608-.313-.608-.74V2.33c```
+          0-.427-.256-.74-.608-.74C0 1.59 0 1.57 0 1.57v8.756s0 .02 0 .074zm2.4-8.648a.964.964 0 0 1 .294-.036c.273 0 .467.234.467.56v5.4c0 .427.256.74.608.74.14 0 .28-.036.424-.11l3.135-1.555 2.474 2.44a.98.98 0 0 0 1.43.036l3.468-3.52a.964.964 0 0 1 .294-.036c.273 0 .467.234.467.56v2.457c0 .427.256.74.608.74.14 0 .28-.036.424-.11L16 6.383v2.39c0 .427.256.74.608.74.14 0 .28-.036.424-.11l2-1c.218-.109.368-.34.368-.6V2.3a.6.6 0 0 0-.6-.6.6.6 0 0 0-.6.6v2.472c0 .193-.117.373-.294.427a.67.67 0 0 1-.706-.166L13 2.965v2.39c0 .427.256.74.608.74.14 0 .28-.036.424-.11l2-1c.218-.109.368-.34.368-.6V1.57c0-.02-.005-.04-.013-.056a.539.539 0 0 0-.152-.23L10.066.051A1.13 1.13 0 0 0 9.78 0c-.3 0-.546.313-.546.74v3.9c0 .427.256.74.608.74.14 0 .28-.036.424-.11L12 3.656l2.474 2.44a.98.98 0 0 0 1.43.036l3.468-3.52a.964.964 0 0 1 .294-.036c.273 0 .467.234.467.56v2.457c0 .427.256.74.608.74.14 0 .28-.036.424-.11l2-1c.218-.109.368-.34.368-.6V1.57c0-.02-.005-.04-.013-.056a.539.539 0 0 0-.152-.23L14.066.051A1.13 1.13 0 0 0 13.78 0c-.3 0-.546.313-.546.74v1.2l-10.6 5.247v-5.92z" />
+                            </svg>
+                            <span class="dislike-count"><%= property.dislikes %></span>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="btn btn-primary like-button" data-target="<%= property._id %>">Like</button>
+                      <button class="liked-button btn-success" data-target="<%= property._id %>" style="display: none;">Liked</button>
+                      <button class="btn btn-danger dislike-button" data-target="<%= property._id %>">Dislike</button>
+                      <button class="disliked-button btn-danger" data-target="<%= property._id %>" style="display: none;">Disliked</button>                         
+                                                                 
+                      <button class="btn btn-primary comment-btn">Comment</button>
+                      <div class="comment-box" id="commentBox_<%= property._id %>">
+                        <textarea class="form-control comment-textarea" rows="3" placeholder="Enter your comment"></textarea>
+                        <button class="btn btn-primary post-comment-btn" data-property-name="<%= property._id %>">Post Comment</button>
+                      </div>                      
                     </div>
                   </div>
-                  <button class="btn btn-primary like-button"
-                    onclick="handleLike('<%= property._id %>')">Like</button>
-                  <button class="btn btn-primary liked-button" style="display: none;"
-                    onclick="handleLike('<%= property._id %>')">Liked</button>
-                  <button class="btn btn-danger"
-                    onclick="handleDislike('<%= property._id %>')">Dislike</button>
-                  <button class="btn btn-primary comment-btn">Comment</button>
-                  <div class="comment-box" id="commentBox_<%= property._id %>">
-                    <textarea class="form-control" rows="3" placeholder="Enter your comment"></textarea>
-                    <button class="btn btn-primary post-comment-btn" onclick="postComment('<%= property._id %>')">Post Comment</button>
-                  </div>
-                </div>
+                <% }) %>
               </div>
-            <% }) %>
+            </div>
           </div>
-        </div>
       </div>
     </div>
   
@@ -372,96 +373,157 @@
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/jquery-3.3.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
-<script type="text/javascript">
- // Handle view more button click
- $(document).on('click', '.view-more-button', function () {
+<script>
+  $(document).ready(function() {
+    // Event delegation for view more button
+   
+    $(document).on('click', '.view-more-button', function() {
       var targetId = $(this).data('target');
       $('#' + targetId).slideToggle();
+    });      
+    // Get the card title element
+    const cardTitle = document.querySelector('.card-title');
+     const cardSubtitle = document.querySelector('.card-subtitle');
+     const cardText = document.querySelector('.card-text');
+    // Access the property name from the card title element
+    const propertyName = cardTitle.textContent;
+    const P_location = cardSubtitle.textContent;
+    const cost = cardText.textContent;
+    // Use the retrieved value as needed
+    console.log('Property Name:', propertyName);
+    console.log('Property_location:', P_location);
+    console.log('Property_cost:', cost);
+
+    // Event delegation for like and dislike buttons
+    $(document).on('click', '.like-button, .dislike-button', function() {
+      var propertyId = $(this).data('target');
+      var likeCount = parseInt($(this).closest('.property-container').find('.like-count').text()) || 0;
+      var dislikeCount = parseInt($(this).closest('.property-container').find('.dislike-count').text()) || 0;
+
+      if ($(this).hasClass('dislike-button')) {
+        likeCount++;
+        dislikeCount--;
+      } else {
+        dislikeCount++;
+        likeCount--;
+      }
+
+      $(this).closest('.property-container').find('.like-count').text(likeCount);
+      $(this).closest('.property-container').find('.dislike-count').text(dislikeCount);
+
+      postComment(propertyId, likeCount, dislikeCount)
+        .then(function() {
+          createLeaseRequest(propertyId, '<%= username %>', propertyName, P_location, cost);
+        })
+        .catch(function(error) {
+          console.error('Error:', error);
+        });
     });
 
-    // Handle like button click
-    function handleLike(propertyId) {
-      // Perform logic to handle like button click
-      // ...
-
-      var likeCount = $('#' + propertyId).find('.like-count');
-      var likes = parseInt(likeCount.text());
-      likes++;
-      likeCount.text(likes);
-
-      $('#' + propertyId).find('.like-button').hide();
-      $('#' + propertyId).find('.liked-button').show();
-    }
-
-    // Handle dislike button click
-    function handleDislike(propertyId) {
-      // Perform logic to handle dislike button click
-      // ...
-
-      var likeCount = $('#' + propertyId).find('.like-count');
-      var likes = parseInt(likeCount.text());
-      likes--;
-      likeCount.text(likes);
-
-      $('#' + propertyId).find('.liked-button').hide();
-      $('#' + propertyId).find('.like-button').show();
-    }
-
-    // Handle comment button click
-    $(document).on('click', '.comment-btn', function () {
+    // Event delegation for comment button
+    $(document).on('click', '.comment-btn', function() {
       var commentBox = $(this).siblings('.comment-box');
       commentBox.toggle();
     });
 
-    // Handle post comment button click
-    $(document).on('click', '.post-comment-btn', function () {
-      var comment = $(this).siblings('textarea').val();
-      // Perform the logic to post the comment to the server
-      // ...
-      // Display a success message or handle the response accordingly
+    // Event delegation for post comment button
+    $(document).on('click', '.post-comment-btn', function() {
+      var commentBox = $(this).closest('.comment-box');
+      var commentTextArea = commentBox.find('.comment-textarea');
+      var comment = commentTextArea.val().trim();
+      var propertyId = $(this).data('property-name');
+      var likeCount = parseInt($(this).closest('.property-container').find('.like-count').text()) || 0;
+      var dislikeCount = parseInt($(this).closest('.property-container').find('.dislike-count').text()) || 0;
+
+      if (comment !== '') {
+        postComment(propertyId, comment, likeCount, dislikeCount)
+          .then(function() {
+            commentTextArea.val('');
+            $(this).find('.click-count').text(parseInt($(this).find('.click-count').text()) + 1);
+            location.reload();
+          })
+          .catch(function(error) {
+            console.error('Error:', error);
+          });
+      } else {
+        console.log('Empty comment!');
+      }
     });
 
-    // Function to post a comment
-function postComment(propertyId) {
-  const commentBox = document.querySelector(`#commentBox_${propertyId}`);
-  const commentInput = commentBox.querySelector('textarea');
-  const comment = commentInput.value.trim();
+    function postComment(propertyId, comment, likeCount, dislikeCount) {
+      return new Promise(function(resolve, reject) {
+        if (!comment) {
+          console.log('Empty comment!');
+          reject('Empty comment');
+          return;
+        }
 
-  if (comment !== '') {
-    // Make an API request to post the comment for the given propertyId
-    // You can use AJAX, fetch, or any other method to make the API request
+        var requestBody = {
+          property_id: propertyId,
+          userId: '<%= username %>',
+          comment: comment,
+          likes: likeCount,
+          dislikes: dislikeCount
+        };
 
-    // Example using fetch:
-    fetch('/api/properties/' + propertyId + '/comments', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ userId: 'yourUserId', comment: comment }) // Replace 'yourUserId' with the actual user ID
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Clear the comment input
-      commentInput.value = '';
+        fetch('/comments/postcomments', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(requestBody)
+        })
+          .then(function(response) {
+            if (response.ok) {
+              resolve();
+            } else {
+              reject('Post failed');
+            }
+          })
+          .catch(function(error) {
+            reject(error);
+          });
+      });
+    }
 
-      // Update the UI to display the newly posted comment
-      const commentList = commentBox.parentNode.querySelector('.comment-list');
-      const newCommentElement = document.createElement('li');
-      newCommentElement.textContent = data.comment;
-      commentList.appendChild(newCommentElement);
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  }
-}
+    function createLeaseRequest(propertyId, userId, propertyName, P_location, cost) {
+      
+      var requestBody = {
+        property_id: propertyId,
+        userId: userId,
+        propertyName: propertyName,
+        property_location: P_location,
+        propertyPrice: cost,
+      };
 
+      fetch('/lease/postleaserequest', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestBody)
+      })
+        .then(function(response) {
+          if (response.ok) {
+            console.log('Lease request created successfully');
+          } else {
+            console.error('Failed to create lease request');
+          }
+        })
+        .catch(function(error) {
+          console.error('Error:', error);
+        });
+    }
+  });
 
 </script>
 
 
+
+  
 <script src="script.js"></script>
 
 

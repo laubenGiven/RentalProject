@@ -3,34 +3,27 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user.models');
 const UserController = require('../controllers/user.controller');
 const PropertyController = require('../controllers/property.controller');
-const LeaseRequestController = require('../controllers/leaserequest.controller');
-const CommentController = require('../controllers/comment.controller');
+const session = require('express-session');
+const flash = require('express-flash');
 
 const router = express.Router();
 const bodyParser = require('body-parser');
 
 const propertyController = new PropertyController();
-const leaseRequestController = new LeaseRequestController();
-const commentController = new CommentController();
+
 const userController = new UserController();
 
 router.use(bodyParser.urlencoded({ extended: false }));
 
 
+// Add express-flash middleware to handle flash messages
+router.use(session({
+  secret: 'lee123.com',
+  resave: false,
+  saveUninitialized: true
+}));
 
-// Lease Requests Routes
-router.get('/leaserequests', leaseRequestController.getAll);
-router.get('/leaserequests/:id', leaseRequestController.getById);
-router.post('/leaserequests', leaseRequestController.add);
-router.put('/leaserequests/:id', leaseRequestController.update);
-router.delete('/leaserequests/:id', leaseRequestController.deleteById);
 
-// Comments Routes
-router.get('/comments', commentController.getAll);
-router.get('/comments/:id', commentController.getById);
-router.post('/comments', commentController.add);
-router.put('/comments/:id', commentController.update);
-router.delete('/comments/:id', commentController.deleteById);
 
 router.get('/', (req, res, next) => {
   res.render('login');
@@ -52,23 +45,30 @@ router.get('/tenant', (req, res, next) => {
   res.render('tenant');
 });
 
-router.get('/landlord', (req, res, next) => {
-  res.render('landlord');
-});
-
-router.get('/admin', async (req, res, next) => {
+router.get('/landlord', async (req, res) => {
   try {
-    const properties = await propertyController.getUnapprovedProperties();
-    res.render('index', {
-      Property: properties,
+    const { username } = req.session;
+    const users = await User.findOne({ username });    
+    const successMessage = 'Property saved successfully!';
+
+    req.session.loggedin = true;
+    req.session.username = username;
+    
+    // Retrieve approved properties using the propertyController
+    const properties = await propertyController.getapprovedProperties();  
+    res.render('landlord', {      
       username,
-      image: user.photo,
-      message: 'Welcome to the Admin Dashboard.',
+      Property: properties,          
+      message: 'Welcome to the landlord Dashboard.',
+      successMessage,
     });
   } catch (err) {
-    res.status(500).json({ success: false, message: 'Failed to retrieve data' });
+    console.error(err);
+    res.status(500).json({ success: false,message: 'Failed to display land lords page data' });
   }
 });
+
+
 
 router.get('/user', (req, res, next) => {
   res.render('tenant');
@@ -107,12 +107,14 @@ router.post('/auth', async (request, response) => {
 
     if (user.role === 'tenant') {
       const Properties = await propertyController.getAllProperties();
-      req.flash('successMessage', 'Login  successfully!');
-      response.render('tenant', { username,Properties, message: 'Welcome to the Tenant Dashboard.' });
+     
+      response.render('tenant', { username,Properties,message: 'Welcome to the Tenant Dashboard.' });
     } else if (user.role === 'landlord') {
-      response.render('landlord', { username, message: 'Welcome to the Landlord Dashboard.' });
+      const successMessage = "  Login Successful!";
+      response.render('landlord', { username,successMessage, message: 'Welcome to the Landlord Dashboard.' });
     } else if (user.role === 'user') {
-      response.render('tenant', { username, image: user.photo, message: 'Welcome to the User Dashboard.' });
+      const properties = await propertyController.getAllProperties();
+      response.render('tenant', { username, property_id:properties._id, image: user.photo, message: 'Welcome to the User Dashboard.' });
     } else if (user.role === 'admin') {
       // Define the successMessage variable
 const successMessage = "  Login Successful!";
@@ -122,7 +124,7 @@ const successMessage = "  Login Successful!";
       response.render('index', {
         Property: properties,
         Userlist: Userlist,
-        username,
+        username,       
         successMessage,
         image: user.photo,
         message: 'Welcome to the Admin Dashboard.',

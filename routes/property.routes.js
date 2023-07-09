@@ -25,6 +25,7 @@ router.get('/register', (req, res) => {
 
 router.get('/admin', async (req, res) => {
   try {
+    req.session.isAuth = true;
     const { username } = req.session;
     const users = await User.findOne({ username });
     const Userlist = await userController.getAllUsers();
@@ -36,8 +37,7 @@ router.get('/admin', async (req, res) => {
     res.render('index', {
       Userlist,
       username,
-      Property: properties,
-      username,     
+      Property: properties,           
       message: 'Welcome to the Admin Dashboard.',
       successMessage, // Pass the success message to the template;
     });
@@ -53,7 +53,23 @@ router.get('/getAll', propertyController.getAll.bind(propertyController));
 router.get('/:id', propertyController.getById.bind(propertyController));
 router.post('/register', propertyController.add.bind(propertyController));
 router.put('/:id', propertyController.update.bind(propertyController));
-router.delete('/:id', propertyController.deleteById.bind(propertyController));
+
+
+router.get('/delete/:id', async (req,res,next)=>{
+ try{
+  const propertyId = req.params.id;
+  await propertyController.deleteById(propertyId)
+  req.flash('successMessage','property deleted Successfully!!');
+  res.redirect('/api/property/admin');
+ }
+ catch(error){
+  console.error(error);
+  res.status(500).send('Failed to delete property')
+}
+
+});
+
+
 
 // POST /approve/:id - Approve property
 router.post('/approve/:id', async (req, res, next) => {
@@ -62,6 +78,7 @@ router.post('/approve/:id', async (req, res, next) => {
     await propertyController.approveProperty(propertyId);
     req.flash('successMessage', 'Property approved successfully!');
     res.redirect('/api/property/admin');
+    console.log(req.session);
   } catch (error) {
     console.error(error);
     res.status(500).send('Failed to approve property.');

@@ -7,10 +7,16 @@ const commentSchema = new mongoose.Schema({
       ref: 'Property',
       required: true,
     },
+    userId:{
+      type:String,
+      reuired:true,
+
+    },
     comment: {
       type: String,
       required: true,
     },
+
     likes: {
       type: Number,
       default: 0,
@@ -25,6 +31,6 @@ const commentSchema = new mongoose.Schema({
     },
   });
   
-  const Comment = mongoose.model('Comments', commentSchema);
+  const Comment = mongoose.model('Comment', commentSchema);
   
   module.exports = Comment;

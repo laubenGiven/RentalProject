@@ -112,7 +112,7 @@ class UserController extends BaseController {
       user.password = hashedPassword;
       await user.save();
 
-      res.send(`<script>alert("Password resetted successfully!"); window.location.href = "/login";</script>`);
+      res.send(`<script>alert("Password resetted successfully!"); window.location.href = "/";</script>`);
 
     } catch (error) {
       console.error('Error resetting password:', error);

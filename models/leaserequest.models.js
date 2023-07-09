@@ -6,18 +6,29 @@ const leaseRequestSchema = new mongoose.Schema({
     ref: 'Property',
     required: true,
   },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+  userId: {
+    type: String,
     required: true,
+  },
+  propertyName: {
+    type: String,
+    required: true,
+  },
+  property_location: {
+    type: String,
+    required: true,
+  },
+  propertyPrice: {
+    type: Number,
+    required:true,
   },
   startDate: {
     type: Date,
-    required: true,
+    default: null, // Set default value to null
   },
   endDate: {
     type: Date,
-    required: true,
+    default:null,
   },
   status: {
     type: String,
